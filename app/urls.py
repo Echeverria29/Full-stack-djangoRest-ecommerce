@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
   path('index/', index, name='index'),
- 
+  path('registro/', registro, name='registro'),
 
 ]   
 
