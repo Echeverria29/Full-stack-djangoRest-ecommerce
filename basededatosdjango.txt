@@ -126,12 +126,8 @@ class DetalleVenta(models.Model):
 
     class Meta:
         
-        db_table = 'detalle_venta'
+        db_table = 'detalle_compra'
       
-
-
-
-
 
 
 

@@ -13,3 +13,15 @@ class RegistroUsuarioForm(UserCreationForm):
         model= User 
         fields = ['username','password1','password2']
 
+class AgregarAlCarritoForm(forms.Form):
+    libro_id = forms.IntegerField(widget=forms.HiddenInput())
+    cantidad = forms.IntegerField()
+
+    class Meta:
+        
+        model = Carrito
+      
+        fields = ['libro_id','cantidad']
+
+
+

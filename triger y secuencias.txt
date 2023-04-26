@@ -1,0 +1,93 @@
+CREATE SEQUENCE libro_seq
+START WITH 1
+INCREMENT BY 1;
+
+
+CREATE OR REPLACE TRIGGER libro_trg
+BEFORE INSERT ON libro
+FOR EACH ROW
+BEGIN
+    SELECT libro_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
+CREATE SEQUENCE carrito_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER carrito_trg
+BEFORE INSERT ON carrito
+FOR EACH ROW
+BEGIN
+    SELECT carrito_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
+
+
+
+
+
+
+CREATE SEQUENCE venta_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER venta_trg
+BEFORE INSERT ON venta
+FOR EACH ROW
+BEGIN
+    SELECT venta_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
+CREATE SEQUENCE servicio_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER servicio_trg
+BEFORE INSERT ON servicio
+FOR EACH ROW
+BEGIN
+    SELECT servicio_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
+
+
+
+CREATE SEQUENCE pago_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER pago_trg
+BEFORE INSERT ON pago
+FOR EACH ROW
+BEGIN
+    SELECT pago_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
+CREATE SEQUENCE detalle_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER detalle_trg
+BEFORE INSERT ON detalle_venta
+FOR EACH ROW
+BEGIN
+    SELECT detalle_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
