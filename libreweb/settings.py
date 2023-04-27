@@ -141,5 +141,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # enviAR MENSAJES CON DJANGO
 MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
-LOGIN_REDIRECT_URL = '//'
+LOGIN_REDIRECT_URL = '/index/'
 LOGOUT_REDIRECT_URL = '/index/'
