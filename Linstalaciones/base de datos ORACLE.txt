@@ -4,7 +4,7 @@ CREATE TABLE cliente (
     apellido        VARCHAR2(50) NOT NULL,
     correo          VARCHAR2(80) NOT NULL,
     direccion       VARCHAR2(80),
-    telefono        NUMBER(10),
+    telefono        VARCHAR2(20),
     numero_tarjeta  NUMBER(10) NOT NULL
 );
 
@@ -15,43 +15,80 @@ CREATE TABLE tecnico (
     nombre       VARCHAR2(50) NOT NULL,
     apellido     VARCHAR2(50) NOT NULL,
     correo       VARCHAR2(80) NOT NULL,
-    direccion    VARCHAR2(80),
-    telefono     NUMBER(10)
+    direccion    VARCHAR2(80) NOT NULL,
+    telefono     VARCHAR2(20) NOT NULL
 );
 
 ALTER TABLE tecnico ADD CONSTRAINT tecnico_pk PRIMARY KEY ( rut_tecnico );
 
+CREATE TABLE materiales (
+    id                      INTEGER NOT NULL,
+    acetona                 NUMBER(10) NOT NULL,
+    agua_destilada          NUMBER(10) NOT NULL,
+    aguja_de_tablero        NUMBER(10) NOT NULL,
+    alcohol                 NUMBER(10) NOT NULL,
+    brocha_2cm              NUMBER(10) NOT NULL,
+    brocha_4cm              NUMBER(10) NOT NULL,
+    cera_virgen             NUMBER(10) NOT NULL,
+    cuter                   NUMBER(10) NOT NULL,
+    franela                 NUMBER(10) NOT NULL,
+    gasolina_blanca         NUMBER(10) NOT NULL,
+    goma_dura               NUMBER(10) NOT NULL,
+    goma_suave              NUMBER(10) NOT NULL,
+    hilo_canamo             NUMBER(10) NOT NULL,
+    hisopos_algodon         NUMBER(10) NOT NULL,
+    keratol                 NUMBER(10) NOT NULL,
+    lija_801_madera         NUMBER(10) NOT NULL,
+    papel_japones           NUMBER(10) NOT NULL,
+    papel_secante           NUMBER(10) NOT NULL,
+    papel_minagris          NUMBER(10) NOT NULL,
+    pegamento_unidor        NUMBER(10) NOT NULL,
+    periodico               NUMBER(10) NOT NULL,
+    plegadera_hueso_madera  NUMBER(10) NOT NULL,
+    rut_tecnico             VARCHAR2(15) NOT NULL
+);
+
+ALTER TABLE materiales ADD CONSTRAINT materiales_pk PRIMARY KEY ( id );
 
 CREATE TABLE empleado (
     rut_empleado  VARCHAR2(15) NOT NULL,
     nombre        VARCHAR2(50) NOT NULL,
     apellido      VARCHAR2(50) NOT NULL,
     correo        VARCHAR2(80) NOT NULL,
-    direccion     VARCHAR2(80),
-    telefono      NUMBER(10),
+    direccion     VARCHAR2(80) NOT NULL,
+    telefono      VARCHAR2(20) NOT NULL,
     cargo         VARCHAR2(50) NOT NULL,
     departamento  VARCHAR2(50) NOT NULL
 );
 
 ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( rut_empleado );
 
+CREATE TABLE tipo_servicio (
+    id           INTEGER NOT NULL,
+    tipo         VARCHAR2(40) NOT NULL
+    
+);
+
+ALTER TABLE tipo_servicio ADD CONSTRAINT tipo_servicio_pk PRIMARY KEY ( id );
+
+
 CREATE TABLE servicio (
     id         INTEGER NOT NULL,
     fecha_servicio      DATE NOT NULL,
     direccion_servicio  VARCHAR2(80) NOT NULL,
-    tipo_servicio       VARCHAR2(50) NOT NULL,
     detalle_servicio    VARCHAR2(150) NOT NULL,
     rut_tecnico         VARCHAR2(15) NOT NULL,
-    rut_cliente         VARCHAR2(15) NOT NULL
+    rut_cliente         VARCHAR2(15) NOT NULL,
+	tipo_servicio    INTEGER NOT NULL
 );
 
 ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( id );
 
 
+
 CREATE TABLE venta (
     id      INTEGER NOT NULL,
     fecha_venta   DATE NOT NULL,
-     total      NUMBER(10) NOT NULL,
     rut_cliente   VARCHAR2(15) NOT NULL,
     rut_empleado  VARCHAR2(15) NOT NULL
 );
@@ -98,6 +135,9 @@ CREATE TABLE detalle_venta (
 
 ALTER TABLE detalle_venta ADD CONSTRAINT detalle_pk PRIMARY KEY ( id);
 
+
+
+
 ALTER TABLE carrito
     ADD CONSTRAINT carrito_libro_fk FOREIGN KEY ( libro_id )
         REFERENCES libro ( id );
@@ -113,6 +153,10 @@ ALTER TABLE servicio
 ALTER TABLE servicio
     ADD CONSTRAINT servicio_tecnico_fk FOREIGN KEY ( rut_tecnico )
         REFERENCES tecnico ( rut_tecnico );
+
+ALTER TABLE servicio
+    ADD CONSTRAINT servicio_tipo_servicio_fk FOREIGN KEY ( tipo_servicio )
+        REFERENCES tipo_servicio ( id );
 
 ALTER TABLE venta
     ADD CONSTRAINT venta_cliente_fk FOREIGN KEY ( rut_cliente )
@@ -130,3 +174,6 @@ ALTER TABLE detalle_venta
     ADD CONSTRAINT venta_libro_fk FOREIGN KEY ( venta_libro_id )
         REFERENCES libro ( id );
 
+ALTER TABLE materiales
+    ADD CONSTRAINT materiales_tecnico_fk FOREIGN KEY ( rut_tecnico )
+        REFERENCES tecnico ( rut_tecnico );

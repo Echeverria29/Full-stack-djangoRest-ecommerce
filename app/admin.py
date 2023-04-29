@@ -22,6 +22,19 @@ class carritoAdmin(admin.ModelAdmin):
     search_fields = ['']
     list_per_page = 4
 
+class materialesAdmin(admin.ModelAdmin):
+    list_display = ['id']
+    search_fields = ['id']
+    list_per_page = 4
+
+class tipoAdmin(admin.ModelAdmin):
+    list_display = ['id','tipo']
+    search_fields = ['id']
+    list_per_page = 4
+
+
 admin.site.register(Cliente, ClienteAdmin)
 admin.site.register(Libro, LibroAdmin)
 admin.site.register(Carrito, carritoAdmin)
+admin.site.register(Materiales, materialesAdmin)
+admin.site.register(TipoServicio, tipoAdmin)

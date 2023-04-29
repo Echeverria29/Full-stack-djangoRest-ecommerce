@@ -26,13 +26,6 @@ BEGIN
     FROM dual;
 END;
 
-
-
-
-
-
-
-
 CREATE SEQUENCE venta_seq
 START WITH 1
 INCREMENT BY 1;
@@ -61,9 +54,6 @@ BEGIN
 END;
 
 
-
-
-
 CREATE SEQUENCE pago_seq
 START WITH 1
 INCREMENT BY 1;
@@ -90,4 +80,33 @@ BEGIN
     INTO :new.id
     FROM dual;
 END;
+
+CREATE SEQUENCE tipo_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tipo_trg
+BEFORE INSERT ON tipo_servicio
+FOR EACH ROW
+BEGIN
+    SELECT tipo_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
+CREATE SEQUENCE materiales_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER materiales_trg
+BEFORE INSERT ON materiales
+FOR EACH ROW
+BEGIN
+    SELECT materiales_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
 

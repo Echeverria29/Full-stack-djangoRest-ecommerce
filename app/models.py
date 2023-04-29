@@ -1,22 +1,6 @@
 
 from django.db import models
 
-
-class Tecnico(models.Model):
-    rut_tecnico = models.CharField(primary_key=True, max_length=15)
-    nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50)
-    correo = models.CharField(max_length=80)
-    direccion = models.CharField(max_length=80, blank=True, null=True)
-    telefono = models.CharField(max_length=20, blank=True, null=True)
-    
-    def __str__(self):
-        return self.nombre
-    
-    class Meta:
-        
-        db_table = 'tecnico'
-
 class Cliente(models.Model):
     rut_cliente = models.CharField(primary_key=True, max_length=15)
     nombre = models.CharField(max_length=50)
@@ -35,6 +19,56 @@ class Cliente(models.Model):
        
         db_table = 'cliente'
 
+
+class Tecnico(models.Model):
+    rut_tecnico = models.CharField(primary_key=True, max_length=15)
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    correo = models.CharField(max_length=80)
+    direccion = models.CharField(max_length=80, blank=True, null=True)
+    telefono = models.CharField(max_length=20, blank=True, null=True)
+    
+    def __str__(self):
+        return self.nombre
+    
+    class Meta:
+        
+        db_table = 'tecnico'
+
+
+class Materiales(models.Model):
+    id = models.IntegerField(primary_key=True)
+    acetona = models.IntegerField()
+    agua_destilada = models.IntegerField()
+    aguja_de_tablero = models.IntegerField()
+    alcohol = models.IntegerField()
+    brocha_2cm = models.IntegerField()
+    brocha_4cm = models.IntegerField()
+    cera_virgen = models.IntegerField()
+    cuter = models.IntegerField()
+    franela = models.IntegerField()
+    gasolina_blanca = models.IntegerField()
+    goma_dura = models.IntegerField()
+    goma_suave = models.IntegerField()
+    hilo_canamo = models.IntegerField()
+    hisopos_algodon = models.IntegerField()
+    keratol = models.IntegerField()
+    lija_801_madera = models.IntegerField()
+    papel_japones = models.IntegerField()
+    papel_secante = models.IntegerField()
+    papel_minagris = models.IntegerField()
+    pegamento_unidor = models.IntegerField()
+    periodico = models.IntegerField()
+    plegadera_hueso_madera = models.IntegerField()
+    rut_tecnico = models.ForeignKey(Tecnico, models.CASCADE)
+
+    class Meta:
+        
+        db_table = 'materiales'
+
+
+
+
 class Empleado(models.Model):
     rut_empleado = models.CharField(primary_key=True, max_length=15)
     nombre = models.CharField(max_length=50)
@@ -52,18 +86,30 @@ class Empleado(models.Model):
         
         db_table = 'empleado'
 
+class TipoServicio(models.Model):
+    id = models.IntegerField(primary_key=True)
+    tipo = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.tipo
+    class Meta:
+        
+        db_table = 'tipo_servicio'
+
+
 class Servicio(models.Model):
     id = models.IntegerField(primary_key=True)
     fecha_servicio = models.DateField()
     direccion_servicio = models.CharField(max_length=80)
-    tipo_servicio = models.CharField(max_length=50)
     detalle_servicio = models.CharField(max_length=200)
     rut_tecnico = models.ForeignKey(Tecnico, on_delete=models.CASCADE)
     rut_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-
+    tipo_servicio = models.ForeignKey(TipoServicio,on_delete=models.CASCADE)
     class Meta:
         
         db_table = 'servicio'
+
+
 
 class Venta(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -128,10 +174,6 @@ class DetalleVenta(models.Model):
         
         db_table = 'detalle_venta'
       
-
-
-
-
 
 
 
