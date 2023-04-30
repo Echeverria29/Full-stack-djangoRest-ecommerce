@@ -85,7 +85,10 @@ BEGIN
     FROM dual;
 END;
 
-
+estos procedimientos son para las tablas que tengas que agregar datos pero no tienes 
+porque agregar un id por ejemplo , un cliente pide el servicio pero no tiene porque 
+agregar un id a los datos no le corresponde ahi entra el trigger 
+cuando se quiera insertar datos agrega un id automatico de esa tabla 
 CREATE SEQUENCE servicio_seq
 START WITH 1
 INCREMENT BY 1;

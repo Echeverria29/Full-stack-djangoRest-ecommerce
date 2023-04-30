@@ -38,7 +38,7 @@ class tecnicoAdmin(admin.ModelAdmin):
     list_per_page = 10
 
 class servicioAdmin(admin.ModelAdmin):
-    list_display = ['id','fecha_servicio','direccion_servicio','detalle_servicio']
+    list_display = ['id','fecha_servicio','direccion_servicio','detalle_servicio','tecnico','cliente']
     search_fields = ['id']
     list_per_page = 11
 
