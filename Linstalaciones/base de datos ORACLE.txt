@@ -1,4 +1,5 @@
 CREATE TABLE cliente (
+    id              INTEGER NOT NULL,
     rut_cliente     VARCHAR2(15) NOT NULL,
     nombre          VARCHAR2(50) NOT NULL,
     apellido        VARCHAR2(50) NOT NULL,
@@ -8,9 +9,10 @@ CREATE TABLE cliente (
     numero_tarjeta  NUMBER(10) NOT NULL
 );
 
-ALTER TABLE cliente ADD CONSTRAINT cliente_pk PRIMARY KEY ( rut_cliente );
+ALTER TABLE cliente ADD CONSTRAINT cliente_pk PRIMARY KEY ( id );
 
 CREATE TABLE tecnico (
+    id              INTEGER NOT NULL,
     rut_tecnico  VARCHAR2(15) NOT NULL,
     nombre       VARCHAR2(50) NOT NULL,
     apellido     VARCHAR2(50) NOT NULL,
@@ -19,7 +21,7 @@ CREATE TABLE tecnico (
     telefono     VARCHAR2(20) NOT NULL
 );
 
-ALTER TABLE tecnico ADD CONSTRAINT tecnico_pk PRIMARY KEY ( rut_tecnico );
+ALTER TABLE tecnico ADD CONSTRAINT tecnico_pk PRIMARY KEY ( id );
 
 CREATE TABLE materiales (
     id                      INTEGER NOT NULL,
@@ -45,12 +47,13 @@ CREATE TABLE materiales (
     pegamento_unidor        NUMBER(10) NOT NULL,
     periodico               NUMBER(10) NOT NULL,
     plegadera_hueso_madera  NUMBER(10) NOT NULL,
-    rut_tecnico             VARCHAR2(15) NOT NULL
+    tecnico_id              INTEGER NOT NULL
 );
 
 ALTER TABLE materiales ADD CONSTRAINT materiales_pk PRIMARY KEY ( id );
 
 CREATE TABLE empleado (
+     id                      INTEGER NOT NULL,
     rut_empleado  VARCHAR2(15) NOT NULL,
     nombre        VARCHAR2(50) NOT NULL,
     apellido      VARCHAR2(50) NOT NULL,
@@ -61,15 +64,15 @@ CREATE TABLE empleado (
     departamento  VARCHAR2(50) NOT NULL
 );
 
-ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( rut_empleado );
+ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( id );
 
-CREATE TABLE tipo_servicio (
+CREATE TABLE tipo (
     id           INTEGER NOT NULL,
     tipo         VARCHAR2(40) NOT NULL
     
 );
 
-ALTER TABLE tipo_servicio ADD CONSTRAINT tipo_servicio_pk PRIMARY KEY ( id );
+ALTER TABLE tipo ADD CONSTRAINT tipo_pk PRIMARY KEY ( id );
 
 
 CREATE TABLE servicio (
@@ -77,9 +80,9 @@ CREATE TABLE servicio (
     fecha_servicio      DATE NOT NULL,
     direccion_servicio  VARCHAR2(80) NOT NULL,
     detalle_servicio    VARCHAR2(150) NOT NULL,
-    rut_tecnico         VARCHAR2(15) NOT NULL,
-    rut_cliente         VARCHAR2(15) NOT NULL,
-	tipo_servicio    INTEGER NOT NULL
+     cliente_id           INTEGER NOT NULL,
+     tecnico_id           INTEGER NOT NULL,
+	tipo_id            INTEGER NOT NULL
 );
 
 ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( id );
@@ -89,8 +92,8 @@ ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( id );
 CREATE TABLE venta (
     id      INTEGER NOT NULL,
     fecha_venta   DATE NOT NULL,
-    rut_cliente   VARCHAR2(15) NOT NULL,
-    rut_empleado  VARCHAR2(15) NOT NULL
+     cliente_id                      INTEGER NOT NULL,
+     empleado_id                      INTEGER NOT NULL
 );
 
 ALTER TABLE venta ADD CONSTRAINT venta_pk PRIMARY KEY ( id );
@@ -147,24 +150,24 @@ ALTER TABLE pago
         REFERENCES venta ( id );
 
 ALTER TABLE servicio
-    ADD CONSTRAINT servicio_cliente_fk FOREIGN KEY ( rut_cliente )
-        REFERENCES cliente ( rut_cliente );
+    ADD CONSTRAINT servicio_cliente_fk FOREIGN KEY ( cliente_id )
+        REFERENCES cliente ( id );
 
 ALTER TABLE servicio
-    ADD CONSTRAINT servicio_tecnico_fk FOREIGN KEY ( rut_tecnico )
-        REFERENCES tecnico ( rut_tecnico );
+    ADD CONSTRAINT servicio_tecnico_fk FOREIGN KEY ( tecnico_id )
+        REFERENCES tecnico ( id );
 
 ALTER TABLE servicio
-    ADD CONSTRAINT servicio_tipo_servicio_fk FOREIGN KEY ( tipo_servicio )
-        REFERENCES tipo_servicio ( id );
+    ADD CONSTRAINT servicio_tipo_fk FOREIGN KEY ( tipo_id )
+        REFERENCES tipo ( id );
 
 ALTER TABLE venta
-    ADD CONSTRAINT venta_cliente_fk FOREIGN KEY ( rut_cliente )
-        REFERENCES cliente ( rut_cliente );
+    ADD CONSTRAINT venta_cliente_fk FOREIGN KEY ( cliente_id )
+        REFERENCES cliente ( id );
 
 ALTER TABLE venta
-    ADD CONSTRAINT venta_empleado_fk FOREIGN KEY ( rut_empleado )
-        REFERENCES empleado ( rut_empleado );
+    ADD CONSTRAINT venta_empleado_fk FOREIGN KEY ( empleado_id )
+        REFERENCES empleado ( id );
 
 ALTER TABLE detalle_venta
     ADD CONSTRAINT venta_fk FOREIGN KEY ( venta_venta_id )
@@ -175,5 +178,5 @@ ALTER TABLE detalle_venta
         REFERENCES libro ( id );
 
 ALTER TABLE materiales
-    ADD CONSTRAINT materiales_tecnico_fk FOREIGN KEY ( rut_tecnico )
-        REFERENCES tecnico ( rut_tecnico );
+    ADD CONSTRAINT materiales_tecnico_fk FOREIGN KEY ( tecnico_id )
+        REFERENCES tecnico ( id );

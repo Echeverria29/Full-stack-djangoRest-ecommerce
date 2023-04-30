@@ -1,3 +1,49 @@
+CREATE SEQUENCE cliente_seq
+START WITH 1
+INCREMENT BY 1;
+
+
+CREATE OR REPLACE TRIGGER cliente_trg
+BEFORE INSERT ON cliente
+FOR EACH ROW
+BEGIN
+    SELECT cliente_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+CREATE SEQUENCE empleado_seq
+START WITH 1
+INCREMENT BY 1;
+
+
+CREATE OR REPLACE TRIGGER empleado_trg
+BEFORE INSERT ON empleado
+FOR EACH ROW
+BEGIN
+    SELECT empleado_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+CREATE SEQUENCE tecnico_seq
+START WITH 1
+INCREMENT BY 1;
+
+
+CREATE OR REPLACE TRIGGER tecnico_trg
+BEFORE INSERT ON tecnico
+FOR EACH ROW
+BEGIN
+    SELECT tecnico_seq.NEXTVAL
+    INTO :new.id
+    FROM dual;
+END;
+
+
+
+
+
 CREATE SEQUENCE libro_seq
 START WITH 1
 INCREMENT BY 1;

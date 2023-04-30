@@ -85,8 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/orcl',
-        'USER': 'libreria',
-        'PASSWORD': 'libreria',
+        'USER': 'libreria1',
+        'PASSWORD': 'libreria1',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
@@ -141,5 +141,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # enviAR MENSAJES CON DJANGO
 MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
-LOGIN_REDIRECT_URL = '/index/'
+LOGIN_REDIRECT_URL = 'listar_cliente'
 LOGOUT_REDIRECT_URL = '/index/'

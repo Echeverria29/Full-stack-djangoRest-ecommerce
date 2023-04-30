@@ -2,7 +2,8 @@
 from django.db import models
 
 class Cliente(models.Model):
-    rut_cliente = models.CharField(primary_key=True, max_length=15)
+    id = models.IntegerField(primary_key=True)
+    rut_cliente = models.CharField( max_length=15)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     correo = models.CharField(max_length=80)
@@ -12,7 +13,7 @@ class Cliente(models.Model):
 
 
     def __str__(self):
-      return self.nombre
+      return self.rut_cliente
 
 
     class Meta:
@@ -21,15 +22,16 @@ class Cliente(models.Model):
 
 
 class Tecnico(models.Model):
-    rut_tecnico = models.CharField(primary_key=True, max_length=15)
+    id = models.IntegerField(primary_key=True)
+    rut_tecnico = models.CharField( max_length=15)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     correo = models.CharField(max_length=80)
-    direccion = models.CharField(max_length=80, blank=True, null=True)
-    telefono = models.CharField(max_length=20, blank=True, null=True)
+    direccion = models.CharField(max_length=80)
+    telefono = models.CharField(max_length=20)
     
     def __str__(self):
-        return self.nombre
+        return self.rut_tecnico
     
     class Meta:
         
@@ -60,7 +62,7 @@ class Materiales(models.Model):
     pegamento_unidor = models.IntegerField()
     periodico = models.IntegerField()
     plegadera_hueso_madera = models.IntegerField()
-    rut_tecnico = models.ForeignKey(Tecnico, models.CASCADE)
+    tecnico = models.ForeignKey(Tecnico, models.CASCADE)
 
     class Meta:
         
@@ -70,23 +72,24 @@ class Materiales(models.Model):
 
 
 class Empleado(models.Model):
-    rut_empleado = models.CharField(primary_key=True, max_length=15)
+    id = models.IntegerField(primary_key=True)
+    rut_empleado = models.CharField( max_length=15)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     correo = models.CharField(max_length=80)
-    direccion = models.CharField(max_length=80, blank=True, null=True)
-    telefono = models.CharField(max_length=20, blank=True, null=True)
+    direccion = models.CharField(max_length=80)
+    telefono = models.CharField(max_length=20)
     cargo = models.CharField(max_length=50)
     departamento = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.nombre
+        return self.rut_empleado
   
     class Meta:
         
         db_table = 'empleado'
 
-class TipoServicio(models.Model):
+class Tipo(models.Model):
     id = models.IntegerField(primary_key=True)
     tipo = models.CharField(max_length=40)
 
@@ -94,7 +97,7 @@ class TipoServicio(models.Model):
         return self.tipo
     class Meta:
         
-        db_table = 'tipo_servicio'
+        db_table = 'tipo'
 
 
 class Servicio(models.Model):
@@ -102,9 +105,9 @@ class Servicio(models.Model):
     fecha_servicio = models.DateField()
     direccion_servicio = models.CharField(max_length=80)
     detalle_servicio = models.CharField(max_length=200)
-    rut_tecnico = models.ForeignKey(Tecnico, on_delete=models.CASCADE)
-    rut_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    tipo_servicio = models.ForeignKey(TipoServicio,on_delete=models.CASCADE)
+    tecnico = models.ForeignKey(Tecnico, on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    tipo = models.ForeignKey(Tipo,on_delete=models.CASCADE)
     class Meta:
         
         db_table = 'servicio'
@@ -114,9 +117,8 @@ class Servicio(models.Model):
 class Venta(models.Model):
     id = models.IntegerField(primary_key=True)
     fecha_venta = models.DateField()
-    total = models.IntegerField()
-    rut_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    rut_empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
 
     class Meta:
         
@@ -125,9 +127,9 @@ class Venta(models.Model):
 class Pago(models.Model):
     id = models.IntegerField(primary_key=True)
     total = models.IntegerField()
-    id_venta = models.OneToOneField(Venta, on_delete=models.CASCADE, db_column='id_venta')
-    tipo_pago = models.CharField(max_length=50)
-
+    venta = models.ForeignKey(Venta, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.total
     class Meta:
        
         db_table = 'pago'
@@ -141,6 +143,9 @@ class Libro(models.Model):
     precio = models.IntegerField()
     stock = models.IntegerField()
     proveedor = models.CharField(max_length=50)
+
+    def stockfinal(self):
+      return self.stock - self.carrito.cantidad
 
     def __str__(self):
       return self.nombre
@@ -167,14 +172,13 @@ class Carrito(models.Model):
 
 class DetalleVenta(models.Model):
     id = models.IntegerField(primary_key=True)
-    venta_venta_id = models.ForeignKey(Venta, on_delete=models.CASCADE)  
-    venta_libro_id = models.ForeignKey(Libro, on_delete=models.CASCADE)
+    venta = models.ForeignKey(Venta, on_delete=models.CASCADE)  
+    libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
 
     class Meta:
         
         db_table = 'detalle_venta'
       
-
 
 
 
