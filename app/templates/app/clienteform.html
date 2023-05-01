@@ -40,11 +40,7 @@
   <!--CONTAINER QUE TIENE ADENTRO LAS 3 IMAGENES POR SEPARADO OCUPANDO LOS 12 ESPACIOS DE LA PAGINA-->
   <div class="m-3 container-fluid">
     <div class="row">
-      <div>
-        <h6>Formato de la fecha: DD/MM/YYY</h6>
-      </div>
       {% load crispy_forms_tags %}
-
       <div class="col-sm-4">
         <form action="" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
@@ -59,7 +55,7 @@
           <!-- <p>{{ msj }}</p>  -->
           <script>
             Swal.fire({
-              title: "Datos enviados!",
+              title: "Datos guardados!",
               text: "{{ msj }}",
               icon: "success",
               showConfirmButton: false,
@@ -74,14 +70,9 @@
 
   <ul class="nav d-flex justify-content-center">
     <li class="nav-item d-flex justify-content-center">
-      <a
-        class="nav-link"
-        href="../listar_cliente"
-        data-bs-toggle="tooltip"
-        title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
-        >Volver al perfil</a
-      >
+      <a class="nav-link" href="../listar_cliente">Volver al perfil</a>
     </li>
   </ul>
 </div>
+
 {% endblock %}

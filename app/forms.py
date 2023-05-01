@@ -27,7 +27,7 @@ class AgregarAlCarritoForm(forms.Form):
       
         fields = ['libro_id','cantidad']
 
-
+#formulario para que el cliente agrege sus datos , sin el id esta programado en  views para que no se coloque
 class ClienteForm(ModelForm):
    
     rut_cliente = forms.CharField(min_length=3 ,max_length=15)
@@ -42,10 +42,10 @@ class ClienteForm(ModelForm):
         model = Cliente
         fields = ['rut_cliente','nombre','apellido','correo','direccion','telefono', 'numero_tarjeta']
 
-
+#formulario para solicitar el servicio por parte del cliente
 class ServicioForm(ModelForm):
 
-    fecha_servicio = forms.DateField()
+    fecha_servicio = forms.DateField(input_formats=['%d/%m/%Y'])
     direccion_servicio = forms.CharField(max_length=80)
     detalle_servicio = forms.CharField(max_length=200)
     tecnico = forms.ModelChoiceField(queryset=Tecnico.objects.all())
@@ -58,3 +58,4 @@ class ServicioForm(ModelForm):
         model = Servicio
       
         fields = ['fecha_servicio','direccion_servicio', 'detalle_servicio', 'tecnico','cliente','tipo']
+

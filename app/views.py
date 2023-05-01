@@ -86,12 +86,42 @@ def eliminar_del_carrito(request, id):
 # LISTAR DATOS DEL CLIENTE
 @login_required
 def listar_cliente(request):
-    
-    clienteall = Cliente.objects.all()
+    clientes = Cliente.objects.all()
+    cantidad_clientes = clientes.count()
     datos = {
-      'listaCliente' : clienteall
+        'listaCliente': clientes,
+        'cantidad_clientes': cantidad_clientes
     }
-    return render(request,'app/listar_cliente.html',datos)
+    return render(request, 'app/listar_cliente.html', datos)
+
+
+#FORMULARIO PARA AGREGAR DATOS DEL CLIENTE,ESTE AGREGA AUTOMATICAMENTE EL ID SIN QUE EL USUARIO LO TENGA QUE ESCRIBIR
+@login_required
+def clienteform(request):
+    if request.method == 'POST':
+        form = ClienteForm(request.POST)
+        if form.is_valid():
+            # Crea una instancia del modelo Servicio sin especificar el campo "id"
+            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
+            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
+            #ese id sea autoincrementable
+            cliente = Cliente(
+                rut_cliente=form.cleaned_data['rut_cliente'],
+                nombre=form.cleaned_data['nombre'],
+                apellido=form.cleaned_data['apellido'],
+                correo=form.cleaned_data['correo'],
+                direccion=form.cleaned_data['direccion'],
+                telefono=form.cleaned_data['telefono'],
+                numero_tarjeta=form.cleaned_data['numero_tarjeta']
+            )
+            cliente.save()
+            messages.success(request,'Datos agregados correctamente!')
+    else:
+        form = ClienteForm()
+    return render(request, 'app/clienteform.html', {'form': form})
+
+
+
 
 #FORMULARIO PARA MODIFICAR DATOS CLIENTE
 @login_required
@@ -104,12 +134,13 @@ def modificliente (request, id):
         formulario = ClienteForm(data=request.POST, files=request.FILES, instance=usuario)
         if formulario.is_valid():
             formulario.save()
-            messages.success(request, '¡Modificación exitosa!')
+            messages.success(request, '¡Modificación de datos exitosa!')
             datos['form'] = formulario
 
     return render(request, 'app/modificliente.html', datos)
 
 
+#FORMULARIO DE SOLICITAR SERVICIO,ESTE AGREGA AUTOMATICAMENTE EL ID SIN QUE EL USUARIO LO TENGA QUE ESCRIBIR
 @login_required
 def servicioform(request):
     if request.method == 'POST':
@@ -117,6 +148,8 @@ def servicioform(request):
         if form.is_valid():
             # Crea una instancia del modelo Servicio sin especificar el campo "id"
             #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
+            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
+            #ese id sea autoincrementable
             servicio = Servicio(
                 fecha_servicio=form.cleaned_data['fecha_servicio'],
                 direccion_servicio=form.cleaned_data['direccion_servicio'],
@@ -126,6 +159,7 @@ def servicioform(request):
                 tipo=form.cleaned_data['tipo']
             )
             servicio.save()
+            messages.success(request,'Servicio agendado correctamente!')
     else:
         form = ServicioForm()
     return render(request, 'app/servicioform.html', {'form': form})

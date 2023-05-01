@@ -103,6 +103,25 @@
             <tbody>
               <tr>
                 <td>
+                  {% if cantidad_clientes > 0 %}
+                  <a
+                    href="#"
+                    class="btn btn-success bg-success disabled"
+                    data-bs-toggle="tooltip"
+                    title="Ya has agregado tus datos"
+                    >Ya has agregado tus datos</a
+                  >
+                  {% else %}
+                  <a
+                    href="{% url 'clienteform' %}"
+                    class="btn btn-success bg-success"
+                    data-bs-toggle="tooltip"
+                    title="Agrega tus datos"
+                    >Agrega tus datos</a
+                  >
+                  {% endif %} >
+                </td>
+                <td>
                   <a
                     href="{% url 'logout' %}"
                     class="btn btn-danger bg-danger"

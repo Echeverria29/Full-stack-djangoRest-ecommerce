@@ -16,6 +16,7 @@ urlpatterns = [
   path('listar_cliente', listar_cliente, name='listar_cliente'),
   path('modificliente/<int:id>', modificliente, name='modificliente'),
   path('servicioform', servicioform, name='servicioform'),
+  path('clienteform', clienteform, name='clienteform'),
   
 
 
