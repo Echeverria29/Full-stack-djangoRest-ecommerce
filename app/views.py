@@ -17,6 +17,8 @@ from django.contrib.auth.decorators import login_required, permission_required
 def index(request):
   return render(request,'app/index.html')
 
+
+
 #FORMULARIO PARA REGISTRASE A LA PAGINA
 def registro(request):
     
@@ -163,3 +165,14 @@ def servicioform(request):
     else:
         form = ServicioForm()
     return render(request, 'app/servicioform.html', {'form': form})
+
+
+@login_required
+def listar_servicio(request):
+    servicio = Servicio.objects.all()
+    tecnico= Tecnico.objects.all()
+    datos = {
+        'listaServicio': servicio,
+        'listaTecnico'  :tecnico,
+    }
+    return render(request, 'app/listar_servicio.html', datos)
