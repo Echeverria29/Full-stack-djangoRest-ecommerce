@@ -1,5 +1,0 @@
-
-Insert into LIBRERIA1.TECNICO (RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('18354934-0','orlando','echeverria','orlando_tecnico@libreriaimagina.cl','los timbales 232','+5693124587');
-Insert into LIBRERIA1.TIPO (ID,TIPO) values ('2','reparacion');
-Insert into LIBRERIA1.TIPO (ID,TIPO) values ('1','mantenimiento');
-Insert into LIBRERIA1.CLIENTE (RUT_CLIENTE,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,NUMERO_TARJETA) values ('12469180-k','romaney','hernandez','roma@gmail.com',null,null,'289892892');

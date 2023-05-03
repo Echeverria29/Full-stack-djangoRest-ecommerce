@@ -1,0 +1,221 @@
+CREATE SEQUENCE carrito_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER carrito_trg
+BEFORE INSERT ON carrito
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT carrito_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+----
+CREATE SEQUENCE cliente_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER cliente_trg
+BEFORE INSERT ON cliente
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT cliente_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+-----
+CREATE SEQUENCE cotizaciones_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER cotizaciones_trg
+BEFORE INSERT ON cotizaciones
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT cotizaciones_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+------------
+CREATE SEQUENCE detalle_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER detalle_trg
+BEFORE INSERT ON detalle_venta
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT detalle_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+----------------
+CREATE SEQUENCE empleado_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER empleado_trg
+BEFORE INSERT ON empleado
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT empleado_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+--------------------
+CREATE SEQUENCE libro_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER libro_trg
+BEFORE INSERT ON libro
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT libro_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+---------------------
+CREATE SEQUENCE materiales_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER materiales_trg
+BEFORE INSERT ON materiales
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT materiales_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+--------------------------
+CREATE SEQUENCE pago_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER pago_trg
+BEFORE INSERT ON pago
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT pago_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+---------------------------------
+CREATE SEQUENCE servicio_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER servicio_trg
+BEFORE INSERT ON servicio
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT servicio_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+
+----------------------------------
+CREATE SEQUENCE tecnico_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tecnico_trg
+BEFORE INSERT ON tecnico
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT tecnico_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+-----------------------------------------------
+CREATE SEQUENCE tipo_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tipo_trg
+BEFORE INSERT ON tipo
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT tipo_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+
+-------------------------------------------
+CREATE SEQUENCE venta_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER venta_trg
+BEFORE INSERT ON venta
+FOR EACH ROW
+DECLARE
+  next_id INTEGER;
+BEGIN
+  SELECT venta_seq.NEXTVAL
+  INTO next_id
+  FROM dual
+  FOR UPDATE;
+
+  :new.id := next_id;
+END;
+
+
+
+

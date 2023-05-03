@@ -1,47 +1,14 @@
 {% extends 'app/base.html' %} {% block contenido %}
-<header class="header" id="header">
-  <nav class="navbar navbar-expand-sm bg-info navbar-light">
-    <div class="container-fluid">
-      <img
-        src="../static/app/img/libro.png "
-        alt=""
-        style="width: 50px; border-radius: 50%"
-      />
-      <!--border-raduis le da forma circular al icono -->
+{% block navbar %}
+  {% include 'app/basecliente.html' %}
+{% endblock %}
 
-      <!--AQUI SE ENCUENTRA EL BOTON QUE SE DESPLIEGA HACIA ABAJO EN EL NAVBAR CON SU RESPECTVIOS LINKS-->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavbar"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../lista_libros">¡ Ir a la tienda !</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="../ver_carrito">Ver mi carrito </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<!--DENTRO DE HEADER VA EL NAVBAR QUE ES LA BARRA DE NAVEGACION SUPERIOR-->
 <div class="main container-fluid">
   <!--CONTAINER QUE TIENE ADENTRO LAS 3 IMAGENES POR SEPARADO OCUPANDO LOS 12 ESPACIOS DE LA PAGINA-->
   <div class="m-3 container-fluid">
     <div class="row">
       <div>
-        <h6>Formato de la fecha: DD/MM/YYY</h6>
+        
       </div>
       {% load crispy_forms_tags %}
 

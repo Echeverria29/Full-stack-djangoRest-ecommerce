@@ -44,18 +44,14 @@ class ClienteForm(ModelForm):
 
 #formulario para solicitar el servicio por parte del cliente
 class ServicioForm(ModelForm):
-
-    fecha_servicio = forms.DateField(input_formats=['%d/%m/%Y'])
+    fecha_servicio = forms.DateField(widget=forms.DateInput(attrs={'type': 'date', 'format': 'yyyy-mm-dd'}),input_formats=['%Y-%m-%d'])
+    hora_servicio = forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time'}), input_formats=['%H:%M'])
     direccion_servicio = forms.CharField(max_length=80)
     detalle_servicio = forms.CharField(max_length=200)
     tecnico = forms.ModelChoiceField(queryset=Tecnico.objects.all())
     cliente = forms.ModelChoiceField(queryset=Cliente.objects.all())
     tipo = forms.ModelChoiceField(queryset=Tipo.objects.all())
-    
 
     class Meta:
-        
         model = Servicio
-      
-        fields = ['fecha_servicio','direccion_servicio', 'detalle_servicio', 'tecnico','cliente','tipo']
-
+        fields = ['fecha_servicio','hora_servicio','direccion_servicio', 'detalle_servicio', 'tecnico','cliente','tipo']

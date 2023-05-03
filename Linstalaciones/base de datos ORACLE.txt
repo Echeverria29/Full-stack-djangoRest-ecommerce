@@ -11,6 +11,18 @@ CREATE TABLE cliente (
 
 ALTER TABLE cliente ADD CONSTRAINT cliente_pk PRIMARY KEY ( id );
 
+CREATE TABLE cotizaciones (
+    id          INTEGER NOT NULL,
+    fecha       DATE NOT NULL,
+    hora        DATE NOT NULL,
+    detalle     VARCHAR2(200) NOT NULL,
+    cliente_id  INTEGER NOT NULL
+);
+
+ALTER TABLE cotizaciones ADD CONSTRAINT cotizaciones_pk PRIMARY KEY ( id );
+
+
+
 CREATE TABLE tecnico (
     id              INTEGER NOT NULL,
     rut_tecnico  VARCHAR2(15) NOT NULL,
@@ -66,6 +78,17 @@ CREATE TABLE empleado (
 
 ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( id );
 
+CREATE TABLE gestion_cotizaciones (
+    id               INTEGER NOT NULL,
+    fecha_respuesta  DATE NOT NULL,
+    hora_respuesta   DATE NOT NULL,
+    detalle          VARCHAR2(200) NOT NULL,
+    empleado_id      INTEGER NOT NULL
+);
+
+ALTER TABLE gestion_cotizaciones ADD CONSTRAINT gestion_cotizaciones_pk PRIMARY KEY ( id );
+
+
 CREATE TABLE tipo (
     id           INTEGER NOT NULL,
     tipo         VARCHAR2(40) NOT NULL
@@ -78,6 +101,7 @@ ALTER TABLE tipo ADD CONSTRAINT tipo_pk PRIMARY KEY ( id );
 CREATE TABLE servicio (
     id         INTEGER NOT NULL,
     fecha_servicio      DATE NOT NULL,
+ hora_servicio       DATE NOT NULL,
     direccion_servicio  VARCHAR2(80) NOT NULL,
     detalle_servicio    VARCHAR2(150) NOT NULL,
      cliente_id           INTEGER NOT NULL,
@@ -92,6 +116,7 @@ ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( id );
 CREATE TABLE venta (
     id      INTEGER NOT NULL,
     fecha_venta   DATE NOT NULL,
+ hora_venta       DATE NOT NULL,
      cliente_id                      INTEGER NOT NULL,
      empleado_id                      INTEGER NOT NULL
 );
@@ -138,8 +163,13 @@ CREATE TABLE detalle_venta (
 
 ALTER TABLE detalle_venta ADD CONSTRAINT detalle_pk PRIMARY KEY ( id);
 
+ALTER TABLE gestion_cotizaciones
+    ADD CONSTRAINT ges_cotiza_empleado_fk FOREIGN KEY ( empleado_id )
+        REFERENCES empleado ( id );
 
-
+ALTER TABLE cotizaciones
+    ADD CONSTRAINT cotizaciones_cliente_fk FOREIGN KEY ( cliente_id )
+        REFERENCES cliente ( id );
 
 ALTER TABLE carrito
     ADD CONSTRAINT carrito_libro_fk FOREIGN KEY ( libro_id )

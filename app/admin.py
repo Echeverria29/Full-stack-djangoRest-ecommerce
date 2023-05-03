@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from django import forms
 from .models import *
 
 class ClienteAdmin(admin.ModelAdmin):
@@ -38,22 +38,25 @@ class tecnicoAdmin(admin.ModelAdmin):
     list_per_page = 10
 
 class servicioAdmin(admin.ModelAdmin):
-    list_display = ['id','fecha_servicio','direccion_servicio','detalle_servicio','tecnico','cliente']
+    list_display = ['id','fecha_servicio','hora_servicio','direccion_servicio','detalle_servicio','tecnico','cliente']
     search_fields = ['id']
     list_per_page = 11
 
 class ventaAdmin(admin.ModelAdmin):
-    list_display = ['id','fecha_venta']
+    list_display = ['id','cliente_id','empleado_id']
     search_fields = ['id']
     list_per_page = 12
 
 
 class pagoAdmin(admin.ModelAdmin):
-    list_display = ['id','total']
+    list_display = ['id','total','venta_id']
     search_fields = ['id']
     list_per_page = 13
 
-
+class cotizacionesAdmin(admin.ModelAdmin):
+    list_display = ['id','detalle','cliente_id']
+    search_fields = ['id']
+    list_per_page = 14
 
 
 admin.site.register(Cliente, ClienteAdmin)
@@ -66,3 +69,4 @@ admin.site.register(Venta, ventaAdmin)
 admin.site.register(Carrito, carritoAdmin)
 admin.site.register(Materiales, materialesAdmin)
 admin.site.register(Tipo, tipoAdmin)
+admin.site.register(Cotizaciones,cotizacionesAdmin)

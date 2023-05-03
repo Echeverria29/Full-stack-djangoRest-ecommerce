@@ -154,6 +154,7 @@ def servicioform(request):
             #ese id sea autoincrementable
             servicio = Servicio(
                 fecha_servicio=form.cleaned_data['fecha_servicio'],
+                hora_servicio=form.cleaned_data['hora_servicio'],
                 direccion_servicio=form.cleaned_data['direccion_servicio'],
                 detalle_servicio=form.cleaned_data['detalle_servicio'],
                 tecnico=form.cleaned_data['tecnico'],

@@ -1,0 +1,12 @@
+Insert into PROBANDO.CLIENTE (ID,RUT_CLIENTE,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,NUMERO_TARJETA) values ('1','12469','roma','herna','roma@gmail.com','turque 123','+56965664','1234343');
+
+Insert into PROBANDO.EMPLEADO (ID,RUT_EMPLEADO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,CARGO,DEPARTAMENTO) values ('1','1981781','roberto','bola','r@gmail.com','quillalles 1234','+56965454','vendedor','ventas');
+
+Insert into PROBANDO.TECNICO (ID,RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('1','18354','orla','echeve','or@gmail.com','timbales 1234','+56954543185');
+
+Insert into PROBANDO.TIPO (ID,TIPO) values ('1','mantenimiento');
+Insert into PROBANDO.TIPO (ID,TIPO) values ('2','reparacion');
+
+
+Insert into PROBANDO.LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('1','harry potter','JK rowlling','perseo','20000','30','libreria imagina');
+Insert into PROBANDO.LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos','JRR TOLKIEN','sky','25000','10','alphilia');

@@ -85,8 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/orcl',
-        'USER': 'libreria1',
-        'PASSWORD': 'libreria1',
+        'USER': 'probando',
+        'PASSWORD': 'probando',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
