@@ -14,7 +14,6 @@ ALTER TABLE cliente ADD CONSTRAINT cliente_pk PRIMARY KEY ( id );
 CREATE TABLE cotizaciones (
     id          INTEGER NOT NULL,
     fecha       DATE NOT NULL,
-    hora        DATE NOT NULL,
     detalle     VARCHAR2(200) NOT NULL,
     cliente_id  INTEGER NOT NULL
 );
@@ -37,28 +36,8 @@ ALTER TABLE tecnico ADD CONSTRAINT tecnico_pk PRIMARY KEY ( id );
 
 CREATE TABLE materiales (
     id                      INTEGER NOT NULL,
-    acetona                 NUMBER(10) NOT NULL,
-    agua_destilada          NUMBER(10) NOT NULL,
-    aguja_de_tablero        NUMBER(10) NOT NULL,
-    alcohol                 NUMBER(10) NOT NULL,
-    brocha_2cm              NUMBER(10) NOT NULL,
-    brocha_4cm              NUMBER(10) NOT NULL,
-    cera_virgen             NUMBER(10) NOT NULL,
-    cuter                   NUMBER(10) NOT NULL,
-    franela                 NUMBER(10) NOT NULL,
-    gasolina_blanca         NUMBER(10) NOT NULL,
-    goma_dura               NUMBER(10) NOT NULL,
-    goma_suave              NUMBER(10) NOT NULL,
-    hilo_canamo             NUMBER(10) NOT NULL,
-    hisopos_algodon         NUMBER(10) NOT NULL,
-    keratol                 NUMBER(10) NOT NULL,
-    lija_801_madera         NUMBER(10) NOT NULL,
-    papel_japones           NUMBER(10) NOT NULL,
-    papel_secante           NUMBER(10) NOT NULL,
-    papel_minagris          NUMBER(10) NOT NULL,
-    pegamento_unidor        NUMBER(10) NOT NULL,
-    periodico               NUMBER(10) NOT NULL,
-    plegadera_hueso_madera  NUMBER(10) NOT NULL,
+    nombre                 VARCHAR2(30) NOT NULL,
+    stock		NUMBER(10) NOT NULL,
     tecnico_id              INTEGER NOT NULL
 );
 
@@ -81,7 +60,6 @@ ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( id );
 CREATE TABLE gestion_cotizaciones (
     id               INTEGER NOT NULL,
     fecha_respuesta  DATE NOT NULL,
-    hora_respuesta   DATE NOT NULL,
     detalle          VARCHAR2(200) NOT NULL,
     empleado_id      INTEGER NOT NULL
 );
@@ -101,12 +79,12 @@ ALTER TABLE tipo ADD CONSTRAINT tipo_pk PRIMARY KEY ( id );
 CREATE TABLE servicio (
     id         INTEGER NOT NULL,
     fecha_servicio      DATE NOT NULL,
- hora_servicio       DATE NOT NULL,
     direccion_servicio  VARCHAR2(80) NOT NULL,
     detalle_servicio    VARCHAR2(150) NOT NULL,
+	tipo_id            INTEGER NOT NULL,
      cliente_id           INTEGER NOT NULL,
-     tecnico_id           INTEGER NOT NULL,
-	tipo_id            INTEGER NOT NULL
+     tecnico_id           INTEGER NOT NULL
+	
 );
 
 ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( id );
@@ -116,7 +94,7 @@ ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( id );
 CREATE TABLE venta (
     id      INTEGER NOT NULL,
     fecha_venta   DATE NOT NULL,
- hora_venta       DATE NOT NULL,
+	total      NUMBER(10) NOT NULL,
      cliente_id                      INTEGER NOT NULL,
      empleado_id                      INTEGER NOT NULL
 );

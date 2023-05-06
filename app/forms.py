@@ -5,7 +5,7 @@ from .models import *
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.forms import ValidationError
-
+from datetime import datetime, time
 
 #formulario para registrarse
 class RegistroUsuarioForm(UserCreationForm):
@@ -42,10 +42,24 @@ class ClienteForm(ModelForm):
         model = Cliente
         fields = ['rut_cliente','nombre','apellido','correo','direccion','telefono', 'numero_tarjeta']
 
+class TecnicoForm(ModelForm):
+   
+    rut_tecnico = forms.CharField(min_length=3 ,max_length=15)
+    nombre = forms.CharField(min_length=3 ,max_length=50)
+    apellido = forms.CharField(min_length=3 ,max_length=50)
+    correo = forms.CharField(min_length=3 ,max_length=80)
+    direccion = forms.CharField(min_length=3 ,max_length=80,required=False)
+    telefono = forms.CharField(min_length=3 ,max_length=20,required=False)
+    
+
+    class Meta:
+        model = Tecnico
+        fields = ['rut_tecnico','nombre','apellido','correo','direccion','telefono']
+
+
 #formulario para solicitar el servicio por parte del cliente
 class ServicioForm(ModelForm):
-    fecha_servicio = forms.DateField(widget=forms.DateInput(attrs={'type': 'date', 'format': 'yyyy-mm-dd'}),input_formats=['%Y-%m-%d'])
-    hora_servicio = forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time'}), input_formats=['%H:%M'])
+    fecha_servicio = forms.DateTimeField(widget=forms.DateTimeInput(attrs={'type': 'datetime-local', 'step': '60'}),input_formats=['%Y-%m-%dT%H:%M'])
     direccion_servicio = forms.CharField(max_length=80)
     detalle_servicio = forms.CharField(max_length=200)
     tecnico = forms.ModelChoiceField(queryset=Tecnico.objects.all())
@@ -54,4 +68,4 @@ class ServicioForm(ModelForm):
 
     class Meta:
         model = Servicio
-        fields = ['fecha_servicio','hora_servicio','direccion_servicio', 'detalle_servicio', 'tecnico','cliente','tipo']
+        fields = ['fecha_servicio','direccion_servicio', 'detalle_servicio', 'tecnico','cliente','tipo']

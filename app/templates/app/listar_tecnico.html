@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basecliente.html' %}
+  {% include 'app/basetecnico.html' %}
 {% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
@@ -26,7 +26,7 @@
               </tr>
             </thead>
             <tbody>
-              {% for aux in listaCliente %}
+              {% for aux in listaTecnico %}
 
               <tr>
                 <td>
@@ -40,7 +40,7 @@
                   {% endif %}
                 </td>
 
-                <td>{{aux.rut_cliente}}</td>
+                <td>{{aux.rut_tecnico}}</td>
                 <td>{{aux.nombre}}</td>
                 <td>{{aux.apellido}}</td>
                 <td>{{aux.direccion}}</td>
@@ -49,7 +49,7 @@
                   {{aux.correo}}
                   <div class="d-flex" id="modifi">
                     <a
-                      href="{% url 'modificliente' aux.id %}"
+                      href="{% url 'modifitecnico' aux.id %}"
                       class="btn btn-info btn-sm"
                       data-bs-toggle="tooltip"
                       title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!"
@@ -68,7 +68,7 @@
             <tbody>
               <tr>
                 <td>
-                  {% if cantidad_clientes > 0 %}
+                  {% if cantidad_tecnicos > 0 %}
                   <a
                     href="#"
                     class="btn btn-success bg-success disabled"
@@ -78,7 +78,7 @@
                   >
                   {% else %}
                   <a
-                    href="{% url 'clienteform' %}"
+                    href="{% url 'tecnicoform' %}"
                     class="btn btn-success bg-success"
                     data-bs-toggle="tooltip"
                     title="Agrega tus datos"

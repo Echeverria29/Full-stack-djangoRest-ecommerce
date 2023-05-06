@@ -22,8 +22,7 @@ class Cliente(models.Model):
 
 class Cotizaciones(models.Model):
     id = models.IntegerField(primary_key=True)
-    fecha_servicio = models.DateField()
-    hora_servicio = models.TimeField()
+    fecha_servicio = models.DateTimeField()
     detalle = models.CharField(max_length=200)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
 
@@ -56,28 +55,8 @@ class Tecnico(models.Model):
 
 class Materiales(models.Model):
     id = models.IntegerField(primary_key=True)
-    acetona = models.IntegerField()
-    agua_destilada = models.IntegerField()
-    aguja_de_tablero = models.IntegerField()
-    alcohol = models.IntegerField()
-    brocha_2cm = models.IntegerField()
-    brocha_4cm = models.IntegerField()
-    cera_virgen = models.IntegerField()
-    cuter = models.IntegerField()
-    franela = models.IntegerField()
-    gasolina_blanca = models.IntegerField()
-    goma_dura = models.IntegerField()
-    goma_suave = models.IntegerField()
-    hilo_canamo = models.IntegerField()
-    hisopos_algodon = models.IntegerField()
-    keratol = models.IntegerField()
-    lija_801_madera = models.IntegerField()
-    papel_japones = models.IntegerField()
-    papel_secante = models.IntegerField()
-    papel_minagris = models.IntegerField()
-    pegamento_unidor = models.IntegerField()
-    periodico = models.IntegerField()
-    plegadera_hueso_madera = models.IntegerField()
+    nombre = models.CharField( max_length=30)
+    stock = models.IntegerField()
     tecnico = models.ForeignKey(Tecnico, models.CASCADE)
 
     class Meta:
@@ -107,8 +86,7 @@ class Empleado(models.Model):
 
 class GestionCotizaciones(models.Model):
     id = models.IntegerField(primary_key=True)
-    fecha_respuesta = models.DateField()
-    hora_respuesta = models.TimeField()
+    fecha_respuesta = models.DateTimeField()
     detalle = models.CharField(max_length=200)
     empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
 
@@ -130,13 +108,14 @@ class Tipo(models.Model):
 
 class Servicio(models.Model):
     id = models.IntegerField(primary_key=True)
-    fecha_servicio = models.DateField()
-    hora_servicio = models.TimeField()
+    fecha_servicio = models.DateTimeField()
     direccion_servicio = models.CharField(max_length=80)
     detalle_servicio = models.CharField(max_length=200)
-    tecnico = models.ForeignKey(Tecnico, on_delete=models.CASCADE)
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     tipo = models.ForeignKey(Tipo,on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    tecnico = models.ForeignKey(Tecnico, on_delete=models.CASCADE)
+    
+    
     
     class Meta:
         db_table = 'servicio'
@@ -144,8 +123,8 @@ class Servicio(models.Model):
 
 class Venta(models.Model):
     id = models.IntegerField(primary_key=True)
-    fecha_servicio = models.DateField()
-    hora_servicio = models.TimeField()
+    fecha_venta = models.DateField()
+    total = models.IntegerField()
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
 

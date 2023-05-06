@@ -12,7 +12,7 @@ from django.contrib.auth import authenticate, login
 from django.db.models import Q
 from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required, permission_required
-
+from django.core.exceptions import ValidationError
 
 def index(request):
   return render(request,'app/index.html')
@@ -84,6 +84,56 @@ def eliminar_del_carrito(request, id):
         messages.success(request, f'Se ha eliminado "{carrito.libro.nombre}" del carrito.')
     return redirect('ver_carrito')
 
+@login_required
+def listar_tecnico(request):
+    tecnicos = Tecnico.objects.all()
+    cantidad_tecnicos = tecnicos.count()
+    datos = {
+        'listaTecnico': tecnicos,
+        'cantidad_tecnicos': cantidad_tecnicos
+    }
+    return render(request, 'app/listar_tecnico.html', datos)
+
+
+@login_required
+def tecnicoform(request):
+    if request.method == 'POST':
+        form = TecnicoForm(request.POST)
+        if form.is_valid():
+            # Crea una instancia del modelo Servicio sin especificar el campo "id"
+            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
+            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
+            #ese id sea autoincrementable
+            tecnico = Tecnico(
+                rut_tecnico=form.cleaned_data['rut_tecnico'],
+                nombre=form.cleaned_data['nombre'],
+                apellido=form.cleaned_data['apellido'],
+                correo=form.cleaned_data['correo'],
+                direccion=form.cleaned_data['direccion'],
+                telefono=form.cleaned_data['telefono'],
+                
+            )
+            tecnico.save()
+            messages.success(request,'Datos agregados correctamente!')
+    else:
+        form = TecnicoForm()
+    return render(request, 'app/tecnicoform.html', {'form': form})
+
+@login_required
+def modifitecnico (request, id):
+    usuario = Tecnico.objects.get(id=id)
+    datos = {
+        'form' : TecnicoForm(instance=usuario)
+    }
+    if request.method == 'POST':
+        formulario = TecnicoForm(data=request.POST, files=request.FILES, instance=usuario)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modifitecnico.html', datos)
+
 
 # LISTAR DATOS DEL CLIENTE
 @login_required
@@ -144,29 +194,41 @@ def modificliente (request, id):
 
 #FORMULARIO DE SOLICITAR SERVICIO,ESTE AGREGA AUTOMATICAMENTE EL ID SIN QUE EL USUARIO LO TENGA QUE ESCRIBIR
 @login_required
+
+
 def servicioform(request):
     if request.method == 'POST':
         form = ServicioForm(request.POST)
         if form.is_valid():
-            # Crea una instancia del modelo Servicio sin especificar el campo "id"
-            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
-            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
-            #ese id sea autoincrementable
-            servicio = Servicio(
-                fecha_servicio=form.cleaned_data['fecha_servicio'],
-                hora_servicio=form.cleaned_data['hora_servicio'],
-                direccion_servicio=form.cleaned_data['direccion_servicio'],
-                detalle_servicio=form.cleaned_data['detalle_servicio'],
-                tecnico=form.cleaned_data['tecnico'],
-                cliente=form.cleaned_data['cliente'],
-                tipo=form.cleaned_data['tipo']
-            )
-            servicio.save()
-            messages.success(request,'Servicio agendado correctamente!')
+            # Verifica si la fecha y hora ya está ocupada
+            fecha_servicio = form.cleaned_data['fecha_servicio']
+            if Servicio.objects.filter(fecha_servicio=fecha_servicio).exists():
+                form.add_error('fecha_servicio', 'Esta hora ya está ocupada, por favor elija otra hora.')
+            else:
+                # Crea una instancia del modelo Servicio sin especificar el campo "id"
+                # esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
+                # digando agrega igual ese id . idealmente realizar trigger en base de datos para que
+                # ese id sea autoincrementable
+                servicio = Servicio(
+                    fecha_servicio=fecha_servicio,
+                    direccion_servicio=form.cleaned_data['direccion_servicio'],
+                    detalle_servicio=form.cleaned_data['detalle_servicio'],
+                    tecnico=form.cleaned_data['tecnico'],
+                    cliente=form.cleaned_data['cliente'],
+                    tipo=form.cleaned_data['tipo']
+                )
+                servicio.save()
+                messages.success(request, 'Servicio agendado correctamente!')
     else:
         form = ServicioForm()
     return render(request, 'app/servicioform.html', {'form': form})
 
+
+def clean_fecha_servicio(self):
+        fecha_servicio = self.cleaned_data['fecha_servicio']
+        if Servicio.objects.filter(fecha_servicio=fecha_servicio).exists():
+            raise ValidationError("Esta hora ya está ocupada, por favor elija otra hora.")
+        return fecha_servicio
 
 @login_required
 def listar_servicio(request):
