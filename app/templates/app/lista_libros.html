@@ -4,75 +4,77 @@
   {% include 'app/basecliente.html' %}
   {% endblock %}
 
-<div class="main container-fluid">
-  <div class="m-1 container-fluid">
-    <div class="row">
-      {% for libro in libros %}
-      <div class="col-sm-4 justify-content-center d-flex">
-        <div class="m-3 card" style="width: 400px">
-          {% if libro.imagen %}
-          <img src=" aux.imagen.url " width="80%" />
-          {% else %}
-          <img
-            src="../static/app/img/imagenlibros.jpg"
-            class="img-fluid item-img w-0 mb-0"
-          />
-          {% endif %}
-          <div class="card-body">
-            <div class="d-flex justify-content-center m-1">
-              <h4 class="card-title">{{libro.nombre}}</h4>
-            </div>
-
-            <div class="d-flex justify-content-center m-1">
-              <p class="card-text">Autor: {{libro.autor}}</p>
-            </div>
-            <div class="d-flex justify-content-center m-1">
-              <p class="card-text">Editorial: {{libro.editorial}}</p>
-            </div>
-            <div class="d-flex justify-content-center m-1">
-              <p class="card-text">Stock: {{libro.stock}}</p>
-            </div>
-            <div class="d-flex justify-content-center m-1">
-              <p class="card-text">
-                <strong>Precio: ${{ libro.precio }}</strong>
-              </p>
-            </div>
-            <form method="POST" action="{% url 'agregar_al_carrito' %}">
-              {% csrf_token %}
-              <input type="hidden" name="libro_id" value="{{ libro.id }}" />
+  <div class="main container-fluid">
+    <div class="m-1 container-fluid">
+      <div class="row">
+        {% for libro in libros %}
+        <div class="col-sm-4">
+          <div class="m-3 card" style="width: 400px">
+            {% if libro.imagen %}
+            <img src="{{ libro.imagen.url }}" class="card-img-top" />
+            {% else %}
+            <img
+              src="../static/app/img/imagenlibros.jpg"
+              class="card-img-top" style="width: 100%; max-width: 100%;"
+            />
+            {% endif %}
+            <div class="card-body">
               <div class="d-flex justify-content-center m-1">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" value="{{
-                carrito.cantidad|default_if_none:"1" }}" min="1" />
+                <h4 class="card-title">{{libro.nombre}}</h4>
               </div>
-              <div class="d-flex justify-content-center m-3">
-                <button type="submit" class="btn btn-success btn-sm">
-                  Agregar al carrito
-                </button>
-                {% if messages %}
-
-                <!-- <script>alert(1) </script> -->
-                {% for msj in messages %}
-                <!-- <script>alert(2) </script>  -->
-                <!-- <p>{{ msj }}</p>  -->
-                <script>
-                  Swal.fire({
-                    title: "Libro agregado al carrito correctamente!",
-                    text: "{{ msj }}",
-                    icon: "success",
-                    showConfirmButton: false,
-                    timer: 2000,
-                  });
-                </script>
-                {% endfor %} {% endif %}
+  
+              <div class="d-flex justify-content-center m-1">
+                <p class="card-text">Autor: {{libro.autor}}</p>
               </div>
-            </form>
+              <div class="d-flex justify-content-center m-1">
+                <p class="card-text">Editorial: {{libro.editorial}}</p>
+              </div>
+              <div class="d-flex justify-content-center m-1">
+                <p class="card-text">Stock: {{libro.stock}}</p>
+              </div>
+              <div class="d-flex justify-content-center m-1">
+                <p class="card-text">
+                  <strong>Precio: ${{ libro.precio }}</strong>
+                </p>
+              </div>
+              <form method="POST" action="{% url 'agregar_al_carrito' %}">
+                {% csrf_token %}
+                <input type="hidden" name="libro_id" value="{{ libro.id }}" />
+                <div class="d-flex justify-content-center m-1">
+                  <label for="cantidad">Cantidad:</label>
+                  <input type="number" id="cantidad" name="cantidad" value="{{
+                  carrito.cantidad|default_if_none:"1" }}" min="1" />
+                </div>
+                <div class="d-flex justify-content-center m-3">
+                  <button type="submit" class="btn btn-success btn-sm">
+                    Agregar al carrito
+                  </button>
+                  {% if messages %}
+  
+                  <!-- <script>alert(1) </script> -->
+                  {% for msj in messages %}
+                  <!-- <script>alert(2) </script>  -->
+                  <!-- <p>{{ msj }}</p>  -->
+                  <script>
+                    Swal.fire({
+                      title: "Libro agregado al carrito correctamente!",
+                      text: "{{ msj }}",
+                      icon: "success",
+                      showConfirmButton: false,
+                      timer: 2000,
+                    });
+                  </script>
+                  {% endfor %} {% endif %}
+                </div>
+              </form>
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
-</div>
+
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
     <a
@@ -84,4 +86,4 @@
     >
   </li>
 </ul>
-{% endfor %} {% endblock %}
+{% endblock %}

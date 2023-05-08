@@ -54,9 +54,17 @@ class pagoAdmin(admin.ModelAdmin):
     list_per_page = 13
 
 class cotizacionesAdmin(admin.ModelAdmin):
-    list_display = ['id','detalle','cliente_id']
+    list_display = ['id','fecha','correo','detalle','cliente_id']
     search_fields = ['id']
     list_per_page = 14
+
+class materialesAdmin(admin.ModelAdmin):
+    list_display = ['id','nombre','stock','tecnico_id']
+    search_fields = ['id']
+    list_per_page = 14
+
+
+
 
 
 admin.site.register(Cliente, ClienteAdmin)

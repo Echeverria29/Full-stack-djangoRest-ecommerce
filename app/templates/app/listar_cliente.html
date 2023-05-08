@@ -31,11 +31,11 @@
               <tr>
                 <td>
                   {% if aux.imagen %}
-                  <img src=" aux.imagen.url " width="80%" />
+                  <img src=" aux.imagen.url " />
                   {% else %}
                   <img
                     src="../static/app/img/equipo.png"
-                    class="img-fluid item-img w-50 mb-3"
+                    style="width: 40%; max-width: 80%;"
                   />
                   {% endif %}
                 </td>

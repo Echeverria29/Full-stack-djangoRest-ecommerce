@@ -84,6 +84,33 @@ def eliminar_del_carrito(request, id):
         messages.success(request, f'Se ha eliminado "{carrito.libro.nombre}" del carrito.')
     return redirect('ver_carrito')
 
+
+@login_required
+def listar_personas(request):
+    cliente = Cliente.objects.all()
+
+     
+    datos = {
+        #como dato estas listas van en las paginas listar_...
+        
+        'listaClientes': cliente,
+      
+        
+    }
+    return render(request, 'app/listar_personas.html', datos)
+
+@login_required
+def listar_empleado(request):
+    empleado = Empleado.objects.all()
+    cantidad_empleados = empleado.count()
+    datos = {
+        #como dato estas listas van en las paginas listar_...
+        'listaEmpleado': empleado,
+        'cantidad_empleados': cantidad_empleados
+    }
+    return render(request, 'app/listar_empleado.html', datos)
+
+
 @login_required
 def listar_tecnico(request):
     tecnicos = Tecnico.objects.all()
@@ -93,6 +120,100 @@ def listar_tecnico(request):
         'cantidad_tecnicos': cantidad_tecnicos
     }
     return render(request, 'app/listar_tecnico.html', datos)
+
+@login_required
+def listar_servicio(request):
+    servicio = Servicio.objects.all()
+    tecnico= Tecnico.objects.all()
+    datos = {
+        'listaServicio': servicio,
+        'listaTecnico'  :tecnico,
+    }
+    return render(request, 'app/listar_servicio.html', datos)
+
+@login_required
+def listar_serviciotec(request):
+    servicio = Servicio.objects.all()
+    tecnico= Tecnico.objects.all()
+    datos = {
+        'listaServicio2': servicio,
+        'listaTecnico2'  :tecnico,
+    }
+    return render(request, 'app/listar_serviciotec.html', datos)
+
+@login_required
+def listar_cotizaciones(request):
+    cotizacion = Cotizaciones.objects.all()
+    cliente= Cliente.objects.all()
+    datos = {
+        'listaCotizacion': cotizacion,
+        'listaCliente2'  :cliente,
+    }
+    return render(request, 'app/listar_cotizaciones.html', datos)
+
+@login_required
+def empleadoform(request):
+    if request.method == 'POST':
+        form = EmpleadoForm(request.POST)
+        if form.is_valid():
+            # Crea una instancia del modelo Servicio sin especificar el campo "id"
+            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
+            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
+            #ese id sea autoincrementable
+            empleado = Empleado(
+                rut_empleado=form.cleaned_data['rut_empleado'],
+                nombre=form.cleaned_data['nombre'],
+                apellido=form.cleaned_data['apellido'],
+                correo=form.cleaned_data['correo'],
+                direccion=form.cleaned_data['direccion'],
+                telefono=form.cleaned_data['telefono'],
+                cargo=form.cleaned_data['cargo'],
+                departamento=form.cleaned_data['departamento'],
+                
+            )
+            empleado.save()
+            messages.success(request,'Datos agregados correctamente!')
+    else:
+        form = EmpleadoForm()
+    return render(request, 'app/empleadoform.html', {'form': form})
+
+@login_required
+def modifiempleado (request, id):
+    usuario = Empleado.objects.get(id=id)
+    datos = {
+        'form' : EmpleadoForm(instance=usuario)
+    }
+    if request.method == 'POST':
+        formulario = EmpleadoForm(data=request.POST, files=request.FILES, instance=usuario)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modifiempleado.html', datos)
+
+@login_required
+def modificliempleado (request, id):
+    usuario = Cliente.objects.get(id=id)
+    datos = {
+        'form' : ClienteForm(instance=usuario)
+    }
+    if request.method == 'POST':
+        formulario = ClienteForm(data=request.POST, files=request.FILES, instance=usuario)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modifiempleado.html', datos)
+
+def eliminarpersona(request,id):
+
+  cliemple = Cliente.objects.get(id=id)
+  cliemple.delete()
+  messages.success(request,'Cliente eliminado!')
+
+  return redirect(to="listar_personas")
 
 
 @login_required
@@ -194,8 +315,6 @@ def modificliente (request, id):
 
 #FORMULARIO DE SOLICITAR SERVICIO,ESTE AGREGA AUTOMATICAMENTE EL ID SIN QUE EL USUARIO LO TENGA QUE ESCRIBIR
 @login_required
-
-
 def servicioform(request):
     if request.method == 'POST':
         form = ServicioForm(request.POST)
@@ -204,6 +323,7 @@ def servicioform(request):
             fecha_servicio = form.cleaned_data['fecha_servicio']
             if Servicio.objects.filter(fecha_servicio=fecha_servicio).exists():
                 form.add_error('fecha_servicio', 'Esta hora ya está ocupada, por favor elija otra hora.')
+            
             else:
                 # Crea una instancia del modelo Servicio sin especificar el campo "id"
                 # esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
@@ -224,18 +344,30 @@ def servicioform(request):
     return render(request, 'app/servicioform.html', {'form': form})
 
 
-def clean_fecha_servicio(self):
-        fecha_servicio = self.cleaned_data['fecha_servicio']
-        if Servicio.objects.filter(fecha_servicio=fecha_servicio).exists():
-            raise ValidationError("Esta hora ya está ocupada, por favor elija otra hora.")
-        return fecha_servicio
-
 @login_required
-def listar_servicio(request):
-    servicio = Servicio.objects.all()
-    tecnico= Tecnico.objects.all()
-    datos = {
-        'listaServicio': servicio,
-        'listaTecnico'  :tecnico,
-    }
-    return render(request, 'app/listar_servicio.html', datos)
+def cotizacionesform(request):
+    if request.method == 'POST':
+        form = CotizacionesForm(request.POST)
+        if form.is_valid():
+            # Verifica si la fecha y hora ya está ocupada
+            fecha = form.cleaned_data['fecha']
+            if Cotizaciones.objects.filter(fecha=fecha).exists():
+                form.add_error('fecha', 'Esta hora ya está ocupada, por favor elija otra hora.')
+            
+            else:
+                # Crea una instancia del modelo Servicio sin especificar el campo "id"
+                # esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
+                # digando agrega igual ese id . idealmente realizar trigger en base de datos para que
+                # ese id sea autoincrementable
+                cotizaciones = Cotizaciones(
+                    fecha=form.cleaned_data['fecha'],
+                    correo=form.cleaned_data['correo'],
+                    detalle=form.cleaned_data['detalle'],                  
+                    cliente=form.cleaned_data['cliente'],
+                )
+                cotizaciones.save()
+                messages.success(request, 'Cotizacion enviada correctamente')
+    else:
+        form = CotizacionesForm()
+    return render(request, 'app/cotizacionesform.html', {'form': form})
+

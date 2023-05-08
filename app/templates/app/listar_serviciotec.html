@@ -1,0 +1,64 @@
+{% extends 'app/base.html' %} {% block contenido %}
+{% block navbar %}
+  {% include 'app/basetecnico.html' %}
+{% endblock %}
+<section class="thumbnail 1" id="thumbnail 1">
+  <div class="Thumbnail py-2 bg-light">
+    <!--CONTENEDOR PLOMO QUE ENCIERRA LOS CONTAINER-->
+
+    <div class="container-fluid">
+      <!-- CONTENEDOR-fluid para que el contenedor ocupe los 12 espacios que nos ofrece boostrap  -->
+
+      <div class="row">
+        <!--comando aling aliniea los 3 itemps-->
+        <!--IMAGEN DE LA IZQUIERDA-->
+        <div class="col-sm-10">
+          <table class="table table-condensed table-striped">
+            <thead>
+              <tr class="table-success">
+                <th>Fecha servicio</th>
+                <th>Dirección servicio</th>
+                <th>Detalle servicio</th>
+                <th>Rut tecnico</th>
+                <th>Nombre tecnico</th>
+                <th>Numero de telefono</th>
+             
+              </tr>
+            </thead>
+            <tbody>
+              {% for aux in listaServicio2 %}
+                  {% for x in listaTecnico2 %}
+                      {% if x.rut_tecnico == x.rut_tecnico %}
+                          <tr>
+                              <td>{{ aux.fecha_servicio }}</td>
+                              <td>{{ aux.direccion_servicio }}</td>
+                              <td>{{ aux.detalle_servicio }}</td>
+                              <td>{{ x.rut_tecnico }}</td>
+                              <td>{{ x.nombre }}</td>
+                              <td>{{ x.telefono }}</td>
+                          </tr>
+                      {% endif %}
+                  {% endfor %}
+              {% endfor %}
+          </tbody>
+          
+          
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<ul class="nav d-flex justify-content-center">
+  <li class="nav-item d-flex justify-content-center">
+    <a
+      class="nav-link"
+      href="../listar_tecnico"
+      data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
+      >Volver al perfil</a
+    >
+  </li>
+</ul>
+{% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basetecnico.html' %}
+  {% include 'app/basempleado.html' %}
 {% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
@@ -23,33 +23,37 @@
                 <th>Dirección</th>
                 <th>Celular</th>
                 <th>E-mail</th>
+                <th>cargo</th>
+                <th>departamento</th>
               </tr>
             </thead>
             <tbody>
-              {% for aux in listaTecnico %}
+              {% for aux in listaEmpleado %}
 
               <tr>
                 <td>
                   {% if aux.imagen %}
-                  <img src=" aux.imagen.url " />
+                  <img src=" aux.imagen.url "  />
                   {% else %}
                   <img
                     src="../static/app/img/equipo.png"
-                    style="width: 40%; max-width: 80%;"
+                    style="width: 80%; max-width: 80%;"
                   />
                   {% endif %}
                 </td>
 
-                <td>{{aux.rut_tecnico}}</td>
+                <td>{{aux.rut_empleado}}</td>
                 <td>{{aux.nombre}}</td>
                 <td>{{aux.apellido}}</td>
                 <td>{{aux.direccion}}</td>
                 <td>{{aux.telefono}}</td>
+                <td>{{aux.correo}}</td>
+                <td>{{aux.cargo}}</td>
                 <td>
-                  {{aux.correo}}
+                  {{aux.departamento}}
                   <div class="d-flex" id="modifi">
                     <a
-                      href="{% url 'modifitecnico' aux.id %}"
+                      href="{% url 'modifiempleado' aux.id %}"
                       class="btn btn-info btn-sm"
                       data-bs-toggle="tooltip"
                       title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!"
@@ -68,7 +72,7 @@
             <tbody>
               <tr>
                 <td>
-                  {% if cantidad_tecnicos > 0 %}
+                  {% if cantidad_empleados > 0 %}
                   <a
                     href="#"
                     class="btn btn-success bg-success disabled"
@@ -78,7 +82,7 @@
                   >
                   {% else %}
                   <a
-                    href="{% url 'tecnicoform' %}"
+                    href="{% url 'empleadoform' %}"
                     class="btn btn-success bg-success"
                     data-bs-toggle="tooltip"
                     title="Agrega tus datos"

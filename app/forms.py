@@ -34,13 +34,32 @@ class ClienteForm(ModelForm):
     nombre = forms.CharField(min_length=3 ,max_length=50)
     apellido = forms.CharField(min_length=3 ,max_length=50)
     correo = forms.CharField(min_length=3 ,max_length=80)
-    direccion = forms.CharField(min_length=3 ,max_length=80,required=False)
-    telefono = forms.CharField(min_length=3 ,max_length=20,required=False)
+    direccion = forms.CharField(min_length=3 ,max_length=80)
+    telefono = forms.CharField(min_length=3 ,max_length=20)
     numero_tarjeta = forms.IntegerField()
 
     class Meta:
         model = Cliente
         fields = ['rut_cliente','nombre','apellido','correo','direccion','telefono', 'numero_tarjeta']
+
+class EmpleadoForm(ModelForm):
+   
+    rut_empleado = forms.CharField(min_length=3 ,max_length=15)
+    nombre = forms.CharField(min_length=3 ,max_length=50)
+    apellido = forms.CharField(min_length=3 ,max_length=50)
+    correo = forms.CharField(min_length=3 ,max_length=80)
+    direccion = forms.CharField(min_length=3 ,max_length=80)
+    telefono = forms.CharField(min_length=3 ,max_length=20)
+    cargo = forms.CharField(min_length=3 ,max_length=20)
+    departamento = forms.CharField(min_length=3 ,max_length=20)
+    
+
+    class Meta:
+        model = Empleado
+        fields = ['rut_empleado','nombre','apellido','correo','direccion','telefono', 'cargo','departamento']
+
+
+
 
 class TecnicoForm(ModelForm):
    
@@ -69,3 +88,15 @@ class ServicioForm(ModelForm):
     class Meta:
         model = Servicio
         fields = ['fecha_servicio','direccion_servicio', 'detalle_servicio', 'tecnico','cliente','tipo']
+
+
+#formulario para solicitar cotizaciones por parte del cliente
+class CotizacionesForm(ModelForm):
+    fecha = forms.DateTimeField(widget=forms.DateTimeInput(attrs={'type': 'datetime-local', 'step': '60'}),input_formats=['%Y-%m-%dT%H:%M'])
+    correo = forms.CharField(max_length=80)
+    detalle = forms.CharField(max_length=200)
+    cliente = forms.ModelChoiceField(queryset=Cliente.objects.all())
+
+    class Meta:
+        model = Cotizaciones
+        fields = ['fecha','correo', 'detalle','cliente']

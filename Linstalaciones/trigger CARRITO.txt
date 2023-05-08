@@ -1,3 +1,4 @@
+
 CREATE SEQUENCE carrito_seq
 START WITH 1
 INCREMENT BY 1;
@@ -105,24 +106,7 @@ BEGIN
 
   :new.id := next_id;
 END;
--------------------------------------------------
-CREATE SEQUENCE gestioncoti_seq
-START WITH 1
-INCREMENT BY 1;
 
-CREATE OR REPLACE TRIGGER gestioncoti_trg
-BEFORE INSERT ON gestion_cotizaciones
-FOR EACH ROW
-DECLARE
-  next_id INTEGER;
-BEGIN
-  SELECT gestioncoti_seq.NEXTVAL
-  INTO next_id
-  FROM dual
-  FOR UPDATE;
-
-  :new.id := next_id;
-END;
 ---------------------------------------------
 CREATE SEQUENCE materiales_seq
 START WITH 1
@@ -233,7 +217,6 @@ BEGIN
 
   :new.id := next_id;
 END;
-
 
 
 

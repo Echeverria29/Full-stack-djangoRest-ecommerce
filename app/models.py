@@ -22,7 +22,8 @@ class Cliente(models.Model):
 
 class Cotizaciones(models.Model):
     id = models.IntegerField(primary_key=True)
-    fecha_servicio = models.DateTimeField()
+    fecha = models.DateTimeField()
+    correo = models.CharField(max_length=80)
     detalle = models.CharField(max_length=200)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
 
@@ -83,18 +84,6 @@ class Empleado(models.Model):
     class Meta:
         
         db_table = 'empleado'
-
-class GestionCotizaciones(models.Model):
-    id = models.IntegerField(primary_key=True)
-    fecha_respuesta = models.DateTimeField()
-    detalle = models.CharField(max_length=200)
-    empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
-
-    
-    class Meta:
-       
-        db_table = 'gestion_cotizaciones'
-
 
 class Tipo(models.Model):
     id = models.IntegerField(primary_key=True)
