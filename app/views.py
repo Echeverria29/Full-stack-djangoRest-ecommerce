@@ -121,6 +121,19 @@ def listar_tecnico(request):
     }
     return render(request, 'app/listar_tecnico.html', datos)
 
+
+@login_required
+def listar_materiales(request):
+    materiales = Materiales.objects.all()
+    tecnico= Tecnico.objects.all()
+    datos = {
+        'listaMateriales': materiales,
+        'listaTecnico': tecnico,
+        
+    }
+    return render(request, 'app/listar_materiales.html', datos)
+
+
 @login_required
 def listar_servicio(request):
     servicio = Servicio.objects.all()
@@ -239,6 +252,31 @@ def tecnicoform(request):
     else:
         form = TecnicoForm()
     return render(request, 'app/tecnicoform.html', {'form': form})
+
+@login_required
+def materialesform(request):
+    if request.method == 'POST':
+        form = MaterialesForm(request.POST)
+        if form.is_valid():
+            # Crea una instancia del modelo Servicio sin especificar el campo "id"
+            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
+            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
+            #ese id sea autoincrementable
+            materiales = Materiales(
+                
+                nombre=form.cleaned_data['nombre'],
+                stock=form.cleaned_data['stock'],
+                tecnico_id=form.cleaned_data['tecnico_id'],
+            )
+            materiales.save()
+            messages.success(request,'Datos agregados correctamente!')
+    else:
+        form = MaterialesForm()
+    return render(request, 'app/materialesform.html', {'form': form})
+
+
+
+
 
 @login_required
 def modifitecnico (request, id):

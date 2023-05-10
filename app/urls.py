@@ -18,9 +18,10 @@ urlpatterns = [
   path('modificliempleado/<int:id>', modificliempleado, name='modificliempleado'),
   path('listar_personas', listar_personas, name='listar_personas'),
   path('eliminarpersona/<int:id>', eliminarpersona, name='eliminarpersona'),
-
+  path('listar_materiales', listar_materiales, name='listar_materiales'),
   path('empleadoform', empleadoform, name='empleadoform'),
   path('tecnicoform', tecnicoform, name='tecnicoform'),
+  path('materialesform', materialesform, name='materialesform'),
   path('listar_tecnico', listar_tecnico, name='listar_tecnico'),
   path('listar_serviciotec', listar_serviciotec, name='listar_serviciotec'),
   path('modifitecnico/<int:id>', modifitecnico, name='modifitecnico'),

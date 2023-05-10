@@ -1,0 +1,61 @@
+{% extends 'app/base.html' %} {% block contenido %}
+{% block navbar %}
+  {% include 'app/basetecnico.html' %}
+{% endblock %}
+<section class="thumbnail 1" id="thumbnail 1">
+  <div class="Thumbnail py-2 bg-light">
+    <!--CONTENEDOR PLOMO QUE ENCIERRA LOS CONTAINER-->
+
+    <div class="container-fluid">
+      <!-- CONTENEDOR-fluid para que el contenedor ocupe los 12 espacios que nos ofrece boostrap  -->
+
+      <div class="row">
+        <!--comando aling aliniea los 3 itemps-->
+        <!--IMAGEN DE LA IZQUIERDA-->
+        <div class="col-sm-10">
+          <table class="table table-condensed table-striped">
+            <thead>
+              <tr class="table-success">
+                <th>nombre</th>
+                <th>stock</th>
+                <th>rut tecnico</th>
+                
+                
+             
+              </tr>
+            </thead>
+            <tbody>
+              {% for aux in listaMateriales %}
+                  {% for x in listaTecnico %}
+                      {% if x.rut_tecnico == x.rut_tecnico %}
+                          <tr>
+                              <td>{{ aux.nombre }}</td>
+                              <td>{{ aux.stock }}</td>                        
+                              <td>{{ x.rut_tecnico }}</td>
+                        
+                          </tr>
+                      {% endif %}
+                  {% endfor %}
+              {% endfor %}
+          </tbody>
+          
+          
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<ul class="nav d-flex justify-content-center">
+  <li class="nav-item d-flex justify-content-center">
+    <a
+      class="nav-link"
+      href="../listar_tecnico"
+      data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
+      >Volver al perfil</a
+    >
+  </li>
+</ul>
+{% endblock %}

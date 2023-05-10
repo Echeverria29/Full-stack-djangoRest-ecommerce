@@ -76,6 +76,21 @@ class TecnicoForm(ModelForm):
         fields = ['rut_tecnico','nombre','apellido','correo','direccion','telefono']
 
 
+class MaterialesForm(ModelForm):
+   
+   
+    nombre = forms.CharField(min_length=3 ,max_length=50)
+    stock = forms.IntegerField()
+    tecnico = forms.ModelChoiceField(queryset=Tecnico.objects.all())
+
+    
+
+    class Meta:
+        model = Tecnico
+        fields = ['nombre','stock','tecnico']
+
+
+
 #formulario para solicitar el servicio por parte del cliente
 class ServicioForm(ModelForm):
     fecha_servicio = forms.DateTimeField(widget=forms.DateTimeInput(attrs={'type': 'datetime-local', 'step': '60'}),input_formats=['%Y-%m-%dT%H:%M'])

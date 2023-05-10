@@ -1,71 +1,71 @@
 --------------------------------------------------------
--- Archivo creado  - domingo-mayo-07-2023   
+-- Archivo creado  - miércoles-mayo-10-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Sequence CARRITO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "CARRITO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."CARRITO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence CLIENTE_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "CLIENTE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."CLIENTE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence COTIZACIONES_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "COTIZACIONES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."COTIZACIONES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence DETALLE_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "DETALLE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."DETALLE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence EMPLEADO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "EMPLEADO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."EMPLEADO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence LIBRO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "LIBRO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."LIBRO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence MATERIALES_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "MATERIALES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."MATERIALES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence PAGO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PAGO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."PAGO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence SERVICIO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "SERVICIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."SERVICIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence TECNICO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "TECNICO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."TECNICO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence TIPO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "TIPO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."TIPO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence VENTA_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "VENTA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PROBANDO"."VENTA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Table AUTH_GROUP
 --------------------------------------------------------
 
-  CREATE TABLE "AUTH_GROUP" 
+  CREATE TABLE "PROBANDO"."AUTH_GROUP" 
    (	"ID" NUMBER(11,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"NAME" NVARCHAR2(150)
    ) SEGMENT CREATION DEFERRED 
@@ -76,7 +76,7 @@
 --  DDL for Table AUTH_GROUP_PERMISSIONS
 --------------------------------------------------------
 
-  CREATE TABLE "AUTH_GROUP_PERMISSIONS" 
+  CREATE TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" 
    (	"ID" NUMBER(19,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"GROUP_ID" NUMBER(11,0), 
 	"PERMISSION_ID" NUMBER(11,0)
@@ -88,7 +88,7 @@
 --  DDL for Table AUTH_PERMISSION
 --------------------------------------------------------
 
-  CREATE TABLE "AUTH_PERMISSION" 
+  CREATE TABLE "PROBANDO"."AUTH_PERMISSION" 
    (	"ID" NUMBER(11,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"NAME" NVARCHAR2(255), 
 	"CONTENT_TYPE_ID" NUMBER(11,0), 
@@ -104,7 +104,7 @@
 --  DDL for Table AUTH_USER
 --------------------------------------------------------
 
-  CREATE TABLE "AUTH_USER" 
+  CREATE TABLE "PROBANDO"."AUTH_USER" 
    (	"ID" NUMBER(11,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"PASSWORD" NVARCHAR2(128), 
 	"LAST_LOGIN" TIMESTAMP (6), 
@@ -127,7 +127,7 @@
 --  DDL for Table AUTH_USER_GROUPS
 --------------------------------------------------------
 
-  CREATE TABLE "AUTH_USER_GROUPS" 
+  CREATE TABLE "PROBANDO"."AUTH_USER_GROUPS" 
    (	"ID" NUMBER(19,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"USER_ID" NUMBER(11,0), 
 	"GROUP_ID" NUMBER(11,0)
@@ -139,7 +139,7 @@
 --  DDL for Table AUTH_USER_USER_PERMISSIONS
 --------------------------------------------------------
 
-  CREATE TABLE "AUTH_USER_USER_PERMISSIONS" 
+  CREATE TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" 
    (	"ID" NUMBER(19,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"USER_ID" NUMBER(11,0), 
 	"PERMISSION_ID" NUMBER(11,0)
@@ -151,7 +151,7 @@
 --  DDL for Table CARRITO
 --------------------------------------------------------
 
-  CREATE TABLE "CARRITO" 
+  CREATE TABLE "PROBANDO"."CARRITO" 
    (	"ID" NUMBER(*,0), 
 	"LIBRO_ID" NUMBER(*,0), 
 	"CANTIDAD" NUMBER(10,0)
@@ -163,7 +163,7 @@
 --  DDL for Table CLIENTE
 --------------------------------------------------------
 
-  CREATE TABLE "CLIENTE" 
+  CREATE TABLE "PROBANDO"."CLIENTE" 
    (	"ID" NUMBER(*,0), 
 	"RUT_CLIENTE" VARCHAR2(15 BYTE), 
 	"NOMBRE" VARCHAR2(50 BYTE), 
@@ -183,7 +183,7 @@
 --  DDL for Table COTIZACIONES
 --------------------------------------------------------
 
-  CREATE TABLE "COTIZACIONES" 
+  CREATE TABLE "PROBANDO"."COTIZACIONES" 
    (	"ID" NUMBER(*,0), 
 	"FECHA" DATE, 
 	"CORREO" VARCHAR2(80 BYTE), 
@@ -200,7 +200,7 @@
 --  DDL for Table DETALLE_VENTA
 --------------------------------------------------------
 
-  CREATE TABLE "DETALLE_VENTA" 
+  CREATE TABLE "PROBANDO"."DETALLE_VENTA" 
    (	"ID" NUMBER(*,0), 
 	"VENTA_VENTA_ID" NUMBER(*,0), 
 	"VENTA_LIBRO_ID" NUMBER(*,0)
@@ -212,7 +212,7 @@
 --  DDL for Table DJANGO_ADMIN_LOG
 --------------------------------------------------------
 
-  CREATE TABLE "DJANGO_ADMIN_LOG" 
+  CREATE TABLE "PROBANDO"."DJANGO_ADMIN_LOG" 
    (	"ID" NUMBER(11,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"ACTION_TIME" TIMESTAMP (6), 
 	"OBJECT_ID" NCLOB, 
@@ -244,7 +244,7 @@
 --  DDL for Table DJANGO_CONTENT_TYPE
 --------------------------------------------------------
 
-  CREATE TABLE "DJANGO_CONTENT_TYPE" 
+  CREATE TABLE "PROBANDO"."DJANGO_CONTENT_TYPE" 
    (	"ID" NUMBER(11,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"APP_LABEL" NVARCHAR2(100), 
 	"MODEL" NVARCHAR2(100)
@@ -259,7 +259,7 @@
 --  DDL for Table DJANGO_MIGRATIONS
 --------------------------------------------------------
 
-  CREATE TABLE "DJANGO_MIGRATIONS" 
+  CREATE TABLE "PROBANDO"."DJANGO_MIGRATIONS" 
    (	"ID" NUMBER(19,0) GENERATED BY DEFAULT ON NULL AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
 	"APP" NVARCHAR2(255), 
 	"NAME" NVARCHAR2(255), 
@@ -275,7 +275,7 @@
 --  DDL for Table DJANGO_SESSION
 --------------------------------------------------------
 
-  CREATE TABLE "DJANGO_SESSION" 
+  CREATE TABLE "PROBANDO"."DJANGO_SESSION" 
    (	"SESSION_KEY" NVARCHAR2(40), 
 	"SESSION_DATA" NCLOB, 
 	"EXPIRE_DATE" TIMESTAMP (6)
@@ -296,7 +296,7 @@
 --  DDL for Table EMPLEADO
 --------------------------------------------------------
 
-  CREATE TABLE "EMPLEADO" 
+  CREATE TABLE "PROBANDO"."EMPLEADO" 
    (	"ID" NUMBER(*,0), 
 	"RUT_EMPLEADO" VARCHAR2(15 BYTE), 
 	"NOMBRE" VARCHAR2(50 BYTE), 
@@ -317,7 +317,7 @@
 --  DDL for Table LIBRO
 --------------------------------------------------------
 
-  CREATE TABLE "LIBRO" 
+  CREATE TABLE "PROBANDO"."LIBRO" 
    (	"ID" NUMBER(*,0), 
 	"NOMBRE" VARCHAR2(50 BYTE), 
 	"AUTOR" VARCHAR2(50 BYTE), 
@@ -336,20 +336,23 @@
 --  DDL for Table MATERIALES
 --------------------------------------------------------
 
-  CREATE TABLE "MATERIALES" 
+  CREATE TABLE "PROBANDO"."MATERIALES" 
    (	"ID" NUMBER(*,0), 
 	"NOMBRE" VARCHAR2(30 BYTE), 
 	"STOCK" NUMBER(10,0), 
 	"TECNICO_ID" NUMBER(*,0)
-   ) SEGMENT CREATION DEFERRED 
+   ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Table PAGO
 --------------------------------------------------------
 
-  CREATE TABLE "PAGO" 
+  CREATE TABLE "PROBANDO"."PAGO" 
    (	"ID" NUMBER(*,0), 
 	"TOTAL" NUMBER(10,0), 
 	"VENTA_ID" NUMBER(*,0)
@@ -361,7 +364,7 @@
 --  DDL for Table SERVICIO
 --------------------------------------------------------
 
-  CREATE TABLE "SERVICIO" 
+  CREATE TABLE "PROBANDO"."SERVICIO" 
    (	"ID" NUMBER(*,0), 
 	"FECHA_SERVICIO" DATE, 
 	"DIRECCION_SERVICIO" VARCHAR2(80 BYTE), 
@@ -369,15 +372,18 @@
 	"TIPO_ID" NUMBER(*,0), 
 	"CLIENTE_ID" NUMBER(*,0), 
 	"TECNICO_ID" NUMBER(*,0)
-   ) SEGMENT CREATION DEFERRED 
+   ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Table TECNICO
 --------------------------------------------------------
 
-  CREATE TABLE "TECNICO" 
+  CREATE TABLE "PROBANDO"."TECNICO" 
    (	"ID" NUMBER(*,0), 
 	"RUT_TECNICO" VARCHAR2(15 BYTE), 
 	"NOMBRE" VARCHAR2(50 BYTE), 
@@ -396,7 +402,7 @@
 --  DDL for Table TIPO
 --------------------------------------------------------
 
-  CREATE TABLE "TIPO" 
+  CREATE TABLE "PROBANDO"."TIPO" 
    (	"ID" NUMBER(*,0), 
 	"TIPO" VARCHAR2(40 BYTE)
    ) SEGMENT CREATION IMMEDIATE 
@@ -410,7 +416,7 @@
 --  DDL for Table VENTA
 --------------------------------------------------------
 
-  CREATE TABLE "VENTA" 
+  CREATE TABLE "PROBANDO"."VENTA" 
    (	"ID" NUMBER(*,0), 
 	"FECHA_VENTA" DATE, 
 	"TOTAL" NUMBER(10,0), 
@@ -420,145 +426,160 @@
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
   TABLESPACE "USERS" ;
-REM INSERTING into AUTH_GROUP
+REM INSERTING into PROBANDO.AUTH_GROUP
 SET DEFINE OFF;
-REM INSERTING into AUTH_GROUP_PERMISSIONS
+REM INSERTING into PROBANDO.AUTH_GROUP_PERMISSIONS
 SET DEFINE OFF;
-REM INSERTING into AUTH_PERMISSION
+REM INSERTING into PROBANDO.AUTH_PERMISSION
 SET DEFINE OFF;
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('1','Can add log entry','1','add_logentry');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('2','Can change log entry','1','change_logentry');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('3','Can delete log entry','1','delete_logentry');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('4','Can view log entry','1','view_logentry');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('5','Can add permission','2','add_permission');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('6','Can change permission','2','change_permission');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('7','Can delete permission','2','delete_permission');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('8','Can view permission','2','view_permission');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('9','Can add group','3','add_group');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('10','Can change group','3','change_group');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('11','Can delete group','3','delete_group');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('12','Can view group','3','view_group');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('13','Can add user','4','add_user');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('14','Can change user','4','change_user');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('15','Can delete user','4','delete_user');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('16','Can view user','4','view_user');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('17','Can add content type','5','add_contenttype');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('18','Can change content type','5','change_contenttype');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('19','Can delete content type','5','delete_contenttype');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('20','Can view content type','5','view_contenttype');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('21','Can add session','6','add_session');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('22','Can change session','6','change_session');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('23','Can delete session','6','delete_session');
-Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('24','Can view session','6','view_session');
-REM INSERTING into AUTH_USER
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('1','Can add log entry','1','add_logentry');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('2','Can change log entry','1','change_logentry');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('3','Can delete log entry','1','delete_logentry');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('4','Can view log entry','1','view_logentry');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('5','Can add permission','2','add_permission');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('6','Can change permission','2','change_permission');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('7','Can delete permission','2','delete_permission');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('8','Can view permission','2','view_permission');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('9','Can add group','3','add_group');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('10','Can change group','3','change_group');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('11','Can delete group','3','delete_group');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('12','Can view group','3','view_group');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('13','Can add user','4','add_user');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('14','Can change user','4','change_user');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('15','Can delete user','4','delete_user');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('16','Can view user','4','view_user');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('17','Can add content type','5','add_contenttype');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('18','Can change content type','5','change_contenttype');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('19','Can delete content type','5','delete_contenttype');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('20','Can view content type','5','view_contenttype');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('21','Can add session','6','add_session');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('22','Can change session','6','change_session');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('23','Can delete session','6','delete_session');
+Insert into PROBANDO.AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('24','Can view session','6','view_session');
+REM INSERTING into PROBANDO.AUTH_USER
 SET DEFINE OFF;
-Insert into AUTH_USER (ID,PASSWORD,LAST_LOGIN,IS_SUPERUSER,USERNAME,FIRST_NAME,LAST_NAME,EMAIL,IS_STAFF,IS_ACTIVE,DATE_JOINED) values ('1','pbkdf2_sha256$600000$TxIfs4uazJAi9EGpLJ1Oy7$Rn2y/LU06BdzE76iAIEhhvjFNa9xX4SsF1ARN1vfLOE=',to_timestamp('07/05/23 17:25:48,511546000','DD/MM/RR HH24:MI:SSXFF'),'1','prob',null,null,'admin@gmail.com','1','1',to_timestamp('07/05/23 02:28:57,173661000','DD/MM/RR HH24:MI:SSXFF'));
-REM INSERTING into AUTH_USER_GROUPS
+Insert into PROBANDO.AUTH_USER (ID,PASSWORD,LAST_LOGIN,IS_SUPERUSER,USERNAME,FIRST_NAME,LAST_NAME,EMAIL,IS_STAFF,IS_ACTIVE,DATE_JOINED) values ('1','pbkdf2_sha256$600000$TxIfs4uazJAi9EGpLJ1Oy7$Rn2y/LU06BdzE76iAIEhhvjFNa9xX4SsF1ARN1vfLOE=',to_timestamp('10/05/23 17:49:43,821177000','DD/MM/RR HH24:MI:SSXFF'),'1','prob',null,null,'admin@gmail.com','1','1',to_timestamp('07/05/23 02:28:57,173661000','DD/MM/RR HH24:MI:SSXFF'));
+REM INSERTING into PROBANDO.AUTH_USER_GROUPS
 SET DEFINE OFF;
-REM INSERTING into AUTH_USER_USER_PERMISSIONS
+REM INSERTING into PROBANDO.AUTH_USER_USER_PERMISSIONS
 SET DEFINE OFF;
-REM INSERTING into CARRITO
+REM INSERTING into PROBANDO.CARRITO
 SET DEFINE OFF;
-REM INSERTING into CLIENTE
+REM INSERTING into PROBANDO.CLIENTE
 SET DEFINE OFF;
-Insert into CLIENTE (ID,RUT_CLIENTE,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,NUMERO_TARJETA) values ('1','12469180-k','romaney','hernandez','roma@gmail.com','turquesa 1082','+5696598585','191817181');
-REM INSERTING into COTIZACIONES
+Insert into PROBANDO.CLIENTE (ID,RUT_CLIENTE,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,NUMERO_TARJETA) values ('3','12469180-k','romaney','hernandez','roma@gmail.com','turquesa 1918','+569257854','11191343');
+REM INSERTING into PROBANDO.COTIZACIONES
 SET DEFINE OFF;
-Insert into COTIZACIONES (ID,FECHA,CORREO,DETALLE,CLIENTE_ID) values ('1',to_date('20/05/23','DD/MM/RR'),'roma@gmail.com','necesito saber si le queda el libro de harry potter urgentemente dice que no hay stock pero pregunto porseacaso muchas gracias.','1');
-REM INSERTING into DETALLE_VENTA
+Insert into PROBANDO.COTIZACIONES (ID,FECHA,CORREO,DETALLE,CLIENTE_ID) values ('2',to_date('09/05/23','DD/MM/RR'),'roma@gmail.com','necesito saber si quedan porfavor libros de harry potter no encuentro en ningun lado o si tiene alguna referencia muchas gracias','3');
+REM INSERTING into PROBANDO.DETALLE_VENTA
 SET DEFINE OFF;
-REM INSERTING into DJANGO_ADMIN_LOG
+REM INSERTING into PROBANDO.DJANGO_ADMIN_LOG
 SET DEFINE OFF;
-Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('4',to_timestamp('07/05/23 17:37:58,500863000','DD/MM/RR HH24:MI:SSXFF'),'18354934-0','1','10','1');
-Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('1',to_timestamp('07/05/23 02:31:38,197612000','DD/MM/RR HH24:MI:SSXFF'),'harry potter deadly hallows part1','1','7','1');
-Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('2',to_timestamp('07/05/23 02:31:50,161734000','DD/MM/RR HH24:MI:SSXFF'),'reparacion','1','9','1');
-Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('3',to_timestamp('07/05/23 02:33:17,902426000','DD/MM/RR HH24:MI:SSXFF'),'señor de los anillos y el retorno del rey','1','7','1');
-Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('5',to_timestamp('07/05/23 17:39:15,937258000','DD/MM/RR HH24:MI:SSXFF'),'11630959-9','1','11','1');
-Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('6',to_timestamp('07/05/23 17:39:38,343339000','DD/MM/RR HH24:MI:SSXFF'),'mantenimiento','1','9','1');
-REM INSERTING into DJANGO_CONTENT_TYPE
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('4',to_timestamp('07/05/23 17:37:58,500863000','DD/MM/RR HH24:MI:SSXFF'),'18354934-0','1','10','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('7',to_timestamp('07/05/23 19:43:42,189706000','DD/MM/RR HH24:MI:SSXFF'),'199999','1','12','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('8',to_timestamp('07/05/23 19:46:03,265603000','DD/MM/RR HH24:MI:SSXFF'),'199999','3','12','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('9',to_timestamp('07/05/23 19:54:20,654771000','DD/MM/RR HH24:MI:SSXFF'),'12469180-k','1','12','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('10',to_timestamp('07/05/23 20:34:26,063770000','DD/MM/RR HH24:MI:SSXFF'),'12469180-k','2','12','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('11',to_timestamp('07/05/23 20:34:36,176804000','DD/MM/RR HH24:MI:SSXFF'),'12469180-k','3','12','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('12',to_timestamp('07/05/23 20:48:27,584792000','DD/MM/RR HH24:MI:SSXFF'),'Materiales object (1)','1','13','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('13',to_timestamp('07/05/23 20:48:55,829094000','DD/MM/RR HH24:MI:SSXFF'),'Materiales object (2)','1','13','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('14',to_timestamp('07/05/23 20:49:28,115052000','DD/MM/RR HH24:MI:SSXFF'),'Materiales object (3)','1','13','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('1',to_timestamp('07/05/23 02:31:38,197612000','DD/MM/RR HH24:MI:SSXFF'),'harry potter deadly hallows part1','1','7','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('2',to_timestamp('07/05/23 02:31:50,161734000','DD/MM/RR HH24:MI:SSXFF'),'reparacion','1','9','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('3',to_timestamp('07/05/23 02:33:17,902426000','DD/MM/RR HH24:MI:SSXFF'),'señor de los anillos y el retorno del rey','1','7','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('5',to_timestamp('07/05/23 17:39:15,937258000','DD/MM/RR HH24:MI:SSXFF'),'11630959-9','1','11','1');
+Insert into PROBANDO.DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('6',to_timestamp('07/05/23 17:39:38,343339000','DD/MM/RR HH24:MI:SSXFF'),'mantenimiento','1','9','1');
+REM INSERTING into PROBANDO.DJANGO_CONTENT_TYPE
 SET DEFINE OFF;
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('11','app','empleado');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('1','admin','logentry');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('2','auth','permission');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('3','auth','group');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('4','auth','user');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('5','contenttypes','contenttype');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('6','sessions','session');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('7','app','libro');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('8','app','venta');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('9','app','tipo');
-Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('10','app','tecnico');
-REM INSERTING into DJANGO_MIGRATIONS
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('11','app','empleado');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('12','app','cliente');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('13','app','materiales');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('1','admin','logentry');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('2','auth','permission');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('3','auth','group');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('4','auth','user');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('5','contenttypes','contenttype');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('6','sessions','session');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('7','app','libro');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('8','app','venta');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('9','app','tipo');
+Insert into PROBANDO.DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('10','app','tecnico');
+REM INSERTING into PROBANDO.DJANGO_MIGRATIONS
 SET DEFINE OFF;
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('1','contenttypes','0001_initial',to_timestamp('07/05/23 02:28:39,276625000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('2','auth','0001_initial',to_timestamp('07/05/23 02:28:39,471755000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('3','admin','0001_initial',to_timestamp('07/05/23 02:28:39,539000000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('4','admin','0002_logentry_remove_auto_add',to_timestamp('07/05/23 02:28:39,566926000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('5','admin','0003_logentry_add_action_flag_choices',to_timestamp('07/05/23 02:28:39,598873000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('6','contenttypes','0002_remove_content_type_name',to_timestamp('07/05/23 02:28:39,730488000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('7','auth','0002_alter_permission_name_max_length',to_timestamp('07/05/23 02:28:39,775399000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('8','auth','0003_alter_user_email_max_length',to_timestamp('07/05/23 02:28:39,817256000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('9','auth','0004_alter_user_username_opts',to_timestamp('07/05/23 02:28:39,850168000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('10','auth','0005_alter_user_last_login_null',to_timestamp('07/05/23 02:28:39,891059000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('11','auth','0006_require_contenttypes_0002',to_timestamp('07/05/23 02:28:39,913999000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('12','auth','0007_alter_validators_add_error_messages',to_timestamp('07/05/23 02:28:39,948905000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('13','auth','0008_alter_user_username_max_length',to_timestamp('07/05/23 02:28:39,981816000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('14','auth','0009_alter_user_last_name_max_length',to_timestamp('07/05/23 02:28:40,020712000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('15','auth','0010_alter_group_name_max_length',to_timestamp('07/05/23 02:28:40,067586000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('16','auth','0011_update_proxy_permissions',to_timestamp('07/05/23 02:28:40,102493000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('17','auth','0012_alter_user_first_name_max_length',to_timestamp('07/05/23 02:28:40,138397000','DD/MM/RR HH24:MI:SSXFF'));
-Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('18','sessions','0001_initial',to_timestamp('07/05/23 02:28:40,179288000','DD/MM/RR HH24:MI:SSXFF'));
-REM INSERTING into DJANGO_SESSION
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('1','contenttypes','0001_initial',to_timestamp('07/05/23 02:28:39,276625000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('2','auth','0001_initial',to_timestamp('07/05/23 02:28:39,471755000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('3','admin','0001_initial',to_timestamp('07/05/23 02:28:39,539000000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('4','admin','0002_logentry_remove_auto_add',to_timestamp('07/05/23 02:28:39,566926000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('5','admin','0003_logentry_add_action_flag_choices',to_timestamp('07/05/23 02:28:39,598873000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('6','contenttypes','0002_remove_content_type_name',to_timestamp('07/05/23 02:28:39,730488000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('7','auth','0002_alter_permission_name_max_length',to_timestamp('07/05/23 02:28:39,775399000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('8','auth','0003_alter_user_email_max_length',to_timestamp('07/05/23 02:28:39,817256000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('9','auth','0004_alter_user_username_opts',to_timestamp('07/05/23 02:28:39,850168000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('10','auth','0005_alter_user_last_login_null',to_timestamp('07/05/23 02:28:39,891059000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('11','auth','0006_require_contenttypes_0002',to_timestamp('07/05/23 02:28:39,913999000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('12','auth','0007_alter_validators_add_error_messages',to_timestamp('07/05/23 02:28:39,948905000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('13','auth','0008_alter_user_username_max_length',to_timestamp('07/05/23 02:28:39,981816000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('14','auth','0009_alter_user_last_name_max_length',to_timestamp('07/05/23 02:28:40,020712000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('15','auth','0010_alter_group_name_max_length',to_timestamp('07/05/23 02:28:40,067586000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('16','auth','0011_update_proxy_permissions',to_timestamp('07/05/23 02:28:40,102493000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('17','auth','0012_alter_user_first_name_max_length',to_timestamp('07/05/23 02:28:40,138397000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('18','sessions','0001_initial',to_timestamp('07/05/23 02:28:40,179288000','DD/MM/RR HH24:MI:SSXFF'));
+REM INSERTING into PROBANDO.DJANGO_SESSION
 SET DEFINE OFF;
-Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ywut0ntsfgvceboldb3yb9apmz2fq67s',to_timestamp('21/05/23 17:25:48,514542000','DD/MM/RR HH24:MI:SSXFF'));
-REM INSERTING into EMPLEADO
+Insert into PROBANDO.DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('6o8xwoufqyfr6clglb7zu6uzs22vvkjw',to_timestamp('24/05/23 17:22:52,961871000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into PROBANDO.DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('j41d0rjb6if4iws3vjb6528i02ykwjio',to_timestamp('24/05/23 17:49:43,822849000','DD/MM/RR HH24:MI:SSXFF'));
+REM INSERTING into PROBANDO.EMPLEADO
 SET DEFINE OFF;
-Insert into EMPLEADO (ID,RUT_EMPLEADO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,CARGO,DEPARTAMENTO) values ('1','11630959-9','andres','echeverria','empleado1@libreria.imagina.cl','av ahumada 1922','+56958454112','vendedor','ventas');
-REM INSERTING into LIBRO
+Insert into PROBANDO.EMPLEADO (ID,RUT_EMPLEADO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,CARGO,DEPARTAMENTO) values ('1','11630959-9','andres','echeverria','empleado1@libreria.imagina.cl','av ahumada 1922','+56958454112','vendedor','ventas');
+REM INSERTING into PROBANDO.LIBRO
 SET DEFINE OFF;
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('1','harry potter deadly hallows part1','J.K rowlling','perseo','30000','12','libreria imagina');
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos y el retorno del rey','J.R.R Tolkien','imagination','28500','20','libreria imagina');
-REM INSERTING into MATERIALES
+Insert into PROBANDO.LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('1','harry potter deadly hallows part1','J.K rowlling','perseo','30000','12','libreria imagina');
+Insert into PROBANDO.LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos y el retorno del rey','J.R.R Tolkien','imagination','28500','20','libreria imagina');
+REM INSERTING into PROBANDO.MATERIALES
 SET DEFINE OFF;
-REM INSERTING into PAGO
+Insert into PROBANDO.MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('1','Acetona','10','1');
+Insert into PROBANDO.MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('2','Brochas de 2 cm','30','1');
+Insert into PROBANDO.MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('3','Cera virgen','25','1');
+REM INSERTING into PROBANDO.PAGO
 SET DEFINE OFF;
-REM INSERTING into SERVICIO
+REM INSERTING into PROBANDO.SERVICIO
 SET DEFINE OFF;
-REM INSERTING into TECNICO
+Insert into PROBANDO.SERVICIO (ID,FECHA_SERVICIO,DIRECCION_SERVICIO,DETALLE_SERVICIO,TIPO_ID,CLIENTE_ID,TECNICO_ID) values ('1',to_date('18/05/23','DD/MM/RR'),'turquesa 1918','mi libro esta demaciado roto y no puede abrirse','1','3','1');
+REM INSERTING into PROBANDO.TECNICO
 SET DEFINE OFF;
-Insert into TECNICO (ID,RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('1','18354934-0','orlando','echeverria','tecnico1@libreria.imagina.cl','macul 1819','+5693065874');
-REM INSERTING into TIPO
+Insert into PROBANDO.TECNICO (ID,RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('1','18354934-0','orlando','echeverria','tecnico1@libreria.imagina.cl','macul 1819','+5693065874');
+REM INSERTING into PROBANDO.TIPO
 SET DEFINE OFF;
-Insert into TIPO (ID,TIPO) values ('1','reparacion');
-Insert into TIPO (ID,TIPO) values ('2','mantenimiento');
-REM INSERTING into VENTA
+Insert into PROBANDO.TIPO (ID,TIPO) values ('1','reparacion');
+Insert into PROBANDO.TIPO (ID,TIPO) values ('2','mantenimiento');
+REM INSERTING into PROBANDO.VENTA
 SET DEFINE OFF;
 --------------------------------------------------------
 --  DDL for Index AUTH_GROU_GROUP_ID__0CD325B0_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_GROU_GROUP_ID__0CD325B0_U" ON "AUTH_GROUP_PERMISSIONS" ("GROUP_ID", "PERMISSION_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_GROU_GROUP_ID__0CD325B0_U" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("GROUP_ID", "PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_GROUP_GROUP_ID_B120CBF9
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_GROUP_GROUP_ID_B120CBF9" ON "AUTH_GROUP_PERMISSIONS" ("GROUP_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_GROUP_GROUP_ID_B120CBF9" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("GROUP_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_GROUP_PERMISSION_84C5C92E
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_GROUP_PERMISSION_84C5C92E" ON "AUTH_GROUP_PERMISSIONS" ("PERMISSION_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_GROUP_PERMISSION_84C5C92E" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_PERM_CONTENT_T_01AB375A_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_PERM_CONTENT_T_01AB375A_U" ON "AUTH_PERMISSION" ("CONTENT_TYPE_ID", "CODENAME") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_PERM_CONTENT_T_01AB375A_U" ON "PROBANDO"."AUTH_PERMISSION" ("CONTENT_TYPE_ID", "CODENAME") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -568,7 +589,7 @@ SET DEFINE OFF;
 --  DDL for Index AUTH_PERMI_CONTENT_TY_2F476E4B
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_PERMI_CONTENT_TY_2F476E4B" ON "AUTH_PERMISSION" ("CONTENT_TYPE_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_PERMI_CONTENT_TY_2F476E4B" ON "PROBANDO"."AUTH_PERMISSION" ("CONTENT_TYPE_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -578,56 +599,56 @@ SET DEFINE OFF;
 --  DDL for Index AUTH_USER__GROUP_ID_97559544
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__GROUP_ID_97559544" ON "AUTH_USER_GROUPS" ("GROUP_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__GROUP_ID_97559544" ON "PROBANDO"."AUTH_USER_GROUPS" ("GROUP_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER__PERMISSION_1FBB5F2C
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__PERMISSION_1FBB5F2C" ON "AUTH_USER_USER_PERMISSIONS" ("PERMISSION_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__PERMISSION_1FBB5F2C" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER__USER_ID_A95EAD1B
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__USER_ID_A95EAD1B" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__USER_ID_A95EAD1B" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("USER_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER_USER_ID_G_94350C0C_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_G_94350C0C_U" ON "AUTH_USER_GROUPS" ("USER_ID", "GROUP_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_USER_USER_ID_G_94350C0C_U" ON "PROBANDO"."AUTH_USER_GROUPS" ("USER_ID", "GROUP_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER_USER_ID_P_14A6B632_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_P_14A6B632_U" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID", "PERMISSION_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_USER_USER_ID_P_14A6B632_U" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("USER_ID", "PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER__USER_ID_6A12ED8B
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__USER_ID_6A12ED8B" ON "AUTH_USER_GROUPS" ("USER_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__USER_ID_6A12ED8B" ON "PROBANDO"."AUTH_USER_GROUPS" ("USER_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index CARRITO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "CARRITO_PK" ON "CARRITO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."CARRITO_PK" ON "PROBANDO"."CARRITO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index CLIENTE_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "CLIENTE_PK" ON "CLIENTE" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."CLIENTE_PK" ON "PROBANDO"."CLIENTE" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -637,7 +658,7 @@ SET DEFINE OFF;
 --  DDL for Index COTIZACIONES_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "COTIZACIONES_PK" ON "COTIZACIONES" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."COTIZACIONES_PK" ON "PROBANDO"."COTIZACIONES" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -647,14 +668,14 @@ SET DEFINE OFF;
 --  DDL for Index DETALLE_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "DETALLE_PK" ON "DETALLE_VENTA" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."DETALLE_PK" ON "PROBANDO"."DETALLE_VENTA" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index DJANGO_ADM_CONTENT_TY_C4BCE8EB
 --------------------------------------------------------
 
-  CREATE INDEX "DJANGO_ADM_CONTENT_TY_C4BCE8EB" ON "DJANGO_ADMIN_LOG" ("CONTENT_TYPE_ID") 
+  CREATE INDEX "PROBANDO"."DJANGO_ADM_CONTENT_TY_C4BCE8EB" ON "PROBANDO"."DJANGO_ADMIN_LOG" ("CONTENT_TYPE_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -664,7 +685,7 @@ SET DEFINE OFF;
 --  DDL for Index DJANGO_ADM_USER_ID_C564EBA6
 --------------------------------------------------------
 
-  CREATE INDEX "DJANGO_ADM_USER_ID_C564EBA6" ON "DJANGO_ADMIN_LOG" ("USER_ID") 
+  CREATE INDEX "PROBANDO"."DJANGO_ADM_USER_ID_C564EBA6" ON "PROBANDO"."DJANGO_ADMIN_LOG" ("USER_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -674,7 +695,7 @@ SET DEFINE OFF;
 --  DDL for Index DJANGO_CO_APP_LABEL_76BD3D3B_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "DJANGO_CO_APP_LABEL_76BD3D3B_U" ON "DJANGO_CONTENT_TYPE" ("APP_LABEL", "MODEL") 
+  CREATE UNIQUE INDEX "PROBANDO"."DJANGO_CO_APP_LABEL_76BD3D3B_U" ON "PROBANDO"."DJANGO_CONTENT_TYPE" ("APP_LABEL", "MODEL") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -684,7 +705,7 @@ SET DEFINE OFF;
 --  DDL for Index DJANGO_SES_EXPIRE_DAT_A5C62663
 --------------------------------------------------------
 
-  CREATE INDEX "DJANGO_SES_EXPIRE_DAT_A5C62663" ON "DJANGO_SESSION" ("EXPIRE_DATE") 
+  CREATE INDEX "PROBANDO"."DJANGO_SES_EXPIRE_DAT_A5C62663" ON "PROBANDO"."DJANGO_SESSION" ("EXPIRE_DATE") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -694,7 +715,7 @@ SET DEFINE OFF;
 --  DDL for Index EMPLEADO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "EMPLEADO_PK" ON "EMPLEADO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."EMPLEADO_PK" ON "PROBANDO"."EMPLEADO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -704,7 +725,7 @@ SET DEFINE OFF;
 --  DDL for Index LIBRO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LIBRO_PK" ON "LIBRO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."LIBRO_PK" ON "PROBANDO"."LIBRO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -714,35 +735,41 @@ SET DEFINE OFF;
 --  DDL for Index MATERIALES_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "MATERIALES_PK" ON "MATERIALES" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."MATERIALES_PK" ON "PROBANDO"."MATERIALES" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index PAGO__IDX
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "PAGO__IDX" ON "PAGO" ("VENTA_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."PAGO__IDX" ON "PROBANDO"."PAGO" ("VENTA_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index PAGO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "PAGO_PK" ON "PAGO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."PAGO_PK" ON "PROBANDO"."PAGO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SERVICIO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SERVICIO_PK" ON "SERVICIO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SERVICIO_PK" ON "PROBANDO"."SERVICIO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015535
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015535" ON "DJANGO_MIGRATIONS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015535" ON "PROBANDO"."DJANGO_MIGRATIONS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -752,7 +779,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015537
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015537" ON "DJANGO_CONTENT_TYPE" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015537" ON "PROBANDO"."DJANGO_CONTENT_TYPE" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -762,7 +789,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015541
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015541" ON "AUTH_PERMISSION" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015541" ON "PROBANDO"."AUTH_PERMISSION" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -772,28 +799,28 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015543
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015543" ON "AUTH_GROUP" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015543" ON "PROBANDO"."AUTH_GROUP" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015544
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015544" ON "AUTH_GROUP" ("NAME") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015544" ON "PROBANDO"."AUTH_GROUP" ("NAME") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015548
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015548" ON "AUTH_GROUP_PERMISSIONS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015548" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015558
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015558" ON "AUTH_USER" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015558" ON "PROBANDO"."AUTH_USER" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -803,7 +830,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015559
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015559" ON "AUTH_USER" ("USERNAME") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015559" ON "PROBANDO"."AUTH_USER" ("USERNAME") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -813,21 +840,21 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015563
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015563" ON "AUTH_USER_GROUPS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015563" ON "PROBANDO"."AUTH_USER_GROUPS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015567
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015567" ON "AUTH_USER_USER_PERMISSIONS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015567" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015584
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015584" ON "DJANGO_ADMIN_LOG" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015584" ON "PROBANDO"."DJANGO_ADMIN_LOG" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -837,7 +864,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015589
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015589" ON "DJANGO_SESSION" ("SESSION_KEY") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015589" ON "PROBANDO"."DJANGO_SESSION" ("SESSION_KEY") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -847,7 +874,7 @@ SET DEFINE OFF;
 --  DDL for Index TECNICO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "TECNICO_PK" ON "TECNICO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."TECNICO_PK" ON "PROBANDO"."TECNICO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -857,7 +884,7 @@ SET DEFINE OFF;
 --  DDL for Index TIPO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "TIPO_PK" ON "TIPO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."TIPO_PK" ON "PROBANDO"."TIPO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -867,56 +894,56 @@ SET DEFINE OFF;
 --  DDL for Index VENTA_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "VENTA_PK" ON "VENTA" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."VENTA_PK" ON "PROBANDO"."VENTA" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015543
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015543" ON "AUTH_GROUP" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015543" ON "PROBANDO"."AUTH_GROUP" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015544
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015544" ON "AUTH_GROUP" ("NAME") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015544" ON "PROBANDO"."AUTH_GROUP" ("NAME") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015548
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015548" ON "AUTH_GROUP_PERMISSIONS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015548" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_GROU_GROUP_ID__0CD325B0_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_GROU_GROUP_ID__0CD325B0_U" ON "AUTH_GROUP_PERMISSIONS" ("GROUP_ID", "PERMISSION_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_GROU_GROUP_ID__0CD325B0_U" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("GROUP_ID", "PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_GROUP_GROUP_ID_B120CBF9
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_GROUP_GROUP_ID_B120CBF9" ON "AUTH_GROUP_PERMISSIONS" ("GROUP_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_GROUP_GROUP_ID_B120CBF9" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("GROUP_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_GROUP_PERMISSION_84C5C92E
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_GROUP_PERMISSION_84C5C92E" ON "AUTH_GROUP_PERMISSIONS" ("PERMISSION_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_GROUP_PERMISSION_84C5C92E" ON "PROBANDO"."AUTH_GROUP_PERMISSIONS" ("PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015541
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015541" ON "AUTH_PERMISSION" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015541" ON "PROBANDO"."AUTH_PERMISSION" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -926,7 +953,7 @@ SET DEFINE OFF;
 --  DDL for Index AUTH_PERM_CONTENT_T_01AB375A_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_PERM_CONTENT_T_01AB375A_U" ON "AUTH_PERMISSION" ("CONTENT_TYPE_ID", "CODENAME") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_PERM_CONTENT_T_01AB375A_U" ON "PROBANDO"."AUTH_PERMISSION" ("CONTENT_TYPE_ID", "CODENAME") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -936,7 +963,7 @@ SET DEFINE OFF;
 --  DDL for Index AUTH_PERMI_CONTENT_TY_2F476E4B
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_PERMI_CONTENT_TY_2F476E4B" ON "AUTH_PERMISSION" ("CONTENT_TYPE_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_PERMI_CONTENT_TY_2F476E4B" ON "PROBANDO"."AUTH_PERMISSION" ("CONTENT_TYPE_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -946,7 +973,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015558
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015558" ON "AUTH_USER" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015558" ON "PROBANDO"."AUTH_USER" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -956,7 +983,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015559
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015559" ON "AUTH_USER" ("USERNAME") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015559" ON "PROBANDO"."AUTH_USER" ("USERNAME") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -966,70 +993,70 @@ SET DEFINE OFF;
 --  DDL for Index AUTH_USER__GROUP_ID_97559544
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__GROUP_ID_97559544" ON "AUTH_USER_GROUPS" ("GROUP_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__GROUP_ID_97559544" ON "PROBANDO"."AUTH_USER_GROUPS" ("GROUP_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015563
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015563" ON "AUTH_USER_GROUPS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015563" ON "PROBANDO"."AUTH_USER_GROUPS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER_USER_ID_G_94350C0C_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_G_94350C0C_U" ON "AUTH_USER_GROUPS" ("USER_ID", "GROUP_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_USER_USER_ID_G_94350C0C_U" ON "PROBANDO"."AUTH_USER_GROUPS" ("USER_ID", "GROUP_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER__USER_ID_6A12ED8B
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__USER_ID_6A12ED8B" ON "AUTH_USER_GROUPS" ("USER_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__USER_ID_6A12ED8B" ON "PROBANDO"."AUTH_USER_GROUPS" ("USER_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER_USER_ID_P_14A6B632_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_P_14A6B632_U" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID", "PERMISSION_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."AUTH_USER_USER_ID_P_14A6B632_U" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("USER_ID", "PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER__USER_ID_A95EAD1B
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__USER_ID_A95EAD1B" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__USER_ID_A95EAD1B" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("USER_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index AUTH_USER__PERMISSION_1FBB5F2C
 --------------------------------------------------------
 
-  CREATE INDEX "AUTH_USER__PERMISSION_1FBB5F2C" ON "AUTH_USER_USER_PERMISSIONS" ("PERMISSION_ID") 
+  CREATE INDEX "PROBANDO"."AUTH_USER__PERMISSION_1FBB5F2C" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("PERMISSION_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015567
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015567" ON "AUTH_USER_USER_PERMISSIONS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015567" ON "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index CARRITO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "CARRITO_PK" ON "CARRITO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."CARRITO_PK" ON "PROBANDO"."CARRITO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index CLIENTE_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "CLIENTE_PK" ON "CLIENTE" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."CLIENTE_PK" ON "PROBANDO"."CLIENTE" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1039,7 +1066,7 @@ SET DEFINE OFF;
 --  DDL for Index COTIZACIONES_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "COTIZACIONES_PK" ON "COTIZACIONES" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."COTIZACIONES_PK" ON "PROBANDO"."COTIZACIONES" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1049,14 +1076,14 @@ SET DEFINE OFF;
 --  DDL for Index DETALLE_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "DETALLE_PK" ON "DETALLE_VENTA" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."DETALLE_PK" ON "PROBANDO"."DETALLE_VENTA" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SYS_C0015584
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015584" ON "DJANGO_ADMIN_LOG" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015584" ON "PROBANDO"."DJANGO_ADMIN_LOG" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1066,7 +1093,7 @@ SET DEFINE OFF;
 --  DDL for Index DJANGO_ADM_CONTENT_TY_C4BCE8EB
 --------------------------------------------------------
 
-  CREATE INDEX "DJANGO_ADM_CONTENT_TY_C4BCE8EB" ON "DJANGO_ADMIN_LOG" ("CONTENT_TYPE_ID") 
+  CREATE INDEX "PROBANDO"."DJANGO_ADM_CONTENT_TY_C4BCE8EB" ON "PROBANDO"."DJANGO_ADMIN_LOG" ("CONTENT_TYPE_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1076,7 +1103,7 @@ SET DEFINE OFF;
 --  DDL for Index DJANGO_ADM_USER_ID_C564EBA6
 --------------------------------------------------------
 
-  CREATE INDEX "DJANGO_ADM_USER_ID_C564EBA6" ON "DJANGO_ADMIN_LOG" ("USER_ID") 
+  CREATE INDEX "PROBANDO"."DJANGO_ADM_USER_ID_C564EBA6" ON "PROBANDO"."DJANGO_ADMIN_LOG" ("USER_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1086,7 +1113,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015537
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015537" ON "DJANGO_CONTENT_TYPE" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015537" ON "PROBANDO"."DJANGO_CONTENT_TYPE" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1096,7 +1123,7 @@ SET DEFINE OFF;
 --  DDL for Index DJANGO_CO_APP_LABEL_76BD3D3B_U
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "DJANGO_CO_APP_LABEL_76BD3D3B_U" ON "DJANGO_CONTENT_TYPE" ("APP_LABEL", "MODEL") 
+  CREATE UNIQUE INDEX "PROBANDO"."DJANGO_CO_APP_LABEL_76BD3D3B_U" ON "PROBANDO"."DJANGO_CONTENT_TYPE" ("APP_LABEL", "MODEL") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1106,7 +1133,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015535
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015535" ON "DJANGO_MIGRATIONS" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015535" ON "PROBANDO"."DJANGO_MIGRATIONS" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1116,7 +1143,7 @@ SET DEFINE OFF;
 --  DDL for Index SYS_C0015589
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0015589" ON "DJANGO_SESSION" ("SESSION_KEY") 
+  CREATE UNIQUE INDEX "PROBANDO"."SYS_C0015589" ON "PROBANDO"."DJANGO_SESSION" ("SESSION_KEY") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1126,7 +1153,7 @@ SET DEFINE OFF;
 --  DDL for Index DJANGO_SES_EXPIRE_DAT_A5C62663
 --------------------------------------------------------
 
-  CREATE INDEX "DJANGO_SES_EXPIRE_DAT_A5C62663" ON "DJANGO_SESSION" ("EXPIRE_DATE") 
+  CREATE INDEX "PROBANDO"."DJANGO_SES_EXPIRE_DAT_A5C62663" ON "PROBANDO"."DJANGO_SESSION" ("EXPIRE_DATE") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1136,7 +1163,7 @@ SET DEFINE OFF;
 --  DDL for Index EMPLEADO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "EMPLEADO_PK" ON "EMPLEADO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."EMPLEADO_PK" ON "PROBANDO"."EMPLEADO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1146,7 +1173,7 @@ SET DEFINE OFF;
 --  DDL for Index LIBRO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LIBRO_PK" ON "LIBRO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."LIBRO_PK" ON "PROBANDO"."LIBRO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1156,35 +1183,41 @@ SET DEFINE OFF;
 --  DDL for Index MATERIALES_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "MATERIALES_PK" ON "MATERIALES" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."MATERIALES_PK" ON "PROBANDO"."MATERIALES" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index PAGO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "PAGO_PK" ON "PAGO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."PAGO_PK" ON "PROBANDO"."PAGO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index PAGO__IDX
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "PAGO__IDX" ON "PAGO" ("VENTA_ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."PAGO__IDX" ON "PROBANDO"."PAGO" ("VENTA_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SERVICIO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SERVICIO_PK" ON "SERVICIO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."SERVICIO_PK" ON "PROBANDO"."SERVICIO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index TECNICO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "TECNICO_PK" ON "TECNICO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."TECNICO_PK" ON "PROBANDO"."TECNICO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1194,7 +1227,7 @@ SET DEFINE OFF;
 --  DDL for Index TIPO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "TIPO_PK" ON "TIPO" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."TIPO_PK" ON "PROBANDO"."TIPO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1204,14 +1237,14 @@ SET DEFINE OFF;
 --  DDL for Index VENTA_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "VENTA_PK" ON "VENTA" ("ID") 
+  CREATE UNIQUE INDEX "PROBANDO"."VENTA_PK" ON "PROBANDO"."VENTA" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Trigger CARRITO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "CARRITO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."CARRITO_TRG" 
 BEFORE INSERT ON carrito
 FOR EACH ROW
 DECLARE
@@ -1225,12 +1258,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "CARRITO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."CARRITO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger CLIENTE_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "CLIENTE_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."CLIENTE_TRG" 
 BEFORE INSERT ON cliente
 FOR EACH ROW
 DECLARE
@@ -1244,12 +1277,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "CLIENTE_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."CLIENTE_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger COTIZACIONES_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "COTIZACIONES_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."COTIZACIONES_TRG" 
 BEFORE INSERT ON cotizaciones
 FOR EACH ROW
 DECLARE
@@ -1263,12 +1296,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "COTIZACIONES_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."COTIZACIONES_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger DETALLE_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "DETALLE_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."DETALLE_TRG" 
 BEFORE INSERT ON detalle_venta
 FOR EACH ROW
 DECLARE
@@ -1282,12 +1315,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "DETALLE_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."DETALLE_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger EMPLEADO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "EMPLEADO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."EMPLEADO_TRG" 
 BEFORE INSERT ON empleado
 FOR EACH ROW
 DECLARE
@@ -1301,12 +1334,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "EMPLEADO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."EMPLEADO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger LIBRO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "LIBRO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."LIBRO_TRG" 
 BEFORE INSERT ON libro
 FOR EACH ROW
 DECLARE
@@ -1320,12 +1353,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "LIBRO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."LIBRO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger MATERIALES_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "MATERIALES_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."MATERIALES_TRG" 
 BEFORE INSERT ON materiales
 FOR EACH ROW
 DECLARE
@@ -1339,12 +1372,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "MATERIALES_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."MATERIALES_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger PAGO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PAGO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."PAGO_TRG" 
 BEFORE INSERT ON pago
 FOR EACH ROW
 DECLARE
@@ -1358,12 +1391,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "PAGO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."PAGO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger SERVICIO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "SERVICIO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."SERVICIO_TRG" 
 BEFORE INSERT ON servicio
 FOR EACH ROW
 DECLARE
@@ -1377,12 +1410,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "SERVICIO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."SERVICIO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger TECNICO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "TECNICO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."TECNICO_TRG" 
 BEFORE INSERT ON tecnico
 FOR EACH ROW
 DECLARE
@@ -1396,12 +1429,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "TECNICO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."TECNICO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger TIPO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "TIPO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."TIPO_TRG" 
 BEFORE INSERT ON tipo
 FOR EACH ROW
 DECLARE
@@ -1417,12 +1450,12 @@ END;
 
 -----------------------
 /
-ALTER TRIGGER "TIPO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."TIPO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger VENTA_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "VENTA_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."VENTA_TRG" 
 BEFORE INSERT ON venta
 FOR EACH ROW
 DECLARE
@@ -1436,12 +1469,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "VENTA_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."VENTA_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger CARRITO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "CARRITO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."CARRITO_TRG" 
 BEFORE INSERT ON carrito
 FOR EACH ROW
 DECLARE
@@ -1455,12 +1488,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "CARRITO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."CARRITO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger CLIENTE_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "CLIENTE_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."CLIENTE_TRG" 
 BEFORE INSERT ON cliente
 FOR EACH ROW
 DECLARE
@@ -1474,12 +1507,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "CLIENTE_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."CLIENTE_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger COTIZACIONES_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "COTIZACIONES_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."COTIZACIONES_TRG" 
 BEFORE INSERT ON cotizaciones
 FOR EACH ROW
 DECLARE
@@ -1493,12 +1526,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "COTIZACIONES_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."COTIZACIONES_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger DETALLE_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "DETALLE_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."DETALLE_TRG" 
 BEFORE INSERT ON detalle_venta
 FOR EACH ROW
 DECLARE
@@ -1512,12 +1545,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "DETALLE_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."DETALLE_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger EMPLEADO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "EMPLEADO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."EMPLEADO_TRG" 
 BEFORE INSERT ON empleado
 FOR EACH ROW
 DECLARE
@@ -1531,12 +1564,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "EMPLEADO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."EMPLEADO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger LIBRO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "LIBRO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."LIBRO_TRG" 
 BEFORE INSERT ON libro
 FOR EACH ROW
 DECLARE
@@ -1550,12 +1583,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "LIBRO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."LIBRO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger MATERIALES_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "MATERIALES_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."MATERIALES_TRG" 
 BEFORE INSERT ON materiales
 FOR EACH ROW
 DECLARE
@@ -1569,12 +1602,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "MATERIALES_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."MATERIALES_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger PAGO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PAGO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."PAGO_TRG" 
 BEFORE INSERT ON pago
 FOR EACH ROW
 DECLARE
@@ -1588,12 +1621,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "PAGO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."PAGO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger SERVICIO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "SERVICIO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."SERVICIO_TRG" 
 BEFORE INSERT ON servicio
 FOR EACH ROW
 DECLARE
@@ -1607,12 +1640,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "SERVICIO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."SERVICIO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger TECNICO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "TECNICO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."TECNICO_TRG" 
 BEFORE INSERT ON tecnico
 FOR EACH ROW
 DECLARE
@@ -1626,12 +1659,12 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "TECNICO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."TECNICO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger TIPO_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "TIPO_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."TIPO_TRG" 
 BEFORE INSERT ON tipo
 FOR EACH ROW
 DECLARE
@@ -1647,12 +1680,12 @@ END;
 
 -----------------------
 /
-ALTER TRIGGER "TIPO_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."TIPO_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger VENTA_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE NONEDITIONABLE TRIGGER "VENTA_TRG" 
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PROBANDO"."VENTA_TRG" 
 BEFORE INSERT ON venta
 FOR EACH ROW
 DECLARE
@@ -1666,44 +1699,44 @@ BEGIN
   :new.id := next_id;
 END;
 /
-ALTER TRIGGER "VENTA_TRG" ENABLE;
+ALTER TRIGGER "PROBANDO"."VENTA_TRG" ENABLE;
 --------------------------------------------------------
 --  Constraints for Table AUTH_GROUP
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_GROUP" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_GROUP" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."AUTH_GROUP" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_GROUP" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "AUTH_GROUP" ADD UNIQUE ("NAME")
+  ALTER TABLE "PROBANDO"."AUTH_GROUP" ADD UNIQUE ("NAME")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table AUTH_GROUP_PERMISSIONS
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_GROUP_PERMISSIONS" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_GROUP_PERMISSIONS" MODIFY ("GROUP_ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_GROUP_PERMISSIONS" MODIFY ("PERMISSION_ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_GROUP_PERMISSIONS" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" MODIFY ("GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" MODIFY ("PERMISSION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "AUTH_GROUP_PERMISSIONS" ADD CONSTRAINT "AUTH_GROU_GROUP_ID__0CD325B0_U" UNIQUE ("GROUP_ID", "PERMISSION_ID")
+  ALTER TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" ADD CONSTRAINT "AUTH_GROU_GROUP_ID__0CD325B0_U" UNIQUE ("GROUP_ID", "PERMISSION_ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table AUTH_PERMISSION
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_PERMISSION" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_PERMISSION" MODIFY ("CONTENT_TYPE_ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_PERMISSION" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."AUTH_PERMISSION" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_PERMISSION" MODIFY ("CONTENT_TYPE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_PERMISSION" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "AUTH_PERMISSION" ADD CONSTRAINT "AUTH_PERM_CONTENT_T_01AB375A_U" UNIQUE ("CONTENT_TYPE_ID", "CODENAME")
+  ALTER TABLE "PROBANDO"."AUTH_PERMISSION" ADD CONSTRAINT "AUTH_PERM_CONTENT_T_01AB375A_U" UNIQUE ("CONTENT_TYPE_ID", "CODENAME")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1713,21 +1746,21 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table AUTH_USER
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_USER" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER" MODIFY ("IS_SUPERUSER" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER" MODIFY ("IS_STAFF" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER" MODIFY ("IS_ACTIVE" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER" MODIFY ("DATE_JOINED" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER" ADD CHECK ("IS_SUPERUSER" IN (0,1)) ENABLE;
-  ALTER TABLE "AUTH_USER" ADD CHECK ("IS_STAFF" IN (0,1)) ENABLE;
-  ALTER TABLE "AUTH_USER" ADD CHECK ("IS_ACTIVE" IN (0,1)) ENABLE;
-  ALTER TABLE "AUTH_USER" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."AUTH_USER" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER" MODIFY ("IS_SUPERUSER" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER" MODIFY ("IS_STAFF" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER" MODIFY ("IS_ACTIVE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER" MODIFY ("DATE_JOINED" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER" ADD CHECK ("IS_SUPERUSER" IN (0,1)) ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_USER" ADD CHECK ("IS_STAFF" IN (0,1)) ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_USER" ADD CHECK ("IS_ACTIVE" IN (0,1)) ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_USER" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "AUTH_USER" ADD UNIQUE ("USERNAME")
+  ALTER TABLE "PROBANDO"."AUTH_USER" ADD UNIQUE ("USERNAME")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1737,49 +1770,49 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table AUTH_USER_GROUPS
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_USER_GROUPS" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER_GROUPS" MODIFY ("USER_ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER_GROUPS" MODIFY ("GROUP_ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER_GROUPS" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."AUTH_USER_GROUPS" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER_GROUPS" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER_GROUPS" MODIFY ("GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER_GROUPS" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "AUTH_USER_GROUPS" ADD CONSTRAINT "AUTH_USER_USER_ID_G_94350C0C_U" UNIQUE ("USER_ID", "GROUP_ID")
+  ALTER TABLE "PROBANDO"."AUTH_USER_GROUPS" ADD CONSTRAINT "AUTH_USER_USER_ID_G_94350C0C_U" UNIQUE ("USER_ID", "GROUP_ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table AUTH_USER_USER_PERMISSIONS
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_USER_USER_PERMISSIONS" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER_USER_PERMISSIONS" MODIFY ("USER_ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER_USER_PERMISSIONS" MODIFY ("PERMISSION_ID" NOT NULL ENABLE);
-  ALTER TABLE "AUTH_USER_USER_PERMISSIONS" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" MODIFY ("PERMISSION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "AUTH_USER_USER_PERMISSIONS" ADD CONSTRAINT "AUTH_USER_USER_ID_P_14A6B632_U" UNIQUE ("USER_ID", "PERMISSION_ID")
+  ALTER TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ADD CONSTRAINT "AUTH_USER_USER_ID_P_14A6B632_U" UNIQUE ("USER_ID", "PERMISSION_ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table CARRITO
 --------------------------------------------------------
 
-  ALTER TABLE "CARRITO" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "CARRITO" MODIFY ("LIBRO_ID" NOT NULL ENABLE);
-  ALTER TABLE "CARRITO" MODIFY ("CANTIDAD" NOT NULL ENABLE);
-  ALTER TABLE "CARRITO" ADD CONSTRAINT "CARRITO_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."CARRITO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CARRITO" MODIFY ("LIBRO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CARRITO" MODIFY ("CANTIDAD" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CARRITO" ADD CONSTRAINT "CARRITO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table CLIENTE
 --------------------------------------------------------
 
-  ALTER TABLE "CLIENTE" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "CLIENTE" MODIFY ("RUT_CLIENTE" NOT NULL ENABLE);
-  ALTER TABLE "CLIENTE" MODIFY ("NOMBRE" NOT NULL ENABLE);
-  ALTER TABLE "CLIENTE" MODIFY ("APELLIDO" NOT NULL ENABLE);
-  ALTER TABLE "CLIENTE" MODIFY ("CORREO" NOT NULL ENABLE);
-  ALTER TABLE "CLIENTE" MODIFY ("NUMERO_TARJETA" NOT NULL ENABLE);
-  ALTER TABLE "CLIENTE" ADD CONSTRAINT "CLIENTE_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."CLIENTE" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CLIENTE" MODIFY ("RUT_CLIENTE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CLIENTE" MODIFY ("NOMBRE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CLIENTE" MODIFY ("APELLIDO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CLIENTE" MODIFY ("CORREO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CLIENTE" MODIFY ("NUMERO_TARJETA" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."CLIENTE" ADD CONSTRAINT "CLIENTE_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1789,12 +1822,12 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table COTIZACIONES
 --------------------------------------------------------
 
-  ALTER TABLE "COTIZACIONES" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "COTIZACIONES" MODIFY ("FECHA" NOT NULL ENABLE);
-  ALTER TABLE "COTIZACIONES" MODIFY ("CORREO" NOT NULL ENABLE);
-  ALTER TABLE "COTIZACIONES" MODIFY ("DETALLE" NOT NULL ENABLE);
-  ALTER TABLE "COTIZACIONES" MODIFY ("CLIENTE_ID" NOT NULL ENABLE);
-  ALTER TABLE "COTIZACIONES" ADD CONSTRAINT "COTIZACIONES_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."COTIZACIONES" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."COTIZACIONES" MODIFY ("FECHA" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."COTIZACIONES" MODIFY ("CORREO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."COTIZACIONES" MODIFY ("DETALLE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."COTIZACIONES" MODIFY ("CLIENTE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."COTIZACIONES" ADD CONSTRAINT "COTIZACIONES_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1804,22 +1837,22 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table DETALLE_VENTA
 --------------------------------------------------------
 
-  ALTER TABLE "DETALLE_VENTA" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "DETALLE_VENTA" MODIFY ("VENTA_VENTA_ID" NOT NULL ENABLE);
-  ALTER TABLE "DETALLE_VENTA" MODIFY ("VENTA_LIBRO_ID" NOT NULL ENABLE);
-  ALTER TABLE "DETALLE_VENTA" ADD CONSTRAINT "DETALLE_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."DETALLE_VENTA" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DETALLE_VENTA" MODIFY ("VENTA_VENTA_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DETALLE_VENTA" MODIFY ("VENTA_LIBRO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DETALLE_VENTA" ADD CONSTRAINT "DETALLE_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table DJANGO_ADMIN_LOG
 --------------------------------------------------------
 
-  ALTER TABLE "DJANGO_ADMIN_LOG" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_ADMIN_LOG" MODIFY ("ACTION_TIME" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_ADMIN_LOG" MODIFY ("ACTION_FLAG" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_ADMIN_LOG" MODIFY ("USER_ID" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_ADMIN_LOG" ADD CHECK ("ACTION_FLAG" >= 0) ENABLE;
-  ALTER TABLE "DJANGO_ADMIN_LOG" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" MODIFY ("ACTION_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" MODIFY ("ACTION_FLAG" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" ADD CHECK ("ACTION_FLAG" >= 0) ENABLE;
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1829,14 +1862,14 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table DJANGO_CONTENT_TYPE
 --------------------------------------------------------
 
-  ALTER TABLE "DJANGO_CONTENT_TYPE" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_CONTENT_TYPE" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."DJANGO_CONTENT_TYPE" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_CONTENT_TYPE" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "DJANGO_CONTENT_TYPE" ADD CONSTRAINT "DJANGO_CO_APP_LABEL_76BD3D3B_U" UNIQUE ("APP_LABEL", "MODEL")
+  ALTER TABLE "PROBANDO"."DJANGO_CONTENT_TYPE" ADD CONSTRAINT "DJANGO_CO_APP_LABEL_76BD3D3B_U" UNIQUE ("APP_LABEL", "MODEL")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1846,9 +1879,9 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table DJANGO_MIGRATIONS
 --------------------------------------------------------
 
-  ALTER TABLE "DJANGO_MIGRATIONS" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_MIGRATIONS" MODIFY ("APPLIED" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_MIGRATIONS" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."DJANGO_MIGRATIONS" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_MIGRATIONS" MODIFY ("APPLIED" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_MIGRATIONS" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1858,9 +1891,9 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table DJANGO_SESSION
 --------------------------------------------------------
 
-  ALTER TABLE "DJANGO_SESSION" MODIFY ("SESSION_KEY" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_SESSION" MODIFY ("EXPIRE_DATE" NOT NULL ENABLE);
-  ALTER TABLE "DJANGO_SESSION" ADD PRIMARY KEY ("SESSION_KEY")
+  ALTER TABLE "PROBANDO"."DJANGO_SESSION" MODIFY ("SESSION_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_SESSION" MODIFY ("EXPIRE_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."DJANGO_SESSION" ADD PRIMARY KEY ("SESSION_KEY")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1870,16 +1903,16 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table EMPLEADO
 --------------------------------------------------------
 
-  ALTER TABLE "EMPLEADO" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("RUT_EMPLEADO" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("NOMBRE" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("APELLIDO" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("CORREO" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("DIRECCION" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("TELEFONO" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("CARGO" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" MODIFY ("DEPARTAMENTO" NOT NULL ENABLE);
-  ALTER TABLE "EMPLEADO" ADD CONSTRAINT "EMPLEADO_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("RUT_EMPLEADO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("NOMBRE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("APELLIDO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("CORREO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("DIRECCION" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("TELEFONO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("CARGO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" MODIFY ("DEPARTAMENTO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."EMPLEADO" ADD CONSTRAINT "EMPLEADO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1889,14 +1922,14 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table LIBRO
 --------------------------------------------------------
 
-  ALTER TABLE "LIBRO" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "LIBRO" MODIFY ("NOMBRE" NOT NULL ENABLE);
-  ALTER TABLE "LIBRO" MODIFY ("AUTOR" NOT NULL ENABLE);
-  ALTER TABLE "LIBRO" MODIFY ("EDITORIAL" NOT NULL ENABLE);
-  ALTER TABLE "LIBRO" MODIFY ("PRECIO" NOT NULL ENABLE);
-  ALTER TABLE "LIBRO" MODIFY ("STOCK" NOT NULL ENABLE);
-  ALTER TABLE "LIBRO" MODIFY ("PROVEEDOR" NOT NULL ENABLE);
-  ALTER TABLE "LIBRO" ADD CONSTRAINT "LIBRO_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."LIBRO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."LIBRO" MODIFY ("NOMBRE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."LIBRO" MODIFY ("AUTOR" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."LIBRO" MODIFY ("EDITORIAL" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."LIBRO" MODIFY ("PRECIO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."LIBRO" MODIFY ("STOCK" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."LIBRO" MODIFY ("PROVEEDOR" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."LIBRO" ADD CONSTRAINT "LIBRO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1906,49 +1939,55 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table MATERIALES
 --------------------------------------------------------
 
-  ALTER TABLE "MATERIALES" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "MATERIALES" MODIFY ("NOMBRE" NOT NULL ENABLE);
-  ALTER TABLE "MATERIALES" MODIFY ("STOCK" NOT NULL ENABLE);
-  ALTER TABLE "MATERIALES" MODIFY ("TECNICO_ID" NOT NULL ENABLE);
-  ALTER TABLE "MATERIALES" ADD CONSTRAINT "MATERIALES_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."MATERIALES" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."MATERIALES" MODIFY ("NOMBRE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."MATERIALES" MODIFY ("STOCK" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."MATERIALES" MODIFY ("TECNICO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."MATERIALES" ADD CONSTRAINT "MATERIALES_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table PAGO
 --------------------------------------------------------
 
-  ALTER TABLE "PAGO" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "PAGO" MODIFY ("TOTAL" NOT NULL ENABLE);
-  ALTER TABLE "PAGO" MODIFY ("VENTA_ID" NOT NULL ENABLE);
-  ALTER TABLE "PAGO" ADD CONSTRAINT "PAGO_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."PAGO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."PAGO" MODIFY ("TOTAL" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."PAGO" MODIFY ("VENTA_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."PAGO" ADD CONSTRAINT "PAGO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table SERVICIO
 --------------------------------------------------------
 
-  ALTER TABLE "SERVICIO" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "SERVICIO" MODIFY ("FECHA_SERVICIO" NOT NULL ENABLE);
-  ALTER TABLE "SERVICIO" MODIFY ("DIRECCION_SERVICIO" NOT NULL ENABLE);
-  ALTER TABLE "SERVICIO" MODIFY ("DETALLE_SERVICIO" NOT NULL ENABLE);
-  ALTER TABLE "SERVICIO" MODIFY ("TIPO_ID" NOT NULL ENABLE);
-  ALTER TABLE "SERVICIO" MODIFY ("CLIENTE_ID" NOT NULL ENABLE);
-  ALTER TABLE "SERVICIO" MODIFY ("TECNICO_ID" NOT NULL ENABLE);
-  ALTER TABLE "SERVICIO" ADD CONSTRAINT "SERVICIO_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."SERVICIO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."SERVICIO" MODIFY ("FECHA_SERVICIO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."SERVICIO" MODIFY ("DIRECCION_SERVICIO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."SERVICIO" MODIFY ("DETALLE_SERVICIO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."SERVICIO" MODIFY ("TIPO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."SERVICIO" MODIFY ("CLIENTE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."SERVICIO" MODIFY ("TECNICO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."SERVICIO" ADD CONSTRAINT "SERVICIO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table TECNICO
 --------------------------------------------------------
 
-  ALTER TABLE "TECNICO" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "TECNICO" MODIFY ("RUT_TECNICO" NOT NULL ENABLE);
-  ALTER TABLE "TECNICO" MODIFY ("NOMBRE" NOT NULL ENABLE);
-  ALTER TABLE "TECNICO" MODIFY ("APELLIDO" NOT NULL ENABLE);
-  ALTER TABLE "TECNICO" MODIFY ("CORREO" NOT NULL ENABLE);
-  ALTER TABLE "TECNICO" MODIFY ("DIRECCION" NOT NULL ENABLE);
-  ALTER TABLE "TECNICO" MODIFY ("TELEFONO" NOT NULL ENABLE);
-  ALTER TABLE "TECNICO" ADD CONSTRAINT "TECNICO_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."TECNICO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TECNICO" MODIFY ("RUT_TECNICO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TECNICO" MODIFY ("NOMBRE" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TECNICO" MODIFY ("APELLIDO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TECNICO" MODIFY ("CORREO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TECNICO" MODIFY ("DIRECCION" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TECNICO" MODIFY ("TELEFONO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TECNICO" ADD CONSTRAINT "TECNICO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1958,9 +1997,9 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table TIPO
 --------------------------------------------------------
 
-  ALTER TABLE "TIPO" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "TIPO" MODIFY ("TIPO" NOT NULL ENABLE);
-  ALTER TABLE "TIPO" ADD CONSTRAINT "TIPO_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."TIPO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TIPO" MODIFY ("TIPO" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."TIPO" ADD CONSTRAINT "TIPO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
@@ -1970,99 +2009,99 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 --  Constraints for Table VENTA
 --------------------------------------------------------
 
-  ALTER TABLE "VENTA" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "VENTA" MODIFY ("FECHA_VENTA" NOT NULL ENABLE);
-  ALTER TABLE "VENTA" MODIFY ("TOTAL" NOT NULL ENABLE);
-  ALTER TABLE "VENTA" MODIFY ("CLIENTE_ID" NOT NULL ENABLE);
-  ALTER TABLE "VENTA" MODIFY ("EMPLEADO_ID" NOT NULL ENABLE);
-  ALTER TABLE "VENTA" ADD CONSTRAINT "VENTA_PK" PRIMARY KEY ("ID")
+  ALTER TABLE "PROBANDO"."VENTA" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."VENTA" MODIFY ("FECHA_VENTA" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."VENTA" MODIFY ("TOTAL" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."VENTA" MODIFY ("CLIENTE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."VENTA" MODIFY ("EMPLEADO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PROBANDO"."VENTA" ADD CONSTRAINT "VENTA_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table AUTH_GROUP_PERMISSIONS
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_GROUP_PERMISSIONS" ADD CONSTRAINT "AUTH_GROU_GROUP_ID_B120CBF9_F" FOREIGN KEY ("GROUP_ID")
-	  REFERENCES "AUTH_GROUP" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
-  ALTER TABLE "AUTH_GROUP_PERMISSIONS" ADD CONSTRAINT "AUTH_GROU_PERMISSIO_84C5C92E_F" FOREIGN KEY ("PERMISSION_ID")
-	  REFERENCES "AUTH_PERMISSION" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" ADD CONSTRAINT "AUTH_GROU_GROUP_ID_B120CBF9_F" FOREIGN KEY ("GROUP_ID")
+	  REFERENCES "PROBANDO"."AUTH_GROUP" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_GROUP_PERMISSIONS" ADD CONSTRAINT "AUTH_GROU_PERMISSIO_84C5C92E_F" FOREIGN KEY ("PERMISSION_ID")
+	  REFERENCES "PROBANDO"."AUTH_PERMISSION" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table AUTH_PERMISSION
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_PERMISSION" ADD CONSTRAINT "AUTH_PERM_CONTENT_T_2F476E4B_F" FOREIGN KEY ("CONTENT_TYPE_ID")
-	  REFERENCES "DJANGO_CONTENT_TYPE" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_PERMISSION" ADD CONSTRAINT "AUTH_PERM_CONTENT_T_2F476E4B_F" FOREIGN KEY ("CONTENT_TYPE_ID")
+	  REFERENCES "PROBANDO"."DJANGO_CONTENT_TYPE" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table AUTH_USER_GROUPS
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_USER_GROUPS" ADD CONSTRAINT "AUTH_USER_USER_ID_6A12ED8B_F" FOREIGN KEY ("USER_ID")
-	  REFERENCES "AUTH_USER" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
-  ALTER TABLE "AUTH_USER_GROUPS" ADD CONSTRAINT "AUTH_USER_GROUP_ID_97559544_F" FOREIGN KEY ("GROUP_ID")
-	  REFERENCES "AUTH_GROUP" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_USER_GROUPS" ADD CONSTRAINT "AUTH_USER_USER_ID_6A12ED8B_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PROBANDO"."AUTH_USER" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_USER_GROUPS" ADD CONSTRAINT "AUTH_USER_GROUP_ID_97559544_F" FOREIGN KEY ("GROUP_ID")
+	  REFERENCES "PROBANDO"."AUTH_GROUP" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table AUTH_USER_USER_PERMISSIONS
 --------------------------------------------------------
 
-  ALTER TABLE "AUTH_USER_USER_PERMISSIONS" ADD CONSTRAINT "AUTH_USER_USER_ID_A95EAD1B_F" FOREIGN KEY ("USER_ID")
-	  REFERENCES "AUTH_USER" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
-  ALTER TABLE "AUTH_USER_USER_PERMISSIONS" ADD CONSTRAINT "AUTH_USER_PERMISSIO_1FBB5F2C_F" FOREIGN KEY ("PERMISSION_ID")
-	  REFERENCES "AUTH_PERMISSION" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ADD CONSTRAINT "AUTH_USER_USER_ID_A95EAD1B_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PROBANDO"."AUTH_USER" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."AUTH_USER_USER_PERMISSIONS" ADD CONSTRAINT "AUTH_USER_PERMISSIO_1FBB5F2C_F" FOREIGN KEY ("PERMISSION_ID")
+	  REFERENCES "PROBANDO"."AUTH_PERMISSION" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table CARRITO
 --------------------------------------------------------
 
-  ALTER TABLE "CARRITO" ADD CONSTRAINT "CARRITO_LIBRO_FK" FOREIGN KEY ("LIBRO_ID")
-	  REFERENCES "LIBRO" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."CARRITO" ADD CONSTRAINT "CARRITO_LIBRO_FK" FOREIGN KEY ("LIBRO_ID")
+	  REFERENCES "PROBANDO"."LIBRO" ("ID") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table COTIZACIONES
 --------------------------------------------------------
 
-  ALTER TABLE "COTIZACIONES" ADD CONSTRAINT "COTIZACIONES_CLIENTE_FK" FOREIGN KEY ("CLIENTE_ID")
-	  REFERENCES "CLIENTE" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."COTIZACIONES" ADD CONSTRAINT "COTIZACIONES_CLIENTE_FK" FOREIGN KEY ("CLIENTE_ID")
+	  REFERENCES "PROBANDO"."CLIENTE" ("ID") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table DETALLE_VENTA
 --------------------------------------------------------
 
-  ALTER TABLE "DETALLE_VENTA" ADD CONSTRAINT "VENTA_FK" FOREIGN KEY ("VENTA_VENTA_ID")
-	  REFERENCES "VENTA" ("ID") ENABLE;
-  ALTER TABLE "DETALLE_VENTA" ADD CONSTRAINT "VENTA_LIBRO_FK" FOREIGN KEY ("VENTA_LIBRO_ID")
-	  REFERENCES "LIBRO" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."DETALLE_VENTA" ADD CONSTRAINT "VENTA_FK" FOREIGN KEY ("VENTA_VENTA_ID")
+	  REFERENCES "PROBANDO"."VENTA" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."DETALLE_VENTA" ADD CONSTRAINT "VENTA_LIBRO_FK" FOREIGN KEY ("VENTA_LIBRO_ID")
+	  REFERENCES "PROBANDO"."LIBRO" ("ID") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table DJANGO_ADMIN_LOG
 --------------------------------------------------------
 
-  ALTER TABLE "DJANGO_ADMIN_LOG" ADD CONSTRAINT "DJANGO_AD_CONTENT_T_C4BCE8EB_F" FOREIGN KEY ("CONTENT_TYPE_ID")
-	  REFERENCES "DJANGO_CONTENT_TYPE" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
-  ALTER TABLE "DJANGO_ADMIN_LOG" ADD CONSTRAINT "DJANGO_AD_USER_ID_C564EBA6_F" FOREIGN KEY ("USER_ID")
-	  REFERENCES "AUTH_USER" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" ADD CONSTRAINT "DJANGO_AD_CONTENT_T_C4BCE8EB_F" FOREIGN KEY ("CONTENT_TYPE_ID")
+	  REFERENCES "PROBANDO"."DJANGO_CONTENT_TYPE" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
+  ALTER TABLE "PROBANDO"."DJANGO_ADMIN_LOG" ADD CONSTRAINT "DJANGO_AD_USER_ID_C564EBA6_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PROBANDO"."AUTH_USER" ("ID") DEFERRABLE INITIALLY DEFERRED ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table MATERIALES
 --------------------------------------------------------
 
-  ALTER TABLE "MATERIALES" ADD CONSTRAINT "MATERIALES_TECNICO_FK" FOREIGN KEY ("TECNICO_ID")
-	  REFERENCES "TECNICO" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."MATERIALES" ADD CONSTRAINT "MATERIALES_TECNICO_FK" FOREIGN KEY ("TECNICO_ID")
+	  REFERENCES "PROBANDO"."TECNICO" ("ID") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table PAGO
 --------------------------------------------------------
 
-  ALTER TABLE "PAGO" ADD CONSTRAINT "PAGO_VENTA_FK" FOREIGN KEY ("VENTA_ID")
-	  REFERENCES "VENTA" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."PAGO" ADD CONSTRAINT "PAGO_VENTA_FK" FOREIGN KEY ("VENTA_ID")
+	  REFERENCES "PROBANDO"."VENTA" ("ID") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table SERVICIO
 --------------------------------------------------------
 
-  ALTER TABLE "SERVICIO" ADD CONSTRAINT "SERVICIO_CLIENTE_FK" FOREIGN KEY ("CLIENTE_ID")
-	  REFERENCES "CLIENTE" ("ID") ENABLE;
-  ALTER TABLE "SERVICIO" ADD CONSTRAINT "SERVICIO_TECNICO_FK" FOREIGN KEY ("TECNICO_ID")
-	  REFERENCES "TECNICO" ("ID") ENABLE;
-  ALTER TABLE "SERVICIO" ADD CONSTRAINT "SERVICIO_TIPO_FK" FOREIGN KEY ("TIPO_ID")
-	  REFERENCES "TIPO" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."SERVICIO" ADD CONSTRAINT "SERVICIO_CLIENTE_FK" FOREIGN KEY ("CLIENTE_ID")
+	  REFERENCES "PROBANDO"."CLIENTE" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."SERVICIO" ADD CONSTRAINT "SERVICIO_TECNICO_FK" FOREIGN KEY ("TECNICO_ID")
+	  REFERENCES "PROBANDO"."TECNICO" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."SERVICIO" ADD CONSTRAINT "SERVICIO_TIPO_FK" FOREIGN KEY ("TIPO_ID")
+	  REFERENCES "PROBANDO"."TIPO" ("ID") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table VENTA
 --------------------------------------------------------
 
-  ALTER TABLE "VENTA" ADD CONSTRAINT "VENTA_CLIENTE_FK" FOREIGN KEY ("CLIENTE_ID")
-	  REFERENCES "CLIENTE" ("ID") ENABLE;
-  ALTER TABLE "VENTA" ADD CONSTRAINT "VENTA_EMPLEADO_FK" FOREIGN KEY ("EMPLEADO_ID")
-	  REFERENCES "EMPLEADO" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."VENTA" ADD CONSTRAINT "VENTA_CLIENTE_FK" FOREIGN KEY ("CLIENTE_ID")
+	  REFERENCES "PROBANDO"."CLIENTE" ("ID") ENABLE;
+  ALTER TABLE "PROBANDO"."VENTA" ADD CONSTRAINT "VENTA_EMPLEADO_FK" FOREIGN KEY ("EMPLEADO_ID")
+	  REFERENCES "PROBANDO"."EMPLEADO" ("ID") ENABLE;

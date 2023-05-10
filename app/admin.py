@@ -23,7 +23,7 @@ class carritoAdmin(admin.ModelAdmin):
     list_per_page = 7
 
 class materialesAdmin(admin.ModelAdmin):
-    list_display = ['id']
+    list_display = ['id','nombre','stock','tecnico_id']
     search_fields = ['id']
     list_per_page = 8
 
@@ -58,10 +58,6 @@ class cotizacionesAdmin(admin.ModelAdmin):
     search_fields = ['id']
     list_per_page = 14
 
-class materialesAdmin(admin.ModelAdmin):
-    list_display = ['id','nombre','stock','tecnico_id']
-    search_fields = ['id']
-    list_per_page = 14
 
 
 
