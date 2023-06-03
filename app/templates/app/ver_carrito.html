@@ -1,13 +1,14 @@
-{% extends 'app/base.html' %} {% block contenido %}
+{% extends 'app/base.html' %}
+{% block contenido %}
 {% block navbar %}
-  {% include 'app/basecliente.html' %}
+{% include 'app/basecliente.html' %}
 {% endblock %}
+
 <h1>Carrito de compras</h1>
 {% if carrito %}
 <table class="table">
   <thead>
     <tr>
-      
       <th scope="col">Libro</th>
       <th scope="col">Cantidad</th>
       <th scope="col">Precio</th>
@@ -17,19 +18,15 @@
   </thead>
   <tbody>
     {% for item in carrito %}
-    
     <tr>
-      
       <td>
         {% if item.imagen %}
-          <img src=" aux.imagen.url "/>
-          {% else %}
-          <img
-            src="../static/app/img/imagenlibros.jpg"
-            class="img-thumbnail" style="width: 10%; max-width: 50%;"
-          />
-          {% endif %}
-        {{ item.libro.nombre }}</td>
+        <img src="{{ item.imagen.url }}" />
+        {% else %}
+        <img src="../static/app/img/imagenlibros.jpg" class="img-thumbnail" style="width: 10%; max-width: 50%;" />
+        {% endif %}
+        {{ item.libro.nombre }}
+      </td>
       <td>{{ item.cantidad }}</td>
       <td>${{ item.libro.precio }}</td>
       <td>${{ item.subtotal }}</td>
@@ -40,6 +37,23 @@
         </form>
       </td>
     </tr>
+    <td>
+      <form method="POST" action="{% url 'realizar_compra4' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Realizar compra</button>
+        {% if messages %}
+        {% for m in messages %}
+        <script>
+          Swal.fire({
+            title: "PROBANDO MENSAJEEEEEEEEEEEEE!",
+            text: "{{ m }}",
+            icon: "success",
+          });
+        </script>
+        {% endfor %}
+        {% endif %}
+      </form>
+    </td>
     {% endfor %}
     <tr>
       <td></td>
@@ -50,26 +64,15 @@
     </tr>
   </tbody>
 </table>
-<form method="POST" action="#">
-  {% csrf_token %}
-  <div class="d-flex justify-content-center">
-    <button type="submit" class="btn btn-success">Realizar compra</button>
-  </div>
-</form>
+
 {% else %}
 <p>No hay productos en el carrito.</p>
-
-{% endif %} 
+{% endif %}
 
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a
-      class="nav-link"
-      href="../listar_cliente"
-      data-bs-toggle="tooltip"
-      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
-      >Volver al perfil</a
-    >
+    <a class="nav-link" href="../listar_cliente" data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al perfil</a>
   </li>
 </ul>
 

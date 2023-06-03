@@ -1,0 +1,62 @@
+{% extends 'app/base.html' %} {% block contenido %}
+{% block navbar %}
+  {% include 'app/basecliente.html' %}
+{% endblock %}
+<section class="thumbnail 1" id="thumbnail 1">
+  <div class="Thumbnail py-2 bg-light">
+    <!--CONTENEDOR PLOMO QUE ENCIERRA LOS CONTAINER-->
+
+    <div class="container-fluid">
+      <!-- CONTENEDOR-fluid para que el contenedor ocupe los 12 espacios que nos ofrece boostrap  -->
+
+      <div class="row">
+        <!--comando aling aliniea los 3 itemps-->
+        <!--IMAGEN DE LA IZQUIERDA-->
+        <div class="col-sm-10">
+          <table class="table table-condensed table-striped">
+            <thead>
+              <tr class="table-success">
+                
+                <th>Nombre libro</th>
+                <th>cantidad</th>
+                <th>estado</th>
+               
+             
+              </tr>
+            </thead>
+            <tbody>
+              {% for aux in starkenapi %}
+
+              <tr>
+               
+                <td>{{ aux.nombre }}</td>
+                <td>{{ aux.cantidad }}</td>
+                <td>{{ aux.estado }}</td>
+               
+              </tr>
+                
+                          
+                 
+              {% endfor %}
+          </tbody>
+          
+          
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<ul class="nav d-flex justify-content-center">
+  <li class="nav-item d-flex justify-content-center">
+    <a
+      class="nav-link"
+      href="../listar_cliente"
+      data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
+      >Volver al perfil</a
+    >
+  </li>
+</ul>
+{% endblock %}
