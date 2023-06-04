@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basempleado.html' %}
+{% include 'app/basempleado.html' %}
 {% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
@@ -18,31 +18,31 @@
               <tr class="table-success">
                 <th>Fecha cotizacion</th>
                 <th>Correo cliente</th>
-                <th>Detalle cotizacion</th>
+                <th>Detalle cotización</th>
                 <th>Rut cliente</th>
                 <th>Nombre cliente</th>
-                <th>Telefono cliente</th>
-             
+                <th>Teléfono cliente</th>
+
               </tr>
             </thead>
             <tbody>
               {% for aux in listaCotizacion %}
-                  {% for x in listaCliente2 %}
-                      {% if x.rut_cliente == x.rut_cliente %}
-                          <tr>
-                              <td>{{ aux.fecha }}</td>
-                              <td>{{ aux.correo }}</td>
-                              <td>{{ aux.detalle }}</td>
-                              <td>{{ x.rut_cliente }}</td>
-                              <td>{{ x.nombre }}</td>
-                              <td>{{ x.telefono }}</td>
-                          </tr>
-                      {% endif %}
-                  {% endfor %}
+              {% for x in listaCliente2 %}
+              {% if x.rut_cliente == x.rut_cliente %}
+              <tr>
+                <td>{{ aux.fecha }}</td>
+                <td>{{ aux.correo }}</td>
+                <td>{{ aux.detalle }}</td>
+                <td>{{ x.rut_cliente }}</td>
+                <td>{{ x.nombre }}</td>
+                <td>{{ x.telefono }}</td>
+              </tr>
+              {% endif %}
               {% endfor %}
-          </tbody>
-          
-          
+              {% endfor %}
+            </tbody>
+
+
           </table>
         </div>
 
@@ -52,13 +52,8 @@
 </section>
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a
-      class="nav-link"
-      href="../listar_empleado"
-      data-bs-toggle="tooltip"
-      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
-      >Volver al perfil</a
-    >
+    <a class="nav-link" href="../listar_empleado" data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al perfil</a>
   </li>
 </ul>
 {% endblock %}

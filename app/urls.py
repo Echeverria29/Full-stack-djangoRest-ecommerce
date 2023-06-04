@@ -35,8 +35,7 @@ urlpatterns = [
   path('libros_api', libros_api, name='libros_api'),
   path('starken_api', starken_api, name='starken_api'),
   path('realizarcompra/', realizar_compra, name='realizar_compra'),
-  path('realizarcompra3/', realizar_compra3, name='realizar_compra3'),
-  path('realizarcompra4/', realizar_compra4, name='realizar_compra4'),
+ 
 
 
 ]   

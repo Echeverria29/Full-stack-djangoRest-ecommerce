@@ -1,21 +1,21 @@
 --------------------------------------------------------
--- Archivo creado  - miércoles-mayo-10-2023   
+-- Archivo creado  - domingo-junio-04-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Sequence CARRITO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "CARRITO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "CARRITO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 161 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence CLIENTE_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "CLIENTE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "CLIENTE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence COTIZACIONES_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "COTIZACIONES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "COTIZACIONES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence DETALLE_SEQ
 --------------------------------------------------------
@@ -25,42 +25,42 @@
 --  DDL for Sequence EMPLEADO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "EMPLEADO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "EMPLEADO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence LIBRO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "LIBRO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "LIBRO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 81 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence MATERIALES_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "MATERIALES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "MATERIALES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence PAGO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PAGO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PAGO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence SERVICIO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "SERVICIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "SERVICIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence TECNICO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "TECNICO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "TECNICO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence TIPO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "TIPO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "TIPO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence VENTA_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "VENTA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "VENTA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 101 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Table AUTH_GROUP
 --------------------------------------------------------
@@ -155,9 +155,12 @@
    (	"ID" NUMBER(*,0), 
 	"LIBRO_ID" NUMBER(*,0), 
 	"CANTIDAD" NUMBER(10,0)
-   ) SEGMENT CREATION DEFERRED 
+   ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Table CLIENTE
@@ -356,9 +359,12 @@
    (	"ID" NUMBER(*,0), 
 	"TOTAL" NUMBER(10,0), 
 	"VENTA_ID" NUMBER(*,0)
-   ) SEGMENT CREATION DEFERRED 
+   ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Table SERVICIO
@@ -422,9 +428,12 @@
 	"TOTAL" NUMBER(10,0), 
 	"CLIENTE_ID" NUMBER(*,0), 
 	"EMPLEADO_ID" NUMBER(*,0)
-   ) SEGMENT CREATION DEFERRED 
+   ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 REM INSERTING into AUTH_GROUP
 SET DEFINE OFF;
@@ -458,7 +467,7 @@ Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('23','Can
 Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('24','Can view session','6','view_session');
 REM INSERTING into AUTH_USER
 SET DEFINE OFF;
-Insert into AUTH_USER (ID,PASSWORD,LAST_LOGIN,IS_SUPERUSER,USERNAME,FIRST_NAME,LAST_NAME,EMAIL,IS_STAFF,IS_ACTIVE,DATE_JOINED) values ('1','pbkdf2_sha256$600000$F467YpkhntfLsGyaQAxIuQ$1x1cUB6eWFYWVjl5pLLLOeCJtFScMBiRB0aHLPiHP5k=',to_timestamp('10/05/23 18:48:22,269489000','DD/MM/RR HH24:MI:SSXFF'),'1','prob',null,null,'prob@gmail.com','1','1',to_timestamp('10/05/23 18:48:07,680630000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into AUTH_USER (ID,PASSWORD,LAST_LOGIN,IS_SUPERUSER,USERNAME,FIRST_NAME,LAST_NAME,EMAIL,IS_STAFF,IS_ACTIVE,DATE_JOINED) values ('1','pbkdf2_sha256$600000$F467YpkhntfLsGyaQAxIuQ$1x1cUB6eWFYWVjl5pLLLOeCJtFScMBiRB0aHLPiHP5k=',to_timestamp('03/06/23 19:20:34,553040000','DD/MM/RR HH24:MI:SSXFF'),'1','prob',null,null,'prob@gmail.com','1','1',to_timestamp('10/05/23 18:48:07,680630000','DD/MM/RR HH24:MI:SSXFF'));
 REM INSERTING into AUTH_USER_GROUPS
 SET DEFINE OFF;
 REM INSERTING into AUTH_USER_USER_PERMISSIONS
@@ -485,6 +494,7 @@ Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYP
 Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('8',to_timestamp('10/05/23 19:00:48,940745000','DD/MM/RR HH24:MI:SSXFF'),'Servicio object (1)','1','14','1');
 Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('9',to_timestamp('10/05/23 19:01:06,648789000','DD/MM/RR HH24:MI:SSXFF'),'Materiales object (1)','1','7','1');
 Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('10',to_timestamp('10/05/23 19:01:20,706082000','DD/MM/RR HH24:MI:SSXFF'),'Materiales object (2)','1','7','1');
+Insert into DJANGO_ADMIN_LOG (ID,ACTION_TIME,OBJECT_REPR,ACTION_FLAG,CONTENT_TYPE_ID,USER_ID) values ('21',to_timestamp('31/05/23 03:44:21,263982000','DD/MM/RR HH24:MI:SSXFF'),'harry potter y las reliquias de la muerte 1','1','11','1');
 REM INSERTING into DJANGO_CONTENT_TYPE
 SET DEFINE OFF;
 Insert into DJANGO_CONTENT_TYPE (ID,APP_LABEL,MODEL) values ('1','admin','logentry');
@@ -523,53 +533,154 @@ Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('17','auth','0012_al
 Insert into DJANGO_MIGRATIONS (ID,APP,NAME,APPLIED) values ('18','sessions','0001_initial',to_timestamp('10/05/23 18:47:52,286484000','DD/MM/RR HH24:MI:SSXFF'));
 REM INSERTING into DJANGO_SESSION
 SET DEFINE OFF;
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('0crm5fkyyql9roztj0othot1l9lgwail',to_timestamp('15/06/23 04:15:33,717221000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('0h7cvi4hbk6r4humyaz75v5axuysoak0',to_timestamp('15/06/23 03:19:15,920275000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('0i8bawz3io8aptu7hppulmnkzec51zc4',to_timestamp('15/06/23 05:20:56,811348000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('18lj6eli92ofl6wl4b48f5lvyqru0plh',to_timestamp('14/06/23 00:42:25,577159000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('1yt3hfpvwi2o8erqr0wbbzz8ey6joxvl',to_timestamp('15/06/23 04:36:55,427188000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('22khsjv03xpp3tfxbtpx87cww73mrg09',to_timestamp('17/06/23 05:25:54,238064000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('2amaurctq9ylm44uw9rs8mnze2w1lfab',to_timestamp('14/06/23 00:29:56,164198000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('2dkx7axxf1an21sx3l0f2559n6zz58ul',to_timestamp('17/06/23 02:39:16,463168000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('37u1lypvmomtbywfs7x6b1ojjapbjyzj',to_timestamp('10/06/23 04:31:01,731025000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('39g4nstvbhzpccfbsqbw5wbkdph6usel',to_timestamp('16/06/23 00:24:59,013506000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('3kij3b99udrymnkt7amjjnuii44vq6oq',to_timestamp('14/06/23 01:04:43,917191000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('3u6u7af47l2fgdgtmd3bnst0tipfqpts',to_timestamp('17/06/23 02:25:48,975105000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('49efxvnoh8ky34g6ez0t8lsttludab2s',to_timestamp('15/06/23 03:32:24,945684000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('63utn2ipcheljvfyp5gcjbsxtca9n66w',to_timestamp('16/06/23 00:45:31,232293000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('63yueseth324re1lwm1att8gh8btxgfh',to_timestamp('17/06/23 00:38:28,145307000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('6qzz7quqi6xzt46dcop2x0zggq8fljil',to_timestamp('16/06/23 23:50:56,650225000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('895jhjxl0h7tjf27ipy9n8c6nh1drovp',to_timestamp('14/06/23 01:41:05,937614000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('8ewpnssrzj4nj4tj18zmo3yvkeygrltd',to_timestamp('16/06/23 00:15:37,754551000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('8g5boia3wqrs6o7z5ijus9atm5isucfu',to_timestamp('14/06/23 01:17:43,772327000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('901vzhrjfwrl70mzirw3yug3qzm32fpn',to_timestamp('14/06/23 01:38:41,115343000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('9578nftmufzhs28c269lwudh8xjxfl9l',to_timestamp('15/06/23 03:48:44,963616000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ahim8zxl374dffg5w5lxry98fk3nvvho',to_timestamp('09/06/23 20:45:52,244337000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('an1hzmtcoc4ptggk7txhnaq6ra4mz49o',to_timestamp('13/06/23 03:37:22,217341000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('avjnst4ser617wgeq1b4bafhtbk1p8k3',to_timestamp('09/06/23 20:59:28,607000000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('b5876opf0a8x1q58dhvv4nrgmp9w1iwt',to_timestamp('14/06/23 00:31:50,038604000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('b6r5den77ndchssc58zz1p3w8dehrk8k',to_timestamp('15/06/23 03:29:06,341748000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('bamwsw9mrdwdmagbynsynhl6y6lsed6y',to_timestamp('13/06/23 23:07:07,764631000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('bhi2kp1zizfzo5mw40g5p5srwzmygqez',to_timestamp('16/06/23 01:00:23,643941000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('blr71aktifgnrbwww2mqst3xwzj0uc1m',to_timestamp('14/06/23 01:36:01,060685000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('c3289y4l978vymt0ouow0283zxkjlozp',to_timestamp('16/06/23 00:32:35,797712000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ce886k1pi3jgycbi2wmwr3hgn9em0527',to_timestamp('16/06/23 23:47:12,676339000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ck99s90hyyj7ewu1byyt6hlq3yjy14ei',to_timestamp('14/06/23 03:45:02,236135000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('cr71sip58hcyvjaw1ium39ie7q8yc0vn',to_timestamp('16/06/23 00:15:12,853490000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('d0axia9bb486bxt8pgt2e5dy0cfum85z',to_timestamp('14/06/23 00:33:29,827254000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('d43vh9c0jjmsptkcnk9qveljqzxr58th',to_timestamp('15/06/23 03:15:21,087744000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ddspe94c8qlbk0jvuikvuok4wmp7vr87',to_timestamp('15/06/23 04:36:26,909707000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('dnfiy62k5m1kuf1fcd55d95mk898mbup',to_timestamp('15/06/23 05:38:41,823008000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('domqnxqcvb6772jzavmje3wyipq1iw9k',to_timestamp('14/06/23 03:54:54,007547000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('doy9f2jp6bux9sbm54c6vta1jgimmvm2',to_timestamp('17/06/23 02:56:24,267856000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('dozatqm1zll40qicxuejybmtn2velxns',to_timestamp('17/06/23 02:32:59,537379000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('dqco4l84khagefoetlu9i3rj1lw5qntc',to_timestamp('14/06/23 03:46:43,178653000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('eclj62z7cus5ou3rlzlj22d9bffwc3ig',to_timestamp('15/06/23 04:31:00,874030000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ej323wzf8g9lia3re0g79vztthjqhctk',to_timestamp('17/06/23 03:04:46,703994000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('endfq21vjx18nhuciw7txp37g85ey9or',to_timestamp('17/06/23 00:23:30,794811000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('eqkj4nxq8gasgdv5udaryf751royyne1',to_timestamp('17/06/23 03:11:36,606206000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('evg3xmanaphkhtc6lte3e2j1wfdog2vr',to_timestamp('17/06/23 05:01:30,813064000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('eyn4d7gtcp39gq7xvz1407biky1274o7',to_timestamp('17/06/23 00:42:38,581576000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('f7d23fef0b3muqqdiex2jy0zordy9x5r',to_timestamp('12/06/23 03:53:11,217502000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('flzle81is6plqe2qby1c58mty4qq07pg',to_timestamp('15/06/23 03:03:23,877024000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('gldq2wf3voyyxv2rdfmqsp8e8zdml4tn',to_timestamp('15/06/23 05:49:55,090469000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('gor6uq0ga8maz0igkmxefqfrbhf5gji2',to_timestamp('14/06/23 03:19:16,650785000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('gqi1jx48jeauf74lrukdlk4qyvucb574',to_timestamp('13/06/23 03:43:26,955960000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('hd5mvph51hp6rqnozk6eptvwcsa5lwa6',to_timestamp('15/06/23 03:30:24,097588000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('hjiccwymo3vqkxf6eg5h22yvvtuxpnp6',to_timestamp('17/06/23 02:32:46,142250000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('i6skiykkos2atcf1lp8o20jkb05elqw2',to_timestamp('16/06/23 00:35:07,189994000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('idd8gqvqhsud7um70ddja5jxvrvrjkfg',to_timestamp('15/06/23 03:02:33,160822000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ifnboxo1tm1hg65njxhc9d7zyv6bpbhm',to_timestamp('17/06/23 00:06:00,291841000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('inxsk2de66enxr352gx5769guiouzeaa',to_timestamp('17/06/23 19:20:34,554375000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('iol2rr7y6ydha4nt1t2m609wf73ehy14',to_timestamp('14/06/23 03:47:40,802328000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('irpwqykiqi4mn129asvz00jmdnpdx1vu',to_timestamp('15/06/23 04:23:02,729192000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('iv5qu03fcvgw45vo8v7mnx1r8oq76xvc',to_timestamp('24/05/23 18:48:22,272650000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('j3cwweyyru3mc4mldguvgbz236w6bi93',to_timestamp('17/06/23 05:26:27,773075000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('jm938gpdhwhb5y0yxxc0urnvnwat84b1',to_timestamp('16/06/23 00:28:10,881610000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('jz8o6sxpnujjwgvhq6bu1c7u2hq9mkfa',to_timestamp('15/06/23 03:59:50,427182000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('k4n2q3u24nalkanaqyhy4flxuqk4uv54',to_timestamp('16/06/23 00:13:42,852829000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('km55nmhqvd36qxtdif4afgf2xxkw7mfr',to_timestamp('16/06/23 23:52:14,921433000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('kx1ukepeygkn9p1q89apbmsbmk6djq9n',to_timestamp('15/06/23 03:41:03,072509000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('lqkmzg541pvv3oriz74lyj66aadtzfpb',to_timestamp('15/06/23 04:31:16,841376000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('lqsv850lxg8nrw0w8yonv0ot6d9tsiqf',to_timestamp('16/06/23 00:17:41,061291000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('luit52om3df0h0earq741ufmme80vuw0',to_timestamp('15/06/23 03:34:51,356282000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('m3gvuvthb5lpt5p32ie807x739chy24z',to_timestamp('15/06/23 03:34:12,617769000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('mcsehrzik2yyrty8vlpr998c8uunj013',to_timestamp('14/06/23 01:39:30,201560000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('mkciwrpjst7vt4vj50o1v32m9il24h5w',to_timestamp('14/06/23 04:22:39,626143000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('moub5fyo7524lmfgurwzovu0aomtjmgq',to_timestamp('16/06/23 23:50:02,044413000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('mpxzwy935seg58v3tamemgdr0v9iuqy3',to_timestamp('16/06/23 00:25:52,254103000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('nv34qjtiw5q6lhfyplfoy4p430nj414t',to_timestamp('16/06/23 00:51:37,554320000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('o9lxpg467cbpaay6iwwif0lpavxumtx0',to_timestamp('15/06/23 03:28:30,997031000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ocz8854jzzz3k6co8vyadbgl0hgd0gv1',to_timestamp('16/06/23 23:38:16,631260000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ogqxgzovmaxnr7ecxxjb9tl0k22n8n6b',to_timestamp('15/06/23 03:11:21,731639000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('oi66x7tu7gm1u7r1qxt10bupawsjflff',to_timestamp('16/06/23 00:33:01,313993000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('omvvzr2cbhnukp47k5c2xdwwxrbndeqv',to_timestamp('14/06/23 00:41:18,376581000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('p1bb3fhgxpzctbyo2dla7j8bwx8vzcha',to_timestamp('14/06/23 01:37:27,623743000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('pbmscq6n7vmt8yh7b7m9xjzbswex9jix',to_timestamp('10/06/23 03:44:45,978717000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('pwcn3kjhoaynq4wc2tzk3rt3sswkmels',to_timestamp('15/06/23 03:03:50,295694000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('pwxmz7u3212qsnrt02nyy7eysighlwpq',to_timestamp('15/06/23 03:37:18,066511000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('q4p39fippi3arjxrk4g0a37qdcivh2w5',to_timestamp('17/06/23 03:04:30,803555000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('q53ah0jp46921zpp0gmixfhwziusofea',to_timestamp('16/06/23 00:28:53,450714000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('qc7mc56serjvy6r2n3r5x781lcymbi8c',to_timestamp('14/06/23 00:07:03,827778000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('r2l6evg0lo0exbsl53tmafm7w320ax50',to_timestamp('15/06/23 05:50:41,989463000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('rwkjln5d89navosdjfp2s8unaypkk4d7',to_timestamp('14/06/23 00:45:09,447143000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('s4wwt543o5t0430822xtsvw4hi8iy6rv',to_timestamp('16/06/23 00:18:25,909785000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('sb0zv28b9na2kamelivnyvj3j5up1gwk',to_timestamp('16/06/23 00:23:11,161931000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('sbqvl6sljistsv2ewfa7lzje9aoyrk9j',to_timestamp('17/06/23 00:15:52,629595000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('sdli57f02dkdjwxxd187g9jkneqh1yx2',to_timestamp('16/06/23 00:58:43,019585000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ssh5x2ngeru77pz6dlvpoj8aclwyldn4',to_timestamp('14/06/23 01:10:05,878970000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('st8rjxo8uj820dnkll1zqit2kl8sqa0v',to_timestamp('14/06/23 01:13:13,808233000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('th04gixet0rrr1d8rvqy6px3d3xsbylw',to_timestamp('16/06/23 00:33:11,859186000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('tts4zg1gaoh58hcbsqgz2j0p6tad0gzm',to_timestamp('17/06/23 00:34:30,715466000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('u89ombtmfbztdnsw5l5t7bl124xj3s2a',to_timestamp('09/06/23 20:37:39,750064000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('uvg343dj8lvh0o9lc3rm3pmw7ic3z6a4',to_timestamp('15/06/23 03:38:07,917701000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('v3uda367ooz4y8nm4j1o861easwydoze',to_timestamp('16/06/23 00:23:32,685352000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vadlfqep7vj2l1r8ln6ox0m1pvz1h2vc',to_timestamp('15/06/23 04:52:20,305012000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vfeivgrjwtihagzfmly4fw2x46znp9zu',to_timestamp('17/06/23 00:31:24,759291000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vhsnr3iyjmi68jhle5458tnj3qued2gk',to_timestamp('09/06/23 23:16:13,230422000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vm3x5qgs0dvwgwjk8deuqqii23mxxr3o',to_timestamp('14/06/23 00:59:23,124680000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vrfgdwoymxmbz7apgwcrzx2u4zz4j0t3',to_timestamp('13/06/23 23:10:56,594278000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vy8a4g8at3n1hog5do65tj7vfgwn6c8f',to_timestamp('14/06/23 03:55:25,448590000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('w1b90x2kvmrsrrzd6jq99htw0xx50qog',to_timestamp('16/06/23 23:49:23,705616000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('wlug0o2tsbjw2hhb3ij8j72yr64wrc4a',to_timestamp('16/06/23 23:48:19,784982000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('wq1x0dw4z3so55p91g5rrdq21yyagg3n',to_timestamp('15/06/23 03:32:39,336686000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('wt02i8wuoshble0dyoruqr83flnuj1s0',to_timestamp('15/06/23 03:25:45,659056000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('wurrkmalt7ofz108z94qi25d8pf4b0gy',to_timestamp('15/06/23 05:36:27,723882000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('xplqnx6cxxxc30xdzzs8peqjjb3w3wjm',to_timestamp('14/06/23 01:19:46,385845000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('xvnspi9bfadtd0qfq87yji190jnc34h3',to_timestamp('15/06/23 03:46:43,889402000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('xy5677xckdp9kf6uvsf1asokhkt6l7ph',to_timestamp('14/06/23 04:05:56,565341000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('y7dkgxfasr4zn59wzewwrrbmz1o7yw9s',to_timestamp('17/06/23 00:18:41,690203000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('yfkigblw3gth25lthfual0ejfmgkxxyj',to_timestamp('15/06/23 04:31:38,750169000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('yugt1k38cbgetvwy0szg700y2dels2nn',to_timestamp('15/06/23 05:35:07,063641000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('zbkswvhely9sru7wzhiamywl2zx1zap8',to_timestamp('15/06/23 04:32:15,691707000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('zcl9rtir9cf5opea51gztoiave4u1xcb',to_timestamp('14/06/23 03:12:47,286969000','DD/MM/RR HH24:MI:SSXFF'));
 REM INSERTING into EMPLEADO
 SET DEFINE OFF;
-Insert into EMPLEADO (ID,RUT_EMPLEADO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,CARGO,DEPARTAMENTO) values ('1','11630959-2','andres','garcia','andres@gmail.com','macul 2123','+5693265988','vendedor','ventas');
+Insert into EMPLEADO (ID,RUT_EMPLEADO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,CARGO,DEPARTAMENTO) values ('21','116309495','andres','echeverria','andrs@gmail.com','gernal232','22902892','vendedor','ventas');
 REM INSERTING into LIBRO
 SET DEFINE OFF;
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('1','harry potter','J.K rowlling','perseo','22350','25','libreria imagina');
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos la trilogia','J.R.R tolkien','barbarus','40800','10','libreria imagina');
+Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos la trilogia','J.R.R tolkien','barbarus','40800','3','libreria imagina');
+Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('61','harry potter y las reliquias de la muerte 1','J.K rowlling','magic','30000','8','imagina');
 REM INSERTING into MATERIALES
 SET DEFINE OFF;
 Insert into MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('1','brocha','20','1');
 Insert into MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('2','cera virgen','10','1');
 REM INSERTING into PAGO
 SET DEFINE OFF;
+Insert into PAGO (ID,TOTAL,VENTA_ID) values ('57','30000','81');
 REM INSERTING into SERVICIO
 SET DEFINE OFF;
+Insert into SERVICIO (ID,FECHA_SERVICIO,DIRECCION_SERVICIO,DETALLE_SERVICIO,TIPO_ID,CLIENTE_ID,TECNICO_ID) values ('22',to_date('13/05/23','DD/MM/RR'),'asda','asda','1','1','1');
 Insert into SERVICIO (ID,FECHA_SERVICIO,DIRECCION_SERVICIO,DETALLE_SERVICIO,TIPO_ID,CLIENTE_ID,TECNICO_ID) values ('1',to_date('15/05/23','DD/MM/RR'),'turquesa 1282','esta todo roto y no puede abrirse','1','1','1');
 REM INSERTING into TECNICO
 SET DEFINE OFF;
-Insert into TECNICO (ID,RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('1','18354934-8','orlando','echeverria','tecnico@gmail.com','los timables 2423','+5693656598');
+Insert into TECNICO (ID,RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('1','18354934-8','orlandosssssss','echeverria','tecnico@gmail.com','los timables 2423','+5693656598');
 REM INSERTING into TIPO
 SET DEFINE OFF;
 Insert into TIPO (ID,TIPO) values ('1','reparacion');
 Insert into TIPO (ID,TIPO) values ('2','mantenimiento');
 REM INSERTING into VENTA
 SET DEFINE OFF;
---------------------------------------------------------
---  DDL for Index SYS_C0016300
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016300" ON "AUTH_GROUP" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index SYS_C0016301
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016301" ON "AUTH_GROUP" ("NAME") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index SYS_C0016305
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016305" ON "AUTH_GROUP_PERMISSIONS" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  TABLESPACE "USERS" ;
+Insert into VENTA (ID,FECHA_VENTA,TOTAL,CLIENTE_ID,EMPLEADO_ID) values ('81',to_date('03/06/23','DD/MM/RR'),'30000','1','21');
 --------------------------------------------------------
 --  DDL for Index AUTH_GROU_GROUP_ID__0CD325B0_U
 --------------------------------------------------------
@@ -592,16 +703,6 @@ SET DEFINE OFF;
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C0016298
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016298" ON "AUTH_PERMISSION" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "USERS" ;
---------------------------------------------------------
 --  DDL for Index AUTH_PERM_CONTENT_T_01AB375A_U
 --------------------------------------------------------
 
@@ -622,65 +723,10 @@ SET DEFINE OFF;
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C0016315
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016315" ON "AUTH_USER" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index SYS_C0016316
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016316" ON "AUTH_USER" ("USERNAME") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "USERS" ;
---------------------------------------------------------
 --  DDL for Index AUTH_USER__GROUP_ID_97559544
 --------------------------------------------------------
 
   CREATE INDEX "AUTH_USER__GROUP_ID_97559544" ON "AUTH_USER_GROUPS" ("GROUP_ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index SYS_C0016320
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016320" ON "AUTH_USER_GROUPS" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index AUTH_USER_USER_ID_G_94350C0C_U
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_G_94350C0C_U" ON "AUTH_USER_GROUPS" ("USER_ID", "GROUP_ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index AUTH_USER__USER_ID_6A12ED8B
---------------------------------------------------------
-
-  CREATE INDEX "AUTH_USER__USER_ID_6A12ED8B" ON "AUTH_USER_GROUPS" ("USER_ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index AUTH_USER_USER_ID_P_14A6B632_U
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_P_14A6B632_U" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID", "PERMISSION_ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index AUTH_USER__USER_ID_A95EAD1B
---------------------------------------------------------
-
-  CREATE INDEX "AUTH_USER__USER_ID_A95EAD1B" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
@@ -691,11 +737,32 @@ SET DEFINE OFF;
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C0016324
+--  DDL for Index AUTH_USER__USER_ID_A95EAD1B
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C0016324" ON "AUTH_USER_USER_PERMISSIONS" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  CREATE INDEX "AUTH_USER__USER_ID_A95EAD1B" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER_USER_ID_G_94350C0C_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_G_94350C0C_U" ON "AUTH_USER_GROUPS" ("USER_ID", "GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER_USER_ID_P_14A6B632_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_P_14A6B632_U" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID", "PERMISSION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER__USER_ID_6A12ED8B
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_USER__USER_ID_6A12ED8B" ON "AUTH_USER_GROUPS" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index CARRITO_PK
@@ -703,6 +770,9 @@ SET DEFINE OFF;
 
   CREATE UNIQUE INDEX "CARRITO_PK" ON "CARRITO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index CLIENTE_PK
@@ -732,16 +802,6 @@ SET DEFINE OFF;
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C0016341
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016341" ON "DJANGO_ADMIN_LOG" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "USERS" ;
---------------------------------------------------------
 --  DDL for Index DJANGO_ADM_CONTENT_TY_C4BCE8EB
 --------------------------------------------------------
 
@@ -762,41 +822,11 @@ SET DEFINE OFF;
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C0016294
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016294" ON "DJANGO_CONTENT_TYPE" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "USERS" ;
---------------------------------------------------------
 --  DDL for Index DJANGO_CO_APP_LABEL_76BD3D3B_U
 --------------------------------------------------------
 
   CREATE UNIQUE INDEX "DJANGO_CO_APP_LABEL_76BD3D3B_U" ON "DJANGO_CONTENT_TYPE" ("APP_LABEL", "MODEL") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index SYS_C0016292
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016292" ON "DJANGO_MIGRATIONS" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "USERS" ;
---------------------------------------------------------
---  DDL for Index SYS_C0016346
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "SYS_C0016346" ON "DJANGO_SESSION" ("SESSION_KEY") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -847,13 +877,459 @@ SET DEFINE OFF;
 
   CREATE UNIQUE INDEX "PAGO_PK" ON "PAGO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index PAGO__IDX
+--  DDL for Index SERVICIO_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "PAGO__IDX" ON "PAGO" ("VENTA_ID") 
+  CREATE UNIQUE INDEX "SERVICIO_PK" ON "SERVICIO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016292
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016292" ON "DJANGO_MIGRATIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016294
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016294" ON "DJANGO_CONTENT_TYPE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016298
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016298" ON "AUTH_PERMISSION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016300
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016300" ON "AUTH_GROUP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016301
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016301" ON "AUTH_GROUP" ("NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016305
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016305" ON "AUTH_GROUP_PERMISSIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016315
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016315" ON "AUTH_USER" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016316
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016316" ON "AUTH_USER" ("USERNAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016320
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016320" ON "AUTH_USER_GROUPS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016324
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016324" ON "AUTH_USER_USER_PERMISSIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016341
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016341" ON "DJANGO_ADMIN_LOG" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016346
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016346" ON "DJANGO_SESSION" ("SESSION_KEY") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TECNICO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "TECNICO_PK" ON "TECNICO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TIPO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "TIPO_PK" ON "TIPO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VENTA_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "VENTA_PK" ON "VENTA" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016300
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016300" ON "AUTH_GROUP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016301
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016301" ON "AUTH_GROUP" ("NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016305
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016305" ON "AUTH_GROUP_PERMISSIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_GROU_GROUP_ID__0CD325B0_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "AUTH_GROU_GROUP_ID__0CD325B0_U" ON "AUTH_GROUP_PERMISSIONS" ("GROUP_ID", "PERMISSION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_GROUP_GROUP_ID_B120CBF9
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_GROUP_GROUP_ID_B120CBF9" ON "AUTH_GROUP_PERMISSIONS" ("GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_GROUP_PERMISSION_84C5C92E
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_GROUP_PERMISSION_84C5C92E" ON "AUTH_GROUP_PERMISSIONS" ("PERMISSION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016298
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016298" ON "AUTH_PERMISSION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_PERM_CONTENT_T_01AB375A_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "AUTH_PERM_CONTENT_T_01AB375A_U" ON "AUTH_PERMISSION" ("CONTENT_TYPE_ID", "CODENAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_PERMI_CONTENT_TY_2F476E4B
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_PERMI_CONTENT_TY_2F476E4B" ON "AUTH_PERMISSION" ("CONTENT_TYPE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016315
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016315" ON "AUTH_USER" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016316
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016316" ON "AUTH_USER" ("USERNAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER__GROUP_ID_97559544
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_USER__GROUP_ID_97559544" ON "AUTH_USER_GROUPS" ("GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016320
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016320" ON "AUTH_USER_GROUPS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER_USER_ID_G_94350C0C_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_G_94350C0C_U" ON "AUTH_USER_GROUPS" ("USER_ID", "GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER__USER_ID_6A12ED8B
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_USER__USER_ID_6A12ED8B" ON "AUTH_USER_GROUPS" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER_USER_ID_P_14A6B632_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "AUTH_USER_USER_ID_P_14A6B632_U" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID", "PERMISSION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER__USER_ID_A95EAD1B
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_USER__USER_ID_A95EAD1B" ON "AUTH_USER_USER_PERMISSIONS" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_USER__PERMISSION_1FBB5F2C
+--------------------------------------------------------
+
+  CREATE INDEX "AUTH_USER__PERMISSION_1FBB5F2C" ON "AUTH_USER_USER_PERMISSIONS" ("PERMISSION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016324
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016324" ON "AUTH_USER_USER_PERMISSIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CARRITO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "CARRITO_PK" ON "CARRITO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CLIENTE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "CLIENTE_PK" ON "CLIENTE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index COTIZACIONES_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "COTIZACIONES_PK" ON "COTIZACIONES" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DETALLE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DETALLE_PK" ON "DETALLE_VENTA" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016341
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016341" ON "DJANGO_ADMIN_LOG" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DJANGO_ADM_CONTENT_TY_C4BCE8EB
+--------------------------------------------------------
+
+  CREATE INDEX "DJANGO_ADM_CONTENT_TY_C4BCE8EB" ON "DJANGO_ADMIN_LOG" ("CONTENT_TYPE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DJANGO_ADM_USER_ID_C564EBA6
+--------------------------------------------------------
+
+  CREATE INDEX "DJANGO_ADM_USER_ID_C564EBA6" ON "DJANGO_ADMIN_LOG" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016294
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016294" ON "DJANGO_CONTENT_TYPE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DJANGO_CO_APP_LABEL_76BD3D3B_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DJANGO_CO_APP_LABEL_76BD3D3B_U" ON "DJANGO_CONTENT_TYPE" ("APP_LABEL", "MODEL") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016292
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016292" ON "DJANGO_MIGRATIONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0016346
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYS_C0016346" ON "DJANGO_SESSION" ("SESSION_KEY") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DJANGO_SES_EXPIRE_DAT_A5C62663
+--------------------------------------------------------
+
+  CREATE INDEX "DJANGO_SES_EXPIRE_DAT_A5C62663" ON "DJANGO_SESSION" ("EXPIRE_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index EMPLEADO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "EMPLEADO_PK" ON "EMPLEADO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index LIBRO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "LIBRO_PK" ON "LIBRO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MATERIALES_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "MATERIALES_PK" ON "MATERIALES" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PAGO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PAGO_PK" ON "PAGO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Index SERVICIO_PK
@@ -891,6 +1367,9 @@ SET DEFINE OFF;
 
   CREATE UNIQUE INDEX "VENTA_PK" ON "VENTA" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Trigger CARRITO_TRG
@@ -1349,15 +1828,66 @@ END;
 /
 ALTER TRIGGER "VENTA_TRG" ENABLE;
 --------------------------------------------------------
+--  DDL for Procedure CREAR_DETALLE_VENTA
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "CREAR_DETALLE_VENTA" (
+    p_venta_id IN NUMBER,
+    p_libro_id IN NUMBER
+) AS
+BEGIN
+    INSERT INTO detalle_venta (venta_venta_id, venta_libro_id)
+    VALUES (p_venta_id, p_libro_id);
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure CREAR_PAGO
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "CREAR_PAGO" (
+    p_total IN NUMBER,
+    p_venta_id IN NUMBER,
+    p_pago_id OUT NUMBER
+) AS
+BEGIN
+    INSERT INTO pago (total, venta_id)
+    VALUES (p_total, p_venta_id)
+    RETURNING id INTO p_pago_id;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure CREAR_VENTA
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "CREAR_VENTA" (
+    p_fecha_venta IN DATE,
+    p_total IN NUMBER,
+    p_cliente_id IN NUMBER,
+    p_empleado_id IN NUMBER,
+    p_venta_id OUT NUMBER
+) AS
+BEGIN
+    INSERT INTO venta (fecha_venta, total, cliente_id, empleado_id)
+    VALUES (p_fecha_venta, p_total, p_cliente_id, p_empleado_id)
+    RETURNING id INTO p_venta_id;
+END;
+
+/
+--------------------------------------------------------
 --  Constraints for Table AUTH_GROUP
 --------------------------------------------------------
 
   ALTER TABLE "AUTH_GROUP" MODIFY ("ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_GROUP" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
   ALTER TABLE "AUTH_GROUP" ADD UNIQUE ("NAME")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table AUTH_GROUP_PERMISSIONS
@@ -1367,7 +1897,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "AUTH_GROUP_PERMISSIONS" MODIFY ("GROUP_ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_GROUP_PERMISSIONS" MODIFY ("PERMISSION_ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_GROUP_PERMISSIONS" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
   ALTER TABLE "AUTH_GROUP_PERMISSIONS" ADD CONSTRAINT "AUTH_GROU_GROUP_ID__0CD325B0_U" UNIQUE ("GROUP_ID", "PERMISSION_ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
@@ -1379,7 +1909,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "AUTH_PERMISSION" MODIFY ("ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_PERMISSION" MODIFY ("CONTENT_TYPE_ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_PERMISSION" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -1403,13 +1933,13 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "AUTH_USER" ADD CHECK ("IS_STAFF" IN (0,1)) ENABLE;
   ALTER TABLE "AUTH_USER" ADD CHECK ("IS_ACTIVE" IN (0,1)) ENABLE;
   ALTER TABLE "AUTH_USER" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
   ALTER TABLE "AUTH_USER" ADD UNIQUE ("USERNAME")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -1422,7 +1952,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "AUTH_USER_GROUPS" MODIFY ("USER_ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_USER_GROUPS" MODIFY ("GROUP_ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_USER_GROUPS" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
   ALTER TABLE "AUTH_USER_GROUPS" ADD CONSTRAINT "AUTH_USER_USER_ID_G_94350C0C_U" UNIQUE ("USER_ID", "GROUP_ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
@@ -1435,7 +1965,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "AUTH_USER_USER_PERMISSIONS" MODIFY ("USER_ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_USER_USER_PERMISSIONS" MODIFY ("PERMISSION_ID" NOT NULL ENABLE);
   ALTER TABLE "AUTH_USER_USER_PERMISSIONS" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   TABLESPACE "USERS"  ENABLE;
   ALTER TABLE "AUTH_USER_USER_PERMISSIONS" ADD CONSTRAINT "AUTH_USER_USER_ID_P_14A6B632_U" UNIQUE ("USER_ID", "PERMISSION_ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
@@ -1449,6 +1979,9 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "CARRITO" MODIFY ("CANTIDAD" NOT NULL ENABLE);
   ALTER TABLE "CARRITO" ADD CONSTRAINT "CARRITO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table CLIENTE
@@ -1501,7 +2034,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "DJANGO_ADMIN_LOG" MODIFY ("USER_ID" NOT NULL ENABLE);
   ALTER TABLE "DJANGO_ADMIN_LOG" ADD CHECK ("ACTION_FLAG" >= 0) ENABLE;
   ALTER TABLE "DJANGO_ADMIN_LOG" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -1512,7 +2045,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
 
   ALTER TABLE "DJANGO_CONTENT_TYPE" MODIFY ("ID" NOT NULL ENABLE);
   ALTER TABLE "DJANGO_CONTENT_TYPE" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -1530,7 +2063,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "DJANGO_MIGRATIONS" MODIFY ("ID" NOT NULL ENABLE);
   ALTER TABLE "DJANGO_MIGRATIONS" MODIFY ("APPLIED" NOT NULL ENABLE);
   ALTER TABLE "DJANGO_MIGRATIONS" ADD PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -1542,7 +2075,7 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "DJANGO_SESSION" MODIFY ("SESSION_KEY" NOT NULL ENABLE);
   ALTER TABLE "DJANGO_SESSION" MODIFY ("EXPIRE_DATE" NOT NULL ENABLE);
   ALTER TABLE "DJANGO_SESSION" ADD PRIMARY KEY ("SESSION_KEY")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -1606,6 +2139,9 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "PAGO" MODIFY ("VENTA_ID" NOT NULL ENABLE);
   ALTER TABLE "PAGO" ADD CONSTRAINT "PAGO_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table SERVICIO
@@ -1664,6 +2200,9 @@ ALTER TRIGGER "VENTA_TRG" ENABLE;
   ALTER TABLE "VENTA" MODIFY ("EMPLEADO_ID" NOT NULL ENABLE);
   ALTER TABLE "VENTA" ADD CONSTRAINT "VENTA_PK" PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table AUTH_GROUP_PERMISSIONS

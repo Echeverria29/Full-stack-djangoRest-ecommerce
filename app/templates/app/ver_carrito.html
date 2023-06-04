@@ -13,7 +13,7 @@
       <th scope="col">Cantidad</th>
       <th scope="col">Precio</th>
       <th scope="col">Subtotal</th>
-      <th scope="col"></th>
+
     </tr>
   </thead>
   <tbody>
@@ -38,7 +38,7 @@
       </td>
     </tr>
     <td>
-      <form method="POST" action="{% url 'realizar_compra4' %}">
+      <form method="POST" action="{% url 'realizar_compra3' %}">
         {% csrf_token %}
         <button type="submit" class="btn btn-primary">Realizar compra</button>
         {% if messages %}
@@ -56,11 +56,10 @@
     </td>
     {% endfor %}
     <tr>
-      <td></td>
-      <td></td>
+
       <td><strong>Total:</strong></td>
       <td><strong>${{ total }}</strong></td>
-      <td></td>
+
     </tr>
   </tbody>
 </table>

@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basempleado.html' %}
+{% include 'app/basempleado.html' %}
 {% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
@@ -16,16 +16,16 @@
           <table class="table table-condensed table-striped">
             <thead>
               <tr class="table-success">
-                <th>FOTO</th>
-                <th>RUT</th>
+                <th>Foto</th>
+                <th>Rut</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Dirección</th>
                 <th>Celular</th>
                 <th>E-mail</th>
-                <th>Numero de tarjeta</th>
-              
-                
+                <th>Número de tarjeta</th>
+
+
               </tr>
             </thead>
             <tbody>
@@ -34,12 +34,9 @@
               <tr>
                 <td>
                   {% if aux.imagen %}
-                  <img src=" aux.imagen.url "  />
+                  <img src=" aux.imagen.url " />
                   {% else %}
-                  <img
-                    src="../static/app/img/equipo.png"
-                    style="width: 80%; max-width: 80%;"
-                  />
+                  <img src="../static/app/img/equipo.png" style="width: 80%; max-width: 80%;" />
                   {% endif %}
                 </td>
 
@@ -53,13 +50,8 @@
                 <td>
                   {{aux.departamento}}
                   <div class="d-flex" id="modifi">
-                    <a
-                      href="{% url 'modificliempleado' aux.id %}"
-                      class="btn btn-info btn-sm"
-                      data-bs-toggle="tooltip"
-                      title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!"
-                      >Modificar datos</a
-                    >
+                    <a href="{% url 'modificliempleado' aux.id %}" class="btn btn-info btn-sm" data-bs-toggle="tooltip"
+                      title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
                   </div>
                   <div class="d-flex" id="elimi">
                     <a href="{% url 'eliminarpersona' aux.id %}" class="btn btn-danger btn-sm" data-bs-toggle="tooltip"
@@ -77,15 +69,10 @@
           <table class="table">
             <tbody>
               <tr>
-                
+
                 <td>
-                  <a
-                    href="{% url 'logout' %}"
-                    class="btn btn-danger bg-danger"
-                    data-bs-toggle="tooltip"
-                    title="¡AQUÍ PUEDES CERRAR SESIÓN!"
-                    >Cerrar sesión</a
-                  >
+                  <a href="{% url 'logout' %}" class="btn btn-danger bg-danger" data-bs-toggle="tooltip"
+                    title="¡AQUÍ PUEDES CERRAR SESIÓN!">Cerrar sesión</a>
                 </td>
               </tr>
             </tbody>

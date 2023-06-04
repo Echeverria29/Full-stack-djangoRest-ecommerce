@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basecliente.html' %}
+{% include 'app/basecliente.html' %}
 {% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
@@ -16,31 +16,31 @@
           <table class="table table-condensed table-striped">
             <thead>
               <tr class="table-success">
-                
+
                 <th>Nombre libro</th>
-                <th>cantidad</th>
-                <th>estado</th>
-               
-             
+                <th>Cantidad</th>
+                <th>Estado</th>
+
+
               </tr>
             </thead>
             <tbody>
               {% for aux in starkenapi %}
 
               <tr>
-               
+
                 <td>{{ aux.nombre }}</td>
                 <td>{{ aux.cantidad }}</td>
                 <td>{{ aux.estado }}</td>
-               
+
               </tr>
-                
-                          
-                 
+
+
+
               {% endfor %}
-          </tbody>
-          
-          
+            </tbody>
+
+
           </table>
         </div>
 
@@ -50,13 +50,8 @@
 </section>
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a
-      class="nav-link"
-      href="../listar_cliente"
-      data-bs-toggle="tooltip"
-      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
-      >Volver al perfil</a
-    >
+    <a class="nav-link" href="../listar_cliente" data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al perfil</a>
   </li>
 </ul>
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basecliente.html' %}
+{% include 'app/basecliente.html' %}
 {% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
@@ -16,8 +16,8 @@
           <table class="table table-condensed table-striped">
             <thead>
               <tr class="table-success">
-                <th>FOTO</th>
-                <th>RUT</th>
+                <th>Foto</th>
+                <th>Rut</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Dirección</th>
@@ -33,10 +33,7 @@
                   {% if aux.imagen %}
                   <img src=" aux.imagen.url " />
                   {% else %}
-                  <img
-                    src="../static/app/img/equipo.png"
-                    style="width: 40%; max-width: 80%;"
-                  />
+                  <img src="../static/app/img/equipo.png" style="width: 40%; max-width: 80%;" />
                   {% endif %}
                 </td>
 
@@ -48,13 +45,8 @@
                 <td>
                   {{aux.correo}}
                   <div class="d-flex" id="modifi">
-                    <a
-                      href="{% url 'modificliente' aux.id %}"
-                      class="btn btn-info btn-sm"
-                      data-bs-toggle="tooltip"
-                      title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!"
-                      >Modificar datos</a
-                    >
+                    <a href="{% url 'modificliente' aux.id %}" class="btn btn-info btn-sm" data-bs-toggle="tooltip"
+                      title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
                   </div>
                 </td>
               </tr>
@@ -69,31 +61,16 @@
               <tr>
                 <td>
                   {% if cantidad_clientes > 0 %}
-                  <a
-                    href="#"
-                    class="btn btn-success bg-success disabled"
-                    data-bs-toggle="tooltip"
-                    title="Ya has agregado tus datos"
-                    >Ya has agregado tus datos</a
-                  >
+                  <a href="#" class="btn btn-success bg-success disabled" data-bs-toggle="tooltip"
+                    title="Ya has agregado tus datos">Ya has agregado tus datos</a>
                   {% else %}
-                  <a
-                    href="{% url 'clienteform' %}"
-                    class="btn btn-success bg-success"
-                    data-bs-toggle="tooltip"
-                    title="Agrega tus datos"
-                    >Agrega tus datos</a
-                  >
-                  {% endif %} 
+                  <a href="{% url 'clienteform' %}" class="btn btn-success bg-success" data-bs-toggle="tooltip"
+                    title="Agrega tus datos">Agrega tus datos</a>
+                  {% endif %}
                 </td>
                 <td>
-                  <a
-                    href="{% url 'logout' %}"
-                    class="btn btn-danger bg-danger"
-                    data-bs-toggle="tooltip"
-                    title="¡AQUÍ PUEDES CERRAR SESIÓN!"
-                    >Cerrar sesión</a
-                  >
+                  <a href="{% url 'logout' %}" class="btn btn-danger bg-danger" data-bs-toggle="tooltip"
+                    title="¡AQUÍ PUEDES CERRAR SESIÓN!">Cerrar sesión</a>
                 </td>
               </tr>
             </tbody>

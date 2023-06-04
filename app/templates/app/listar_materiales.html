@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basetecnico.html' %}
+{% include 'app/basetecnico.html' %}
 {% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
@@ -16,30 +16,30 @@
           <table class="table table-condensed table-striped">
             <thead>
               <tr class="table-success">
-                <th>nombre</th>
-                <th>stock</th>
-                <th>rut tecnico</th>
-                
-                
-             
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Rut técnico</th>
+
+
+
               </tr>
             </thead>
             <tbody>
               {% for aux in listaMateriales %}
-                  {% for x in listaTecnico %}
-                      {% if x.rut_tecnico == x.rut_tecnico %}
-                          <tr>
-                              <td>{{ aux.nombre }}</td>
-                              <td>{{ aux.stock }}</td>                        
-                              <td>{{ x.rut_tecnico }}</td>
-                        
-                          </tr>
-                      {% endif %}
-                  {% endfor %}
+              {% for x in listaTecnico %}
+              {% if x.rut_tecnico == x.rut_tecnico %}
+              <tr>
+                <td>{{ aux.nombre }}</td>
+                <td>{{ aux.stock }}</td>
+                <td>{{ x.rut_tecnico }}</td>
+
+              </tr>
+              {% endif %}
               {% endfor %}
-          </tbody>
-          
-          
+              {% endfor %}
+            </tbody>
+
+
           </table>
         </div>
 
@@ -49,13 +49,8 @@
 </section>
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a
-      class="nav-link"
-      href="../listar_tecnico"
-      data-bs-toggle="tooltip"
-      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
-      >Volver al perfil</a
-    >
+    <a class="nav-link" href="../listar_tecnico" data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al perfil</a>
   </li>
 </ul>
 {% endblock %}

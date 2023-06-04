@@ -3,7 +3,7 @@ from django.http import response
 from django.shortcuts import render,redirect,get_object_or_404
 
 # Create your views here.
-from .forms import *
+
 import requests
 from .models import *
 from .forms import *
@@ -14,74 +14,27 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import ValidationError
 import requests
-import cx_Oracle
 from django.utils import timezone
 from django.db import connection
 from datetime import date
-def index(request):
-  return render(request,'app/index.html')
-
-from django.utils import timezone
-
-
 
 from django.db import transaction
 
-@login_required
-@transaction.atomic
-def realizar_compra4(request):
-    if request.method == 'POST':
-        carrito = Carrito.objects.all()
-        total = sum(item.subtotal() for item in carrito)
 
-        # Reducir el stock de los libros en el carrito
-        for item in carrito:
-            libro = item.libro
-            libro.stock -= item.cantidad
-            libro.save()
-
-        # Obtener el cliente y empleado de la base de datos
-        cliente = Cliente.objects.first()
-        empleado = Empleado.objects.first()
-        
-        with transaction.atomic():
-            # Crear una nueva venta
-            venta = Venta(
-                fecha_venta=date.today(),
-                total=total,
-                cliente=cliente,
-                empleado=empleado
-            )
-            venta.save()
-
-            # Obtener el objeto Venta recién creado
-            venta_creada = Venta.objects.get(pk=venta.pk)
-
-            # Crear un nuevo pago relacionado con la venta
-            pago = Pago(
-                total=total,
-                venta=venta_creada
-            )
-            pago.save()
-         
-        # Eliminar los registros del carrito después de completar la compra
-        carrito.delete()
-
-        messages.success(request, 'Compra realizada exitosamente.')
-
-    return redirect('lista_libros')
+def index(request):
+  return render(request,'app/index.html')
 
 @login_required
-def realizar_compra3(request):
-    carrito = Carrito.objects.all()
+def realizar_compra(request):
+    carrito = Carrito.objects.all()  # Obtener todos los objetos del modelo Carrito
     saldo_tarjeta_url = 'http://127.0.0.1:8002/api/tarjetas/1/'  # URL de la API para obtener el saldo de la tarjeta
     url_api_pagos = 'http://127.0.0.1:8002/api/pagos/'  # URL de la API para realizar el pago
     url_api_starken = 'http://127.0.0.1:8080/api/starken/'  # Reemplaza con la URL de tu API de Starken
 
     try:
-        response = requests.get(saldo_tarjeta_url)
+        response = requests.get(saldo_tarjeta_url)  # Realizar una solicitud GET a la URL de la API de saldo de tarjeta
         if response.status_code == 200:
-            saldo_tarjeta = response.json().get('saldo')
+            saldo_tarjeta = response.json().get('saldo')  # Obtener el saldo de la tarjeta de la respuesta JSON
         else:
             error_message = f'Error al obtener el saldo de la tarjeta: {response.content.decode()}'
             messages.error(request, error_message)
@@ -91,28 +44,55 @@ def realizar_compra3(request):
         messages.error(request, error_message)
         return redirect('lista_libros')
 
-    for item in carrito:
-        libro = item.libro
-        libro.stock -= item.cantidad
-        libro.save()
+    for item in carrito:  # Iterar sobre los objetos en el carrito
+        libro = item.libro  # Obtener el libro del carrito
+        libro.stock -= item.cantidad  # Actualizar el stock del libro
+        libro.save()  # Guardar los cambios en el libro
         nombre = item.libro.nombre
         cantidad = item.cantidad
         estado = 'pendiente'
         item_id = item.id
-        
 
-        monto = sum(item.subtotal() for item in carrito)
-        saldo_total = saldo_tarjeta - monto
+        monto = sum(item.subtotal() for item in carrito)  # Calcular el monto total de la compra
+        saldo_total = saldo_tarjeta - monto  # Calcular el saldo restante después de la compra
 
         if saldo_total < 0:
             error_message = 'Saldo insuficiente. No se puede realizar la compra.'
             messages.error(request, error_message)
             return redirect('lista_libros')
 
+        if request.method == 'POST':
+            carrito = Carrito.objects.all()
+            total = sum(item.subtotal() for item in carrito)
+         
+            # Obtener el cliente y empleado de la base de datos
+            cliente = Cliente.objects.first()
+            empleado = Empleado.objects.first()
+
+            with transaction.atomic():
+                # Crear una nueva venta
+                venta = Venta(
+                    fecha_venta=date.today(),
+                    total=total,
+                    cliente=cliente,
+                    empleado=empleado
+                )
+                venta.save()
+
+                # Obtener el objeto Venta recién creado
+                venta = Venta.objects.latest('id')
+
+                # Crear un nuevo pago relacionado con la venta
+                pago = Pago(
+                    total=total,
+                    venta=venta
+                )
+                pago.save()
+
         # Actualizar el saldo en la API de tarjetas
         data_tarjetas = {'id': 1, 'saldo': saldo_total}
         try:
-            response_tarjetas = requests.put(saldo_tarjeta_url, json=data_tarjetas)
+            response_tarjetas = requests.put(saldo_tarjeta_url, json=data_tarjetas)  # Realizar una solicitud PUT a la API de saldo de tarjeta para actualizar el saldo
             if response_tarjetas.status_code != 200:
                 error_message = f'Error al actualizar el saldo de la tarjeta: {response_tarjetas.content.decode()}'
                 messages.error(request, error_message)
@@ -125,14 +105,12 @@ def realizar_compra3(request):
         # Agregar el saldo total en la API de pagos
         data_pagos = {'id': item_id, 'monto': monto, 'saldofinal': saldo_total}
         try:
-            response_pagos = requests.post(url_api_pagos, json=data_pagos)
+            response_pagos = requests.post(url_api_pagos, json=data_pagos)  # Realizar una solicitud POST a la API de pagos para crear un nuevo objeto de pago
             if response_pagos.status_code == 201:
                 # Agregar el producto a Starken solo si la compra fue realizada correctamente
                 data_starken = {'id': item_id, 'nombre': nombre, 'cantidad': cantidad, 'estado': estado}
-                response_starken = requests.post(url_api_starken, json=data_starken)
+                response_starken = requests.post(url_api_starken, json=data_starken)  # Realizar una solicitud POST a la API de Starken para crear un nuevo objeto de producto
                 if response_starken.status_code != 201:
-                    
-                    
                     error_message = f'Error al crear el objeto Producto en la API de Starken: {response_starken.content.decode()}'
                     messages.error(request, error_message)
             else:
@@ -144,40 +122,12 @@ def realizar_compra3(request):
             messages.error(request, error_message)
             return redirect('lista_libros')
         
-    item.delete()  
+    item.delete()  # Eliminar el objeto del carrito
     messages.success(request, 'Compra realizada exitosamente.')
     return redirect('lista_libros')
 
 
 
-
-
-
-
-
-# FUNCION PARA QUE AL COMPRAR MANDE LOS DATOS ALA BASE DE DATOS DE LA API QUE SE ESTAN SOLICITANDO
-@login_required
-def realizar_compra(request):
-    carrito = Carrito.objects.all()
-    for item in carrito:
-        nombre = item.libro.nombre
-        cantidad = item.cantidad
-        estado = 'pendiente'
-        item_id = item.id
-
-        # Crea el objeto Producto en la base de datos de la API mediante una solicitud POST
-        url_api = 'http://127.0.0.1:8080/api/starken/'  # Reemplaza con la URL de tu API
-        data = {'id': item_id, 'nombre': nombre, 'cantidad': cantidad, 'estado': estado}
-        response = requests.post(url_api, json=data)
-
-        if response.status_code == 201:  # Verifica que el objeto se haya creado exitosamente en la API
-            item.delete()  # Elimina el elemento del carrito solo si se creó correctamente en la API
-        else:
-            error_message = f'Error al crear el objeto Producto: {response.content.decode()}'
-            messages.error(request, error_message)
-
-    messages.success(request, 'Compra realizada exitosamente.')
-    return redirect('lista_libros')
 
 
 
