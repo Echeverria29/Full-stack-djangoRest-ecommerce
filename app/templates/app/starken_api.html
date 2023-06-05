@@ -16,7 +16,10 @@
           <table class="table table-condensed table-striped">
             <thead>
               <tr class="table-success">
-
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Teléfono</th>
                 <th>Nombre libro</th>
                 <th>Cantidad</th>
                 <th>Estado</th>
@@ -28,8 +31,11 @@
               {% for aux in starkenapi %}
 
               <tr>
-
                 <td>{{ aux.nombre }}</td>
+                <td>{{ aux.apellido }}</td>
+                <td>{{ aux.direccion }}</td>
+                <td>{{ aux.telefono }}</td>
+                <td>{{ aux.nombreProducto }}</td>
                 <td>{{ aux.cantidad }}</td>
                 <td>{{ aux.estado }}</td>
 

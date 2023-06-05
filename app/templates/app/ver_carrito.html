@@ -38,7 +38,7 @@
       </td>
     </tr>
     <td>
-      <form method="POST" action="{% url 'realizar_compra3' %}">
+      <form method="POST" action="{% url 'realizar_compra' %}">
         {% csrf_token %}
         <button type="submit" class="btn btn-primary">Realizar compra</button>
         {% if messages %}

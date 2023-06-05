@@ -35,6 +35,8 @@ urlpatterns = [
   path('libros_api', libros_api, name='libros_api'),
   path('starken_api', starken_api, name='starken_api'),
   path('realizarcompra/', realizar_compra, name='realizar_compra'),
+  path('realizar_comprastarken/', realizar_comprastarken, name='realizar_comprastarken'),
+  path('realizar_pagotarjeta/', realizar_pagotarjeta, name='realizar_pagotarjeta'),
  
 
 

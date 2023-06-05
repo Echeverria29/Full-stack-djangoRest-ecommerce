@@ -27,9 +27,10 @@ def index(request):
 @login_required
 def realizar_compra(request):
     carrito = Carrito.objects.all()  # Obtener todos los objetos del modelo Carrito
+    cliente = Cliente.objects.all()  # Obtener todos los objetos del modelo Cliente
     saldo_tarjeta_url = 'http://127.0.0.1:8002/api/tarjetas/1/'  # URL de la API para obtener el saldo de la tarjeta
     url_api_pagos = 'http://127.0.0.1:8002/api/pagos/'  # URL de la API para realizar el pago
-    url_api_starken = 'http://127.0.0.1:8080/api/starken/'  # Reemplaza con la URL de tu API de Starken
+    url_api_starken = 'http://127.0.0.1:8080/api/starken/'  # URL de la API de Starken (reemplaza con la URL correcta)
 
     try:
         response = requests.get(saldo_tarjeta_url)  # Realizar una solicitud GET a la URL de la API de saldo de tarjeta
@@ -48,10 +49,17 @@ def realizar_compra(request):
         libro = item.libro  # Obtener el libro del carrito
         libro.stock -= item.cantidad  # Actualizar el stock del libro
         libro.save()  # Guardar los cambios en el libro
-        nombre = item.libro.nombre
+        nombreProducto = item.libro.nombre
         cantidad = item.cantidad
         estado = 'pendiente'
         item_id = item.id
+
+        for x in cliente:  # Obtener los datos del cliente para usarlos en la API de Starken
+            nombre = x.nombre
+            apellido = x.apellido
+            direccion = x.direccion
+            telefono = x.telefono
+            numerodetarjeta = x.numero_tarjeta
 
         monto = sum(item.subtotal() for item in carrito)  # Calcular el monto total de la compra
         saldo_total = saldo_tarjeta - monto  # Calcular el saldo restante después de la compra
@@ -62,9 +70,8 @@ def realizar_compra(request):
             return redirect('lista_libros')
 
         if request.method == 'POST':
-            carrito = Carrito.objects.all()
             total = sum(item.subtotal() for item in carrito)
-         
+
             # Obtener el cliente y empleado de la base de datos
             cliente = Cliente.objects.first()
             empleado = Empleado.objects.first()
@@ -90,7 +97,7 @@ def realizar_compra(request):
                 pago.save()
 
         # Actualizar el saldo en la API de tarjetas
-        data_tarjetas = {'id': 1, 'saldo': saldo_total}
+        data_tarjetas = {'id': 1, 'numerodetarjeta': numerodetarjeta, 'nombre': nombre, 'apellido': apellido, 'saldo': saldo_total}
         try:
             response_tarjetas = requests.put(saldo_tarjeta_url, json=data_tarjetas)  # Realizar una solicitud PUT a la API de saldo de tarjeta para actualizar el saldo
             if response_tarjetas.status_code != 200:
@@ -102,14 +109,15 @@ def realizar_compra(request):
             messages.error(request, error_message)
             return redirect('lista_libros')
 
-        # Agregar el saldo total en la API de pagos
-        data_pagos = {'id': item_id, 'monto': monto, 'saldofinal': saldo_total}
+        # Agregar la compra a la API de pagos
+        data_pagos = {'id': item_id, 'numerodetarjeta': numerodetarjeta, 'nombre': nombre, 'apellido': apellido, 'monto': monto, 'saldofinal': saldo_total}
         try:
             response_pagos = requests.post(url_api_pagos, json=data_pagos)  # Realizar una solicitud POST a la API de pagos para crear un nuevo objeto de pago
             if response_pagos.status_code == 201:
                 # Agregar el producto a Starken solo si la compra fue realizada correctamente
-                data_starken = {'id': item_id, 'nombre': nombre, 'cantidad': cantidad, 'estado': estado}
+                data_starken = {'id': item_id, 'nombre': nombre, 'apellido': apellido, 'direccion': direccion, 'telefono': telefono, 'nombreProducto': nombreProducto, 'cantidad': cantidad, 'estado': estado}
                 response_starken = requests.post(url_api_starken, json=data_starken)  # Realizar una solicitud POST a la API de Starken para crear un nuevo objeto de producto
+
                 if response_starken.status_code != 201:
                     error_message = f'Error al crear el objeto Producto en la API de Starken: {response_starken.content.decode()}'
                     messages.error(request, error_message)
@@ -121,14 +129,129 @@ def realizar_compra(request):
             error_message = f'Error al conectar con la API de pagos: {str(e)}'
             messages.error(request, error_message)
             return redirect('lista_libros')
-        
+
     item.delete()  # Eliminar el objeto del carrito
     messages.success(request, 'Compra realizada exitosamente.')
     return redirect('lista_libros')
 
 
 
+@login_required
+def realizar_comprastarken(request):
+    carrito = Carrito.objects.all()  # Obtener todos los objetos del modelo Carrito
+    cliente = Cliente.objects.all()  # Obtener todos los objetos del modelo Cliente
+    
+    # Iterar sobre cada objeto en el carrito
+    for item in carrito:
+        nombreProducto = item.libro.nombre  # Obtener el nombre del producto del objeto del carrito
+        cantidad = item.cantidad  # Obtener la cantidad del producto del objeto del carrito
+        estado = 'pendiente'  # Establecer el estado del producto como "pendiente"
+        item_id = item.id  # Obtener el ID del objeto del carrito
 
+        # Iterar sobre cada objeto en el modelo Cliente (suponiendo que solo hay un cliente)
+        for x in cliente:
+            nombre = x.nombre  # Obtener el nombre del cliente
+            apellido = x.apellido  # Obtener el apellido del cliente
+            direccion = x.direccion  # Obtener la dirección del cliente
+            telefono = x.telefono  # Obtener el número de teléfono del cliente
+
+        # Crear el objeto Producto en la base de datos de la API mediante una solicitud POST
+        url_api = 'http://127.0.0.1:8080/api/starken/'  # URL de la API donde se creará el objeto Producto (reemplaza con la URL correcta)
+        data = {
+            'id': item_id,
+            'nombre': nombre,
+            'apellido': apellido,
+            'direccion': direccion,
+            'telefono': telefono,
+            'nombreProducto': nombreProducto,
+            'cantidad': cantidad,
+            'estado': estado
+        }
+        response = requests.post(url_api, json=data)  # Realizar una solicitud POST a la API con los datos del objeto Producto
+
+        if response.status_code == 201:  # Verificar que el objeto se haya creado exitosamente en la API (código de estado 201)
+            item.delete()  # Eliminar el elemento del carrito solo si se creó correctamente en la API
+        else:
+            error_message = f'Error al crear el objeto Producto: {response.content.decode()}'
+            messages.error(request, error_message)  # Mostrar un mensaje de error en caso de que falle la creación del objeto
+
+    messages.success(request, 'Compra realizada exitosamente.')  # Mostrar un mensaje de éxito si todas las compras se realizan correctamente
+    return redirect('lista_libros')  # Redirigir al usuario a la lista de libros después de realizar las compras
+
+
+@login_required
+def realizar_pagotarjeta(request):
+    carrito = Carrito.objects.all()  # Obtener todos los objetos del modelo Carrito
+    cliente = Cliente.objects.first()  # Obtener el primer objeto del modelo Cliente
+    saldo_tarjeta_url = 'http://127.0.0.1:8002/api/tarjetas/1/'  # URL de la API para obtener el saldo de la tarjeta
+    url_api_pagos = 'http://127.0.0.1:8002/api/pagos/'  # URL de la API para realizar el pago
+
+    try:
+        response = requests.get(saldo_tarjeta_url)  # Realizar una solicitud GET a la URL de la API de saldo de tarjeta
+        if response.status_code == 200:
+            saldo_tarjeta = response.json().get('saldo')  # Obtener el saldo de la tarjeta de la respuesta JSON
+        else:
+            error_message = f'Error al obtener el saldo de la tarjeta: {response.content.decode()}'
+            messages.error(request, error_message)
+            return redirect('lista_libros')
+    except requests.exceptions.RequestException as e:
+        error_message = f'Error al conectar con la API de tarjetas: {str(e)}'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    for item in carrito:  # Iterar sobre los objetos en el carrito
+        libro = item.libro  # Obtener el libro del carrito
+        libro.stock -= item.cantidad  # Actualizar el stock del libro
+        libro.save()  # Guardar los cambios en el libro
+        item_id = item.id
+
+    # Obtener los datos del cliente
+    nombre = cliente.nombre
+    apellido = cliente.apellido
+    numerodetarjeta = cliente.numero_tarjeta
+
+    monto = sum(item.subtotal() for item in carrito)  # Calcular el monto total de la compra
+    saldo_total = saldo_tarjeta - monto  # Calcular el saldo restante después de la compra
+
+    if saldo_total < 0:
+        error_message = 'Saldo insuficiente. No se puede realizar la compra.'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    if request.method == 'POST':
+        total = sum(item.subtotal() for item in carrito)
+
+    # Actualizar el saldo en la API de tarjetas
+    data_tarjetas = {'id': 1, 'numerodetarjeta': numerodetarjeta, 'nombre': nombre, 'apellido': apellido, 'saldo': saldo_total}
+    try:
+        response_tarjetas = requests.put(saldo_tarjeta_url, json=data_tarjetas)  # Realizar una solicitud PUT a la API de saldo de tarjeta para actualizar el saldo
+        if response_tarjetas.status_code != 200:
+            error_message = f'Error al actualizar el saldo de la tarjeta: {response_tarjetas.content.decode()}'
+            messages.error(request, error_message)
+            return redirect('lista_libros')
+    except requests.exceptions.RequestException as e:
+        error_message = f'Error al conectar con la API de tarjetas: {str(e)}'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    # Agregar el saldo total en la API de pagos
+    data_pagos = {'id': item_id, 'numerodetarjeta': numerodetarjeta, 'nombre': nombre, 'apellido': apellido, 'monto': monto, 'saldofinal': saldo_total}
+    try:
+        response_pagos = requests.post(url_api_pagos, json=data_pagos)  # Realizar una solicitud POST a la API de pagos para crear un nuevo objeto de pago
+        if response_pagos.status_code != 201:
+            error_message = f'Error al crear el objeto Pago: {response_pagos.content.decode()}'
+            messages.error(request, error_message)
+            return redirect('lista_libros')
+    except requests.exceptions.RequestException as e:
+        error_message = f'Error al conectar con la API de pagos: {str(e)}'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    for item in carrito:
+        item.delete()  # Eliminar los objetos del carrito
+
+    messages.success(request, 'Compra realizada exitosamente.')
+    return redirect('lista_libros')
 
 
 #FORMULARIO PARA REGISTRASE A LA PAGINA
@@ -162,18 +285,17 @@ def lista_libros(request):
 #FUNCION PARA LISTAR EL SEGUIMIENTO DE API STARKEN
 @login_required
 def starken_api(request):
-    url = 'http://127.0.0.1:8080/api/starken/'
-    response = requests.get(url)
+    url = 'http://127.0.0.1:8080/api/starken/'  # URL de la API de seguimiento de Starken (reemplaza con la URL correcta)
+    response = requests.get(url)  # Realiza una solicitud GET a la API de seguimiento de Starken
 
-    if response.status_code == 200:
-        starkenapi = response.json()
-        
-      
+    if response.status_code == 200:  # Verifica que la solicitud haya sido exitosa (código de estado 200)
+        starkenapi = response.json()  # Obtiene los datos de la respuesta JSON y los guarda en la variable starkenapi
 
-        return render(request, 'app/starken_api.html', {'starkenapi': starkenapi})
+        return render(request, 'app/starken_api.html', {'starkenapi': starkenapi})  # Renderiza la plantilla 'starken_api.html' y pasa los datos de starkenapi como contexto
     else:
-        # Manejar el error en caso de que la solicitud no sea exitosa
-        return render(request, 'app/error.html', {'mensaje': 'Error al obtener el seguimiento'})
+        # Maneja el error en caso de que la solicitud no sea exitosa
+        return render(request, 'app/error.html', {'mensaje': 'Error al obtener el seguimiento'})  # Renderiza la plantilla 'error.html' y pasa un mensaje de error como contexto
+
 
 
 
@@ -182,19 +304,16 @@ def starken_api(request):
 #FUNCION PARA LISTAR LOS LIBROS DE LA API DE ALPHILIA
 @login_required
 def libros_api(request):
-    url = 'http://127.0.0.1:8001/api/libros/'
-    response = requests.get(url)
+    url = 'http://127.0.0.1:8001/api/libros/'  # URL de la API de libros de Alphilia (reemplaza con la URL correcta)
+    response = requests.get(url)  # Realiza una solicitud GET a la API de libros de Alphilia
 
-    if response.status_code == 200:
-        librosimagina = response.json()
-        
-      
+    if response.status_code == 200:  # Verifica que la solicitud haya sido exitosa (código de estado 200)
+        librosimagina = response.json()  # Obtiene los datos de la respuesta JSON y los guarda en la variable librosimagina
 
-        return render(request, 'app/libros_api.html', {'librosimagina': librosimagina})
+        return render(request, 'app/libros_api.html', {'librosimagina': librosimagina})  # Renderiza la plantilla 'libros_api.html' y pasa los datos de librosimagina como contexto
     else:
-        # Manejar el error en caso de que la solicitud no sea exitosa
-        return render(request, 'app/error.html', {'mensaje': 'Error al obtener los libros'})
-
+        # Maneja el error en caso de que la solicitud no sea exitosa
+        return render(request, 'app/error.html', {'mensaje': 'Error al obtener los libros'})  # Renderiza la plantilla 'error.html' y pasa un mensaje de error como contexto
 
 
 

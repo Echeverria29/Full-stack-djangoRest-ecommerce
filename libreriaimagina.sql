@@ -1,11 +1,11 @@
 --------------------------------------------------------
--- Archivo creado  - domingo-junio-04-2023   
+-- Archivo creado  - lunes-junio-05-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Sequence CARRITO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "CARRITO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 161 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "CARRITO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 181 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence CLIENTE_SEQ
 --------------------------------------------------------
@@ -40,7 +40,7 @@
 --  DDL for Sequence PAGO_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PAGO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "PAGO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 81 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Sequence SERVICIO_SEQ
 --------------------------------------------------------
@@ -60,7 +60,7 @@
 --  DDL for Sequence VENTA_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "VENTA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 101 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+   CREATE SEQUENCE  "VENTA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 121 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 --------------------------------------------------------
 --  DDL for Table AUTH_GROUP
 --------------------------------------------------------
@@ -467,7 +467,7 @@ Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('23','Can
 Insert into AUTH_PERMISSION (ID,NAME,CONTENT_TYPE_ID,CODENAME) values ('24','Can view session','6','view_session');
 REM INSERTING into AUTH_USER
 SET DEFINE OFF;
-Insert into AUTH_USER (ID,PASSWORD,LAST_LOGIN,IS_SUPERUSER,USERNAME,FIRST_NAME,LAST_NAME,EMAIL,IS_STAFF,IS_ACTIVE,DATE_JOINED) values ('1','pbkdf2_sha256$600000$F467YpkhntfLsGyaQAxIuQ$1x1cUB6eWFYWVjl5pLLLOeCJtFScMBiRB0aHLPiHP5k=',to_timestamp('03/06/23 19:20:34,553040000','DD/MM/RR HH24:MI:SSXFF'),'1','prob',null,null,'prob@gmail.com','1','1',to_timestamp('10/05/23 18:48:07,680630000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into AUTH_USER (ID,PASSWORD,LAST_LOGIN,IS_SUPERUSER,USERNAME,FIRST_NAME,LAST_NAME,EMAIL,IS_STAFF,IS_ACTIVE,DATE_JOINED) values ('1','pbkdf2_sha256$600000$F467YpkhntfLsGyaQAxIuQ$1x1cUB6eWFYWVjl5pLLLOeCJtFScMBiRB0aHLPiHP5k=',to_timestamp('05/06/23 20:35:37,356686000','DD/MM/RR HH24:MI:SSXFF'),'1','prob',null,null,'prob@gmail.com','1','1',to_timestamp('10/05/23 18:48:07,680630000','DD/MM/RR HH24:MI:SSXFF'));
 REM INSERTING into AUTH_USER_GROUPS
 SET DEFINE OFF;
 REM INSERTING into AUTH_USER_USER_PERMISSIONS
@@ -546,6 +546,7 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('39g4nstvbhzpccfbsq
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('3kij3b99udrymnkt7amjjnuii44vq6oq',to_timestamp('14/06/23 01:04:43,917191000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('3u6u7af47l2fgdgtmd3bnst0tipfqpts',to_timestamp('17/06/23 02:25:48,975105000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('49efxvnoh8ky34g6ez0t8lsttludab2s',to_timestamp('15/06/23 03:32:24,945684000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('607wv1yhkov3l9i3gh5oohe1jtoflgim',to_timestamp('19/06/23 18:27:23,749900000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('63utn2ipcheljvfyp5gcjbsxtca9n66w',to_timestamp('16/06/23 00:45:31,232293000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('63yueseth324re1lwm1att8gh8btxgfh',to_timestamp('17/06/23 00:38:28,145307000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('6qzz7quqi6xzt46dcop2x0zggq8fljil',to_timestamp('16/06/23 23:50:56,650225000','DD/MM/RR HH24:MI:SSXFF'));
@@ -559,9 +560,12 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('an1hzmtcoc4ptggk7t
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('avjnst4ser617wgeq1b4bafhtbk1p8k3',to_timestamp('09/06/23 20:59:28,607000000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('b5876opf0a8x1q58dhvv4nrgmp9w1iwt',to_timestamp('14/06/23 00:31:50,038604000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('b6r5den77ndchssc58zz1p3w8dehrk8k',to_timestamp('15/06/23 03:29:06,341748000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('b7mwkasjx2p2lufx12y98chpz08kzw61',to_timestamp('19/06/23 20:25:48,844839000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('bamwsw9mrdwdmagbynsynhl6y6lsed6y',to_timestamp('13/06/23 23:07:07,764631000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('bap3ppms72vzr0ye0f2r2b2izgya8gr0',to_timestamp('19/06/23 20:13:46,354546000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('bhi2kp1zizfzo5mw40g5p5srwzmygqez',to_timestamp('16/06/23 01:00:23,643941000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('blr71aktifgnrbwww2mqst3xwzj0uc1m',to_timestamp('14/06/23 01:36:01,060685000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('bunuehznnv729qd93lr0c7wqsnqx1to0',to_timestamp('19/06/23 18:20:16,518431000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('c3289y4l978vymt0ouow0283zxkjlozp',to_timestamp('16/06/23 00:32:35,797712000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ce886k1pi3jgycbi2wmwr3hgn9em0527',to_timestamp('16/06/23 23:47:12,676339000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ck99s90hyyj7ewu1byyt6hlq3yjy14ei',to_timestamp('14/06/23 03:45:02,236135000','DD/MM/RR HH24:MI:SSXFF'));
@@ -573,6 +577,7 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('dnfiy62k5m1kuf1fcd
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('domqnxqcvb6772jzavmje3wyipq1iw9k',to_timestamp('14/06/23 03:54:54,007547000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('doy9f2jp6bux9sbm54c6vta1jgimmvm2',to_timestamp('17/06/23 02:56:24,267856000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('dozatqm1zll40qicxuejybmtn2velxns',to_timestamp('17/06/23 02:32:59,537379000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('dpqk425hsk0k7zcps4f04i8uf7imh2fg',to_timestamp('19/06/23 19:47:20,646194000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('dqco4l84khagefoetlu9i3rj1lw5qntc',to_timestamp('14/06/23 03:46:43,178653000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('eclj62z7cus5ou3rlzlj22d9bffwc3ig',to_timestamp('15/06/23 04:31:00,874030000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ej323wzf8g9lia3re0g79vztthjqhctk',to_timestamp('17/06/23 03:04:46,703994000','DD/MM/RR HH24:MI:SSXFF'));
@@ -582,12 +587,16 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('evg3xmanaphkhtc6lt
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('eyn4d7gtcp39gq7xvz1407biky1274o7',to_timestamp('17/06/23 00:42:38,581576000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('f7d23fef0b3muqqdiex2jy0zordy9x5r',to_timestamp('12/06/23 03:53:11,217502000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('flzle81is6plqe2qby1c58mty4qq07pg',to_timestamp('15/06/23 03:03:23,877024000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('foc25bcts1ef4op4i0kfxksfc9ueje0d',to_timestamp('19/06/23 18:28:37,354113000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('gldq2wf3voyyxv2rdfmqsp8e8zdml4tn',to_timestamp('15/06/23 05:49:55,090469000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('gor6uq0ga8maz0igkmxefqfrbhf5gji2',to_timestamp('14/06/23 03:19:16,650785000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('gqi1jx48jeauf74lrukdlk4qyvucb574',to_timestamp('13/06/23 03:43:26,955960000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('hd5mvph51hp6rqnozk6eptvwcsa5lwa6',to_timestamp('15/06/23 03:30:24,097588000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('hjiccwymo3vqkxf6eg5h22yvvtuxpnp6',to_timestamp('17/06/23 02:32:46,142250000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('hw02tzky4wtrkn4moll1avk5d2qylsgo',to_timestamp('19/06/23 19:58:45,991038000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('hwloxr25dqv85a9q638sgzrtx6bg0g0h',to_timestamp('19/06/23 20:18:46,563649000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('i6skiykkos2atcf1lp8o20jkb05elqw2',to_timestamp('16/06/23 00:35:07,189994000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('i99ahhzmx7swvwz042av85z3oigbiy1p',to_timestamp('19/06/23 20:02:05,573458000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('idd8gqvqhsud7um70ddja5jxvrvrjkfg',to_timestamp('15/06/23 03:02:33,160822000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ifnboxo1tm1hg65njxhc9d7zyv6bpbhm',to_timestamp('17/06/23 00:06:00,291841000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('inxsk2de66enxr352gx5769guiouzeaa',to_timestamp('17/06/23 19:20:34,554375000','DD/MM/RR HH24:MI:SSXFF'));
@@ -595,6 +604,7 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('iol2rr7y6ydha4nt1t
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('irpwqykiqi4mn129asvz00jmdnpdx1vu',to_timestamp('15/06/23 04:23:02,729192000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('iv5qu03fcvgw45vo8v7mnx1r8oq76xvc',to_timestamp('24/05/23 18:48:22,272650000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('j3cwweyyru3mc4mldguvgbz236w6bi93',to_timestamp('17/06/23 05:26:27,773075000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('jjoh1y5j7mwu3y548abnk0fi8l2scsgg',to_timestamp('19/06/23 19:14:32,585296000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('jm938gpdhwhb5y0yxxc0urnvnwat84b1',to_timestamp('16/06/23 00:28:10,881610000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('jz8o6sxpnujjwgvhq6bu1c7u2hq9mkfa',to_timestamp('15/06/23 03:59:50,427182000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('k4n2q3u24nalkanaqyhy4flxuqk4uv54',to_timestamp('16/06/23 00:13:42,852829000','DD/MM/RR HH24:MI:SSXFF'));
@@ -609,6 +619,7 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('mkciwrpjst7vt4vj50
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('moub5fyo7524lmfgurwzovu0aomtjmgq',to_timestamp('16/06/23 23:50:02,044413000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('mpxzwy935seg58v3tamemgdr0v9iuqy3',to_timestamp('16/06/23 00:25:52,254103000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('nv34qjtiw5q6lhfyplfoy4p430nj414t',to_timestamp('16/06/23 00:51:37,554320000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('o6s96x46vjbg3fk0cx5gzlizb4f0dawv',to_timestamp('19/06/23 20:35:37,357686000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('o9lxpg467cbpaay6iwwif0lpavxumtx0',to_timestamp('15/06/23 03:28:30,997031000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ocz8854jzzz3k6co8vyadbgl0hgd0gv1',to_timestamp('16/06/23 23:38:16,631260000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ogqxgzovmaxnr7ecxxjb9tl0k22n8n6b',to_timestamp('15/06/23 03:11:21,731639000','DD/MM/RR HH24:MI:SSXFF'));
@@ -621,12 +632,15 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('pwxmz7u3212qsnrt02
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('q4p39fippi3arjxrk4g0a37qdcivh2w5',to_timestamp('17/06/23 03:04:30,803555000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('q53ah0jp46921zpp0gmixfhwziusofea',to_timestamp('16/06/23 00:28:53,450714000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('qc7mc56serjvy6r2n3r5x781lcymbi8c',to_timestamp('14/06/23 00:07:03,827778000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('quhgyhlhmeqakl7nrswz4ebm5h24yzcu',to_timestamp('19/06/23 20:03:30,876106000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('r1z2w87gvlykc0ad84oeqhhp2nn0yjp5',to_timestamp('19/06/23 19:48:14,017137000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('r2l6evg0lo0exbsl53tmafm7w320ax50',to_timestamp('15/06/23 05:50:41,989463000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('rwkjln5d89navosdjfp2s8unaypkk4d7',to_timestamp('14/06/23 00:45:09,447143000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('s4wwt543o5t0430822xtsvw4hi8iy6rv',to_timestamp('16/06/23 00:18:25,909785000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('sb0zv28b9na2kamelivnyvj3j5up1gwk',to_timestamp('16/06/23 00:23:11,161931000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('sbqvl6sljistsv2ewfa7lzje9aoyrk9j',to_timestamp('17/06/23 00:15:52,629595000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('sdli57f02dkdjwxxd187g9jkneqh1yx2',to_timestamp('16/06/23 00:58:43,019585000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('srfpbagaeyntpmwtph1ubp3ht15y4ffl',to_timestamp('19/06/23 20:01:47,001907000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('ssh5x2ngeru77pz6dlvpoj8aclwyldn4',to_timestamp('14/06/23 01:10:05,878970000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('st8rjxo8uj820dnkll1zqit2kl8sqa0v',to_timestamp('14/06/23 01:13:13,808233000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('th04gixet0rrr1d8rvqy6px3d3xsbylw',to_timestamp('16/06/23 00:33:11,859186000','DD/MM/RR HH24:MI:SSXFF'));
@@ -639,6 +653,7 @@ Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vfeivgrjwtihagzfml
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vhsnr3iyjmi68jhle5458tnj3qued2gk',to_timestamp('09/06/23 23:16:13,230422000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vm3x5qgs0dvwgwjk8deuqqii23mxxr3o',to_timestamp('14/06/23 00:59:23,124680000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vrfgdwoymxmbz7apgwcrzx2u4zz4j0t3',to_timestamp('13/06/23 23:10:56,594278000','DD/MM/RR HH24:MI:SSXFF'));
+Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vt0kpu2wloj83rdxyksgge1ss9awz8cl',to_timestamp('19/06/23 18:03:11,684631000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('vy8a4g8at3n1hog5do65tj7vfgwn6c8f',to_timestamp('14/06/23 03:55:25,448590000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('w1b90x2kvmrsrrzd6jq99htw0xx50qog',to_timestamp('16/06/23 23:49:23,705616000','DD/MM/RR HH24:MI:SSXFF'));
 Insert into DJANGO_SESSION (SESSION_KEY,EXPIRE_DATE) values ('wlug0o2tsbjw2hhb3ij8j72yr64wrc4a',to_timestamp('16/06/23 23:48:19,784982000','DD/MM/RR HH24:MI:SSXFF'));
@@ -658,15 +673,15 @@ SET DEFINE OFF;
 Insert into EMPLEADO (ID,RUT_EMPLEADO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,CARGO,DEPARTAMENTO) values ('21','116309495','andres','echeverria','andrs@gmail.com','gernal232','22902892','vendedor','ventas');
 REM INSERTING into LIBRO
 SET DEFINE OFF;
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos la trilogia','J.R.R tolkien','barbarus','40800','30','libreria imagina');
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('61','harry potter y las reliquias de la muerte 1','J.K rowlling','magic','30000','30','imagina');
+Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos la trilogia','J.R.R tolkien','barbarus','40800','24','libreria imagina');
+Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('61','harry potter y las reliquias de la muerte 1','J.K rowlling','magic','30000','26','imagina');
 REM INSERTING into MATERIALES
 SET DEFINE OFF;
 Insert into MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('1','brocha','20','1');
 Insert into MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('2','cera virgen','10','1');
 REM INSERTING into PAGO
 SET DEFINE OFF;
-Insert into PAGO (ID,TOTAL,VENTA_ID) values ('57','30000','81');
+Insert into PAGO (ID,TOTAL,VENTA_ID) values ('61','81600','101');
 REM INSERTING into SERVICIO
 SET DEFINE OFF;
 Insert into SERVICIO (ID,FECHA_SERVICIO,DIRECCION_SERVICIO,DETALLE_SERVICIO,TIPO_ID,CLIENTE_ID,TECNICO_ID) values ('1',to_date('15/05/23','DD/MM/RR'),'turquesa 1282','esta todo roto y no puede abrirse','1','1','1');
@@ -679,7 +694,7 @@ Insert into TIPO (ID,TIPO) values ('1','reparacion');
 Insert into TIPO (ID,TIPO) values ('2','mantenimiento');
 REM INSERTING into VENTA
 SET DEFINE OFF;
-Insert into VENTA (ID,FECHA_VENTA,TOTAL,CLIENTE_ID,EMPLEADO_ID) values ('81',to_date('03/06/23','DD/MM/RR'),'30000','1','21');
+Insert into VENTA (ID,FECHA_VENTA,TOTAL,CLIENTE_ID,EMPLEADO_ID) values ('101',to_date('05/06/23','DD/MM/RR'),'81600','1','21');
 --------------------------------------------------------
 --  DDL for Index AUTH_GROU_GROUP_ID__0CD325B0_U
 --------------------------------------------------------
