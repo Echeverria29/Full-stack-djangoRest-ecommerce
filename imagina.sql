@@ -658,8 +658,8 @@ SET DEFINE OFF;
 Insert into EMPLEADO (ID,RUT_EMPLEADO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,CARGO,DEPARTAMENTO) values ('21','116309495','andres','echeverria','andrs@gmail.com','gernal232','22902892','vendedor','ventas');
 REM INSERTING into LIBRO
 SET DEFINE OFF;
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos la trilogia','J.R.R tolkien','barbarus','40800','3','libreria imagina');
-Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('61','harry potter y las reliquias de la muerte 1','J.K rowlling','magic','30000','8','imagina');
+Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('2','señor de los anillos la trilogia','J.R.R tolkien','barbarus','40800','30','libreria imagina');
+Insert into LIBRO (ID,NOMBRE,AUTOR,EDITORIAL,PRECIO,STOCK,PROVEEDOR) values ('61','harry potter y las reliquias de la muerte 1','J.K rowlling','magic','30000','30','imagina');
 REM INSERTING into MATERIALES
 SET DEFINE OFF;
 Insert into MATERIALES (ID,NOMBRE,STOCK,TECNICO_ID) values ('1','brocha','20','1');
@@ -669,11 +669,10 @@ SET DEFINE OFF;
 Insert into PAGO (ID,TOTAL,VENTA_ID) values ('57','30000','81');
 REM INSERTING into SERVICIO
 SET DEFINE OFF;
-Insert into SERVICIO (ID,FECHA_SERVICIO,DIRECCION_SERVICIO,DETALLE_SERVICIO,TIPO_ID,CLIENTE_ID,TECNICO_ID) values ('22',to_date('13/05/23','DD/MM/RR'),'asda','asda','1','1','1');
 Insert into SERVICIO (ID,FECHA_SERVICIO,DIRECCION_SERVICIO,DETALLE_SERVICIO,TIPO_ID,CLIENTE_ID,TECNICO_ID) values ('1',to_date('15/05/23','DD/MM/RR'),'turquesa 1282','esta todo roto y no puede abrirse','1','1','1');
 REM INSERTING into TECNICO
 SET DEFINE OFF;
-Insert into TECNICO (ID,RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('1','18354934-8','orlandosssssss','echeverria','tecnico@gmail.com','los timables 2423','+5693656598');
+Insert into TECNICO (ID,RUT_TECNICO,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO) values ('1','18354934-8','orlando','echeverria','tecnico@gmail.com','los timables 2423','+5693656598');
 REM INSERTING into TIPO
 SET DEFINE OFF;
 Insert into TIPO (ID,TIPO) values ('1','reparacion');
