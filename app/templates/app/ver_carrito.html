@@ -37,23 +37,7 @@
         </form>
       </td>
     </tr>
-    <td>
-      <form method="POST" action="{% url 'realizar_compra' %}">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-primary">Realizar compra</button>
-        {% if messages %}
-        {% for m in messages %}
-        <script>
-          Swal.fire({
-            title: "PROBANDO MENSAJEEEEEEEEEEEEE!",
-            text: "{{ m }}",
-            icon: "success",
-          });
-        </script>
-        {% endfor %}
-        {% endif %}
-      </form>
-    </td>
+
     {% endfor %}
     <tr>
 
@@ -67,6 +51,16 @@
 {% else %}
 <p>No hay productos en el carrito.</p>
 {% endif %}
+
+<div class="main container-fluid d-flex justify-content-center">
+  <form method="POST" action="{% url 'realizar_comprastarken' %}">
+    {% csrf_token %}
+
+    <button type="submit" class="btn btn-primary">Realizar compra</button>
+
+  </form>
+
+</div>
 
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">

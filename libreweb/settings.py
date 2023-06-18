@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -141,5 +142,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # enviAR MENSAJES CON DJANGO
 MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
-LOGIN_REDIRECT_URL = 'listar_cliente'
+LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = '/index/'

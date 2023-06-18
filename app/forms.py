@@ -6,14 +6,13 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.forms import ValidationError
 from datetime import datetime, time
-
+from django.contrib.auth.forms import AuthenticationForm
 #formulario para registrarse
-class RegistroUsuarioForm(UserCreationForm):
-    
-    
-    class Meta:
-        model= User 
-        fields = ['username','email','password1','password2']
+
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(label='Nombre de usuario')
+    password = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
 
 
 #formulario para agregar productos al carrito

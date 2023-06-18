@@ -1,27 +1,58 @@
-from django import forms
-from django.db import models
 
-class Cliente(models.Model):
-    id = models.IntegerField(primary_key=True)
-    rut_cliente = models.CharField( max_length=15)
+from django.db import models
+from django.contrib.auth.models import User
+
+class Perfil(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    rut = models.CharField(max_length=15)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    correo = models.CharField(max_length=80)
-    direccion = models.CharField(max_length=80)
-    telefono = models.CharField(max_length=20)
-    numero_tarjeta = models.IntegerField()
-
-
-    def __str__(self):
-      return self.rut_cliente
-
-
+    correo = models.CharField(max_length=50)
+    direccion = models.CharField(max_length=50)
+    telefono = models.CharField(max_length=50)
+    
     class Meta:
-       
-        db_table = 'cliente'
+        abstract = True
+
+    
+
+    def actualizar_user_fields(self):
+        
+        self.user.first_name = self.nombre
+        self.user.last_name = self.apellido
+        self.user.email = self.correo
+        self.user.save()
+
+class Empleado(Perfil):
+    cargo = models.CharField(max_length=50)
+    departamento = models.CharField(max_length=50)
+
+    def save(self, *args, **kwargs):
+        created = not bool(self.pk)
+        super().save(*args, **kwargs)
+        if created:
+            self.actualizar_user_fields()
+
+class Cliente(Perfil):
+  
+
+    def save(self, *args, **kwargs):
+        created = not bool(self.pk)
+        super().save(*args, **kwargs)
+        if created:
+            self.actualizar_user_fields()
+
+class Tecnico(Perfil):
+    
+
+    def save(self, *args, **kwargs):
+        created = not bool(self.pk)
+        super().save(*args, **kwargs)
+        if created:
+            self.actualizar_user_fields()
 
 class Cotizaciones(models.Model):
-    id = models.IntegerField(primary_key=True)
+   
     fecha = models.DateTimeField()
     correo = models.CharField(max_length=80)
     detalle = models.CharField(max_length=200)
@@ -37,25 +68,8 @@ class Cotizaciones(models.Model):
 
 
 
-class Tecnico(models.Model):
-    id = models.IntegerField(primary_key=True)
-    rut_tecnico = models.CharField( max_length=15)
-    nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50)
-    correo = models.CharField(max_length=80)
-    direccion = models.CharField(max_length=80)
-    telefono = models.CharField(max_length=20)
-    
-    def __str__(self):
-        return self.rut_tecnico
-    
-    class Meta:
-        
-        db_table = 'tecnico'
-
-
 class Materiales(models.Model):
-    id = models.IntegerField(primary_key=True)
+   
     nombre = models.CharField( max_length=30)
     stock = models.IntegerField()
     tecnico = models.ForeignKey(Tecnico, models.CASCADE)
@@ -65,28 +79,8 @@ class Materiales(models.Model):
         db_table = 'materiales'
 
 
-
-
-class Empleado(models.Model):
-    id = models.IntegerField(primary_key=True)
-    rut_empleado = models.CharField( max_length=15)
-    nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50)
-    correo = models.CharField(max_length=80)
-    direccion = models.CharField(max_length=80)
-    telefono = models.CharField(max_length=20)
-    cargo = models.CharField(max_length=50)
-    departamento = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.rut_empleado
-  
-    class Meta:
-        
-        db_table = 'empleado'
-
 class Tipo(models.Model):
-    id = models.IntegerField(primary_key=True)
+
     tipo = models.CharField(max_length=40)
 
     def __str__(self):
@@ -96,7 +90,7 @@ class Tipo(models.Model):
         db_table = 'tipo'
 
 class Servicio(models.Model):
-    id = models.IntegerField(primary_key=True)
+  
     fecha_servicio = models.DateTimeField()
     direccion_servicio = models.CharField(max_length=80)
     detalle_servicio = models.CharField(max_length=200)
@@ -111,7 +105,7 @@ class Servicio(models.Model):
 
 
 class Venta(models.Model):
-    id = models.IntegerField(primary_key=True)
+   
     fecha_venta = models.DateField()
     total = models.IntegerField()
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
@@ -122,7 +116,7 @@ class Venta(models.Model):
         db_table = 'venta'
 
 class Pago(models.Model):
-    id = models.IntegerField(primary_key=True)
+   
     total = models.IntegerField()
     venta = models.ForeignKey(Venta, on_delete=models.CASCADE)
     def __str__(self):
@@ -133,7 +127,7 @@ class Pago(models.Model):
 
 
 class Libro(models.Model):
-    id = models.IntegerField(primary_key=True)
+   
     nombre = models.CharField(max_length=50)
     autor = models.CharField(max_length=50)
     editorial = models.CharField(max_length=50)
@@ -153,7 +147,7 @@ class Libro(models.Model):
         db_table = 'libro'
 
 class Carrito(models.Model):
-    id = models.IntegerField(primary_key=True)
+   
     libro = models.ForeignKey(Libro, models.CASCADE)
     cantidad = models.PositiveIntegerField()
     
@@ -168,7 +162,7 @@ class Carrito(models.Model):
         db_table = 'carrito'
 
 class DetalleVenta(models.Model):
-    id = models.IntegerField(primary_key=True)
+    
     venta = models.ForeignKey(Venta, on_delete=models.CASCADE)  
     libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
 

@@ -3,12 +3,12 @@ from django import forms
 from .models import *
 
 class ClienteAdmin(admin.ModelAdmin):
-    list_display = ['id','rut_cliente','nombre','apellido','correo', 'direccion','telefono','numero_tarjeta']
+    list_display = ['user','rut','nombre','apellido','correo', 'direccion','telefono']
     search_fields = ['id']
     list_per_page = 4
 
 class EmpleadoAdmin(admin.ModelAdmin):
-    list_display = ['id','rut_empleado','nombre','apellido','correo', 'direccion','telefono','cargo','departamento']
+    list_display = ['user','rut','nombre','apellido','correo', 'direccion','telefono','cargo','departamento']
     search_fields = ['id']
     list_per_page = 5
 
@@ -33,7 +33,7 @@ class tipoAdmin(admin.ModelAdmin):
     list_per_page = 9
 
 class tecnicoAdmin(admin.ModelAdmin):
-    list_display = ['id','rut_tecnico','nombre','apellido','correo', 'direccion','telefono']
+    list_display = ['user','rut','nombre','apellido','correo', 'direccion','telefono']
     search_fields = ['id']
     list_per_page = 10
 

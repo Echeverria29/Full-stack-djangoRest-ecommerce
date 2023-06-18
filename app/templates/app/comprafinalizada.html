@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %} {% block contenido %}
+{% block navbar %}
+{% include 'app/basecliente.html' %}
+{% endblock %}
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <div class="card justify-content-center mt-5">
+      <div class="card-header text-center">
+        <h2 class="lead mt-2 mb-3" style="font-size: 30px;"><b>¡Compra exitosa!</b></h2>
+        <img src="../static/app/img/chek.jpg" alt="" width="100">
+        <p>Su compra se ha completado correctamente.</p>
+        <button class="btn btn-primary" onclick="redireccionar()">Ver el estado de su compra</button>
+
+        <script>
+          function redireccionar() {
+            window.location.href = "../starken_api";
+          }
+        </script>
+
+        <p>¡Gracias por su confianza en Libreria Imagina!</p>
+      </div>
+      <div class="card-footer text-center">
+
+        <a href="../lista_libros" class="btn btn-info">Volver al inicio</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+{% endblock %}

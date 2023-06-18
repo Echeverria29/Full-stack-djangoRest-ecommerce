@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %} {% block contenido %}
+
+{% if user.cliente %}
+{% block navbar %}
+{% include 'app/basecliente.html' %}
+{% endblock %}
+{% elif user.empleado %}
+{% block navbar2 %}
+{% include 'app/basempleado.html' %}
+{% endblock %}
+{% elif user.tecnico %}
+{% block navbar3 %}
+{% include 'app/basetecnico.html' %}
+{% endblock %}
+{% endif %}
+
+<body>
+  {% if user.cliente %}
+  {% block tablacli %}
+  {% include 'app/basetablacli.html' %}
+  {% endblock %}
+  {% endif %}
+
+
+</body>
+
+{% endblock %}

@@ -1,10 +1,10 @@
-
+cx_Oracle
 django
 pillow
 django-admin-interface
 django-crispy-forms
 djangorestframework 
-django-bootstrap-v5
+crispy-bootstrap5
 markdown 
 pymysql
 django-filter

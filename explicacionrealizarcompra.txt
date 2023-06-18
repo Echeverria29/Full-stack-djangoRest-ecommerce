@@ -136,3 +136,82 @@ Si la solicitud a Starken no es exitosa, muestra un mensaje de error.
 Si la solicitud a la API de pagos no es exitosa, muestra un mensaje de error y redirige al usuario a la lista de libros.
 Elimina el objeto del carrito.
 Muestra un mensaje de éxito y redirige al usuario a la lista de libros.
+
+
+
+
+VARIANTE SOLA 
+
+@login_required
+def realizar_pagotarjeta(request):
+    carrito = Carrito.objects.all()  # Obtener todos los objetos del modelo Carrito
+    cliente = Cliente.objects.first()  # Obtener el primer objeto del modelo Cliente
+    saldo_tarjeta_url = 'http://127.0.0.1:8002/api/tarjetas/1/'  # URL de la API para obtener el saldo de la tarjeta
+    url_api_pagos = 'http://127.0.0.1:8002/api/pagos/'  # URL de la API para realizar el pago
+
+    try:
+        response = requests.get(saldo_tarjeta_url)  # Realizar una solicitud GET a la URL de la API de saldo de tarjeta
+        if response.status_code == 200:
+            saldo_tarjeta = response.json().get('saldo')  # Obtener el saldo de la tarjeta de la respuesta JSON
+        else:
+            error_message = f'Error al obtener el saldo de la tarjeta: {response.content.decode()}'
+            messages.error(request, error_message)
+            return redirect('lista_libros')
+    except requests.exceptions.RequestException as e:
+        error_message = f'Error al conectar con la API de tarjetas: {str(e)}'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    for item in carrito:  # Iterar sobre los objetos en el carrito
+        libro = item.libro  # Obtener el libro del carrito
+        libro.stock -= item.cantidad  # Actualizar el stock del libro
+        libro.save()  # Guardar los cambios en el libro
+        item_id = item.id
+
+    # Obtener los datos del cliente
+    nombre = cliente.nombre
+    apellido = cliente.apellido
+    numerodetarjeta = cliente.numero_tarjeta
+
+    monto = sum(item.subtotal() for item in carrito)  # Calcular el monto total de la compra
+    saldo_total = saldo_tarjeta - monto  # Calcular el saldo restante después de la compra
+
+    if saldo_total < 0:
+        error_message = 'Saldo insuficiente. No se puede realizar la compra.'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    if request.method == 'POST':
+        total = sum(item.subtotal() for item in carrito)
+
+    # Actualizar el saldo en la API de tarjetas
+    data_tarjetas = {'id': 1, 'numerodetarjeta': numerodetarjeta, 'nombre': nombre, 'apellido': apellido, 'saldo': saldo_total}
+    try:
+        response_tarjetas = requests.put(saldo_tarjeta_url, json=data_tarjetas)  # Realizar una solicitud PUT a la API de saldo de tarjeta para actualizar el saldo
+        if response_tarjetas.status_code != 200:
+            error_message = f'Error al actualizar el saldo de la tarjeta: {response_tarjetas.content.decode()}'
+            messages.error(request, error_message)
+            return redirect('lista_libros')
+    except requests.exceptions.RequestException as e:
+        error_message = f'Error al conectar con la API de tarjetas: {str(e)}'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    # Agregar el saldo total en la API de pagos
+    data_pagos = {'id': item_id, 'numerodetarjeta': numerodetarjeta, 'nombre': nombre, 'apellido': apellido, 'monto': monto, 'saldofinal': saldo_total}
+    try:
+        response_pagos = requests.post(url_api_pagos, json=data_pagos)  # Realizar una solicitud POST a la API de pagos para crear un nuevo objeto de pago
+        if response_pagos.status_code != 201:
+            error_message = f'Error al crear el objeto Pago: {response_pagos.content.decode()}'
+            messages.error(request, error_message)
+            return redirect('lista_libros')
+    except requests.exceptions.RequestException as e:
+        error_message = f'Error al conectar con la API de pagos: {str(e)}'
+        messages.error(request, error_message)
+        return redirect('lista_libros')
+
+    for item in carrito:
+        item.delete()  # Eliminar los objetos del carrito
+
+    messages.success(request, 'Compra realizada exitosamente.')
+    return redirect('lista_libros')
