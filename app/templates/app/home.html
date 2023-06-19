@@ -20,7 +20,16 @@
   {% include 'app/basetablacli.html' %}
   {% endblock %}
   {% endif %}
-
+  {% if user.empleado %}
+  {% block tablaemp %}
+  {% include 'app/basetablaemp.html' %}
+  {% endblock %}
+  {% endif %}
+  {% if user.tecnico %}
+  {% block tablatec %}
+  {% include 'app/basetablatec.html' %}
+  {% endblock %}
+  {% endif %}
 
 </body>
 

@@ -1,7 +1,3 @@
-{% extends 'app/base.html' %} {% block contenido %}
-{% block navbar %}
-{% include 'app/basempleado.html' %}
-{% endblock %}
 <section class="thumbnail 1" id="thumbnail 1">
   <div class="Thumbnail py-2 bg-light">
     <!--CONTENEDOR PLOMO QUE ENCIERRA LOS CONTAINER-->
@@ -23,38 +19,34 @@
                 <th>Dirección</th>
                 <th>Celular</th>
                 <th>E-mail</th>
-                <th>Cargo</th>
-                <th>Departamento</th>
               </tr>
             </thead>
             <tbody>
-              {% for aux in listaEmpleado %}
+              {% if user.empleado %}
 
               <tr>
                 <td>
-                  {% if aux.imagen %}
-                  <img src=" aux.imagen.url " />
+                  {% if user.imagen %}
+                  <img src=" user.imagen.url " />
                   {% else %}
-                  <img src="../static/app/img/equipo.png" style="width: 80%; max-width: 80%;" />
+                  <img src="../static/app/img/equipo.png" style="width: 40%; max-width: 80%;" />
                   {% endif %}
                 </td>
 
-                <td>{{aux.rut_empleado}}</td>
-                <td>{{aux.nombre}}</td>
-                <td>{{aux.apellido}}</td>
-                <td>{{aux.direccion}}</td>
-                <td>{{aux.telefono}}</td>
-                <td>{{aux.correo}}</td>
-                <td>{{aux.cargo}}</td>
+                <td> {{ user.empleado.rut }}</td>
+                <td> {{ user.empleado.nombre }}</td>
+                <td> {{ user.empleado.apellido }}</td>
+                <td> {{ user.empleado.direccion }}</td>
+                <td> {{ user.empleado.telefono }}</td>
                 <td>
-                  {{aux.departamento}}
+                  {{user.empleado.correo}}
                   <div class="d-flex" id="modifi">
-                    <a href="{% url 'modifiempleado' aux.id %}" class="btn btn-info btn-sm" data-bs-toggle="tooltip"
+                    <a href="{% url 'modifiempleado' user.id %}" class="btn btn-info btn-sm" data-bs-toggle="tooltip"
                       title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
                   </div>
                 </td>
               </tr>
-              {% endfor %}
+              {% endif %}
             </tbody>
           </table>
         </div>
@@ -63,17 +55,9 @@
           <table class="table">
             <tbody>
               <tr>
+
                 <td>
-                  {% if cantidad_empleados > 0 %}
-                  <a href="#" class="btn btn-success bg-success disabled" data-bs-toggle="tooltip"
-                    title="Ya has agregado tus datos">Ya has agregado tus datos</a>
-                  {% else %}
-                  <a href="{% url 'empleadoform' %}" class="btn btn-success bg-success" data-bs-toggle="tooltip"
-                    title="Agrega tus datos">Agrega tus datos</a>
-                  {% endif %}
-                </td>
-                <td>
-                  <a href="{% url 'logout' %}" class="btn btn-danger bg-danger" data-bs-toggle="tooltip"
+                  <a href="../cerrar_sesion" class="btn btn-danger bg-danger" data-bs-toggle="tooltip"
                     title="¡AQUÍ PUEDES CERRAR SESIÓN!">Cerrar sesión</a>
                 </td>
               </tr>
@@ -84,5 +68,6 @@
     </div>
   </div>
 </section>
+{% block tablaemp %}
 
 {% endblock %}

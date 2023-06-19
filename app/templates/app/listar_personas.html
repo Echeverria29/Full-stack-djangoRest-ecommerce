@@ -23,7 +23,7 @@
                 <th>Dirección</th>
                 <th>Celular</th>
                 <th>E-mail</th>
-                <th>Número de tarjeta</th>
+                <th>Eliminar usuario</th>
 
 
               </tr>
@@ -40,19 +40,15 @@
                   {% endif %}
                 </td>
 
-                <td>{{aux.rut_empleado}}</td>
+                <td>{{aux.rut}}</td>
                 <td>{{aux.nombre}}</td>
                 <td>{{aux.apellido}}</td>
                 <td>{{aux.direccion}}</td>
                 <td>{{aux.telefono}}</td>
                 <td>{{aux.correo}}</td>
-                <td>{{aux.numero_tarjeta}}</td>
                 <td>
-                  {{aux.departamento}}
-                  <div class="d-flex" id="modifi">
-                    <a href="{% url 'modificliempleado' aux.id %}" class="btn btn-info btn-sm" data-bs-toggle="tooltip"
-                      title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
-                  </div>
+
+
                   <div class="d-flex" id="elimi">
                     <a href="{% url 'eliminarpersona' aux.id %}" class="btn btn-danger btn-sm" data-bs-toggle="tooltip"
                       title="¡AQUÍ PUEDES ELIMINAR LOS DATOS!">Eliminar datos</a>

@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basecliente.html' %}
+{% include 'app/basecliente.html' %}
 {% endblock %}
 
 <div class="main container-fluid">
@@ -8,7 +8,7 @@
   <div class="m-3 container-fluid">
     <div class="row">
       <div>
-        
+
       </div>
       {% load crispy_forms_tags %}
 
@@ -41,13 +41,8 @@
 
   <ul class="nav d-flex justify-content-center">
     <li class="nav-item d-flex justify-content-center">
-      <a
-        class="nav-link"
-        href="../listar_cliente"
-        data-bs-toggle="tooltip"
-        title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
-        >Volver al perfil</a
-      >
+      <a class="nav-link" href="../home" data-bs-toggle="tooltip" title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al
+        perfil</a>
     </li>
   </ul>
 </div>

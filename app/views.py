@@ -1,26 +1,17 @@
-from urllib import request
-from django.http import response
-from django.shortcuts import render,redirect,get_object_or_404
 
-# Create your views here.
+from django.shortcuts import render,redirect,get_object_or_404
 
 import requests
 from .models import *
 from .forms import *
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-from django.db.models import Q
-from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import ValidationError
-import requests
-from django.utils import timezone
-from django.db import connection
 from datetime import date
 from django.db import transaction
-from django.http import HttpResponse,JsonResponse
 from django.contrib.auth import logout
-
+from django.contrib.auth.models import User
 
 def comprafinalizada(request):
     return render(request,'app/comprafinalizada.html')
@@ -34,101 +25,11 @@ def index(request):
 def indexpypal(request):
   return render(request,'app/indexpypal.html')
 
-
-def iniciar_sesion(request):
-    if request.method == 'POST':
-        form = LoginForm(request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('home')
-    else:
-        form = LoginForm()
-
-    return render(request, 'login.html', {'form': form})
-
-def cerrar_sesion(request):
-    logout(request)
-    return redirect('index')
-
-
-   
-    
-
-def crear_empleado(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        rut = request.POST['rut']
-        nombre = request.POST['nombre']
-        apellido = request.POST['apellido']
-        correo = request.POST['correo']
-        telefono = request.POST['telefono']
-        cargo = request.POST['cargo']
-        departamento = request.POST['departamento']
-        # Crear el objeto User
-        user = User.objects.create_user(username=username, password=password)
-        
-        # Crear el objeto Empleado y asignarle el usuario
-        empleado = Empleado(user=user, rut=rut, nombre=nombre, apellido=apellido,correo=correo,telefono=telefono, cargo=cargo,departamento=departamento)
-        empleado.save()
-        
-      
-    
-    return render(request, 'app/crear_empleado.html')
-
-def crear_cliente(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        rut = request.POST['rut']
-        nombre = request.POST['nombre']
-        apellido = request.POST['apellido']
-        correo = request.POST['correo']
-        direccion = request.POST['direccion']
-        telefono = request.POST['telefono']
-        
-        # Crear el objeto User
-        user = User.objects.create_user(username=username, password=password)
-        
-        # Crear el objeto Cliente y asignarle el usuario
-        cliente = Cliente(user=user, rut=rut, nombre=nombre, apellido=apellido, correo=correo,direccion=direccion,telefono=telefono)
-        cliente.save()
-        
-       
-    
-    return render(request, 'app/crear_cliente.html')
-
-def crear_tecnico(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        rut = request.POST['rut']
-        nombre = request.POST['nombre']
-        apellido = request.POST['apellido']
-        correo = request.POST['correo']
-        direccion = request.POST['direccion']
-        telefono = request.POST['telefono']
-        
-        # Crear el objeto User
-        user = User.objects.create_user(username=username, password=password)
-        
-        # Crear el objeto Técnico y asignarle el usuario
-        tecnico = Tecnico(user=user, rut=rut, nombre=nombre, apellido=apellido, correo=correo,direccion=direccion,telefono=telefono)
-        tecnico.save()
-        
-        
-    
-    return render(request, 'app/crear_tecnico.html')
-
-
+ 
 @login_required
 def realizar_comprastarken(request):
-    carrito = Carrito.objects.all()  # Obtener todos los objetos del modelo Carrito
-    cliente = Cliente.objects.all()  # Obtener todos los objetos del modelo Cliente
+    carrito = Carrito.objects.all()  # Obtener el  objetos del modelo Carrito del usuario actual
+    cliente = Cliente.objects.filter(user=request.user).first()  # Obtener el objeto Cliente del usuario actual
     
     # Iterar sobre cada objeto en el carrito
     for item in carrito:
@@ -139,12 +40,11 @@ def realizar_comprastarken(request):
         item_id = item.id  # Obtener el ID del objeto del carrito
 
         # Iterar sobre cada objeto en el modelo Cliente (suponiendo que solo hay un cliente)
-        for x in cliente:
-            rut= x.rut_cliente
-            nombre = x.nombre  # Obtener el nombre del cliente
-            apellido = x.apellido  # Obtener el apellido del cliente
-            direccion = x.direccion  # Obtener la dirección del cliente
-            telefono = x.telefono  # Obtener el número de teléfono del cliente
+        rut = cliente.rut
+        nombre = cliente.nombre
+        apellido = cliente.apellido
+        direccion = cliente.direccion
+        telefono = cliente.telefono
 
         # Crear el objeto Producto en la base de datos de la API mediante una solicitud POST
         url_api = 'http://127.0.0.1:8080/api/starken/'  # URL de la API donde se creará el objeto Producto (reemplaza con la URL correcta)
@@ -199,6 +99,77 @@ def realizar_comprastarken(request):
     
     return redirect('indexpypal')  # Redirigir al usuario a la lista de libros después de realizar las compras
 
+def iniciar_sesion(request):
+    if request.method == 'POST':
+        form = LoginForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+    else:
+        form = LoginForm()
+
+    return render(request, 'login.html', {'form': form})
+
+def cerrar_sesion(request):
+    logout(request)
+    return redirect('index')
+
+def crearclienteform(request):
+    if request.method == 'POST':
+        form = Crearclienteform(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Cliente registrado correctamente')
+    else:
+        form = Crearclienteform()
+    return render(request, 'app/crearclienteform.html', {'form': form})
+
+  
+def crearempleadoform(request):
+    if request.method == 'POST':
+        form = Crearempleadoform(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Empleado registrado correctamente')
+    else:
+        form = Crearempleadoform()
+    return render(request, 'app/crearempleadoform.html', {'form': form})
+
+  
+#FORMULARIO PARA MODIFICAR DATOS CLIENTE
+@login_required
+def modificliente (request, id):
+    cliente = Cliente.objects.get(user_id=id)
+    datos = {
+        'form' : ModificarClienteForm(instance=cliente)
+    }
+    if request.method == 'POST':
+        formulario = ModificarClienteForm(data=request.POST, files=request.FILES, instance=cliente)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modificliente.html', datos)
+
+@login_required
+def modifiempleado (request, id):
+    empleado = Empleado.objects.get(user_id=id)
+    datos = {
+        'form' : ModificarEmpleadoForm(instance=empleado)
+    }
+    if request.method == 'POST':
+        formulario = ModificarEmpleadoForm(data=request.POST, files=request.FILES, instance=empleado)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modifiempleado.html', datos)
 
 
 
@@ -213,17 +184,21 @@ def lista_libros(request):
 #FUNCION PARA LISTAR EL SEGUIMIENTO DE API STARKEN
 @login_required
 def starken_api(request):
+    rut = request.user.cliente.rut  # Obtener el rut del cliente actualmente autenticado
+    
     url = 'http://127.0.0.1:8080/api/starken/'  # URL de la API de seguimiento de Starken (reemplaza con la URL correcta)
-    response = requests.get(url)  # Realiza una solicitud GET a la API de seguimiento de Starken
+    response = requests.get(url)  # Realizar una solicitud GET a la API de seguimiento de Starken
 
-    if response.status_code == 200:  # Verifica que la solicitud haya sido exitosa (código de estado 200)
-        starkenapi = response.json()  # Obtiene los datos de la respuesta JSON y los guarda en la variable starkenapi
+    if response.status_code == 200:  # Verificar que la solicitud haya sido exitosa (código de estado 200)
+        starkenapi = response.json()  # Obtener los datos de la respuesta JSON y guardarlos en la variable starkenapi
+        
+        # Filtrar los datos de seguimiento por el rut del cliente actual
+        starkenapi_filtrado = [item for item in starkenapi if item['rut'] == rut]
 
-        return render(request, 'app/starken_api.html', {'starkenapi': starkenapi})  # Renderiza la plantilla 'starken_api.html' y pasa los datos de starkenapi como contexto
+        return render(request, 'app/starken_api.html', {'starkenapi': starkenapi_filtrado})
     else:
-        # Maneja el error en caso de que la solicitud no sea exitosa
-        return render(request, 'app/error.html', {'mensaje': 'Error al obtener el seguimiento'})  # Renderiza la plantilla 'error.html' y pasa un mensaje de error como contexto
-
+        # Manejar el error en caso de que la solicitud no sea exitosa
+        return render(request, 'error.html', {'mensaje': 'Error al obtener el seguimiento'})
 
 
 
@@ -254,34 +229,35 @@ def agregar_al_carrito(request):
         libro_id = request.POST.get('libro_id')
         cantidad = int(request.POST.get('cantidad', 1))
         libro = get_object_or_404(Libro, id=libro_id)
-        carrito = Carrito.objects.filter(libro=libro).first()
+        carrito = Carrito.objects.filter(usuario=request.user, libro=libro).first()
         if carrito:
             carrito.cantidad += cantidad
             carrito.save()
             messages.success(request, f'Se han agregado {cantidad} "{libro.nombre}" al carrito.')
         else:
-            carrito = Carrito.objects.create(libro=libro, cantidad=cantidad)
+            carrito = Carrito.objects.create(usuario=request.user, libro=libro, cantidad=cantidad)
             messages.success(request, f'Se ha agregado "{libro.nombre}" al carrito.')
-    return redirect('lista_libros')
+    return redirect('../lista_libros')
+
 
 #funcion para ver los libros agregados al carrito
+
 @login_required
 def ver_carrito(request):
-    carrito = Carrito.objects.all()
-    cantidad_carrito = carrito.count()
-
+    carrito = Carrito.objects.filter(usuario=request.user)
     total = sum(item.subtotal() for item in carrito)
     context = {
         'carrito': carrito,
-        'total': total,
-        'cantidad_carrito': cantidad_carrito,
+        'total': total
     }
     return render(request, 'app/ver_carrito.html', context)
+
+
 
 #funcion para eliminar el lo que esta en el carrito
 @login_required
 def eliminar_del_carrito(request, id):
-    carrito = get_object_or_404(Carrito, id=id)
+    carrito = get_object_or_404(Carrito, id=id,usuario=request.user)
     if request.method == 'POST':
         carrito.delete()
         messages.error(request, f'Se ha eliminado "{carrito.libro.nombre}" del carrito.')
@@ -302,28 +278,6 @@ def listar_personas(request):
     }
     return render(request, 'app/listar_personas.html', datos)
 
-#FUNCION PARA LISTAR LOS DATOS DEL EMPLEADO PAGINA PRINCIPAL
-@login_required
-def listar_empleado(request):
-    empleado = Empleado.objects.all()
-    cantidad_empleados = empleado.count()
-    datos = {
-        #como dato estas listas van en las paginas listar_...
-        'listaEmpleado': empleado,
-        'cantidad_empleados': cantidad_empleados
-    }
-    return render(request, 'app/listar_empleado.html', datos)
-
-#FUNCION PARA LISTAR LOS DATOS DEL TECNICO PAGINA PRINCIPAL
-@login_required
-def listar_tecnico(request):
-    tecnicos = Tecnico.objects.all()
-    cantidad_tecnicos = tecnicos.count()
-    datos = {
-        'listaTecnico': tecnicos,
-        'cantidad_tecnicos': cantidad_tecnicos
-    }
-    return render(request, 'app/listar_tecnico.html', datos)
 
 #FUNCION PARA LISTAR LOS DATOS DE LOS MATERIALES DEL TECNICO
 @login_required
@@ -371,98 +325,23 @@ def listar_cotizaciones(request):
     }
     return render(request, 'app/listar_cotizaciones.html', datos)
 
-#FORM PARA GUARDAR LOS DATOS DEL EMPLEADO
-@login_required
-def empleadoform(request):
-    if request.method == 'POST':
-        form = EmpleadoForm(request.POST)
-        if form.is_valid():
-            # Crea una instancia del modelo Servicio sin especificar el campo "id"
-            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
-            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
-            #ese id sea autoincrementable
-            empleado = Empleado(
-                rut_empleado=form.cleaned_data['rut_empleado'],
-                nombre=form.cleaned_data['nombre'],
-                apellido=form.cleaned_data['apellido'],
-                correo=form.cleaned_data['correo'],
-                direccion=form.cleaned_data['direccion'],
-                telefono=form.cleaned_data['telefono'],
-                cargo=form.cleaned_data['cargo'],
-                departamento=form.cleaned_data['departamento'],
-                
-            )
-            empleado.save()
-            messages.success(request,'Datos agregados correctamente!')
-    else:
-        form = EmpleadoForm()
-    return render(request, 'app/empleadoform.html', {'form': form})
 
-#FUNCION PARA MODIFICAR AL EMPLEADO
-@login_required
-def modifiempleado (request, id):
-    usuario = Empleado.objects.get(id=id)
-    datos = {
-        'form' : EmpleadoForm(instance=usuario)
-    }
-    if request.method == 'POST':
-        formulario = EmpleadoForm(data=request.POST, files=request.FILES, instance=usuario)
-        if formulario.is_valid():
-            formulario.save()
-            messages.success(request, '¡Modificación de datos exitosa!')
-            datos['form'] = formulario
 
-    return render(request, 'app/modifiempleado.html', datos)
 
-#FUNCION PARA MODIFICAR LOS CLIENTES DEL EMPLEADO
-@login_required
-def modificliempleado (request, id):
-    usuario = Cliente.objects.get(id=id)
-    datos = {
-        'form' : ClienteForm(instance=usuario)
-    }
-    if request.method == 'POST':
-        formulario = ClienteForm(data=request.POST, files=request.FILES, instance=usuario)
-        if formulario.is_valid():
-            formulario.save()
-            messages.success(request, '¡Modificación de datos exitosa!')
-            datos['form'] = formulario
-
-    return render(request, 'app/modifiempleado.html', datos)
 
 #FUNCION PARA ELIMINAR LOS CLIENTES DEL EMPLEADO
-def eliminarpersona(request,id):
 
-  cliemple = Cliente.objects.get(id=id)
-  cliemple.delete()
-  messages.success(request,'Cliente eliminado!')
+def eliminarpersona(request, id):
+    cliente = Cliente.objects.get(user_id=id)
+    user = cliente.user
 
-  return redirect(to="listar_personas")
+    # Eliminar el cliente y el usuario
+    cliente.delete()
+    user.delete()
 
-#FORM PARA GUARDAR LOS DATOS DEL TECNICO
-@login_required
-def tecnicoform(request):
-    if request.method == 'POST':
-        form = TecnicoForm(request.POST)
-        if form.is_valid():
-            # Crea una instancia del modelo Servicio sin especificar el campo "id"
-            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
-            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
-            #ese id sea autoincrementable
-            tecnico = Tecnico(
-                rut_tecnico=form.cleaned_data['rut_tecnico'],
-                nombre=form.cleaned_data['nombre'],
-                apellido=form.cleaned_data['apellido'],
-                correo=form.cleaned_data['correo'],
-                direccion=form.cleaned_data['direccion'],
-                telefono=form.cleaned_data['telefono'],
-                
-            )
-            tecnico.save()
-            messages.success(request,'Datos agregados correctamente!')
-    else:
-        form = TecnicoForm()
-    return render(request, 'app/tecnicoform.html', {'form': form})
+    messages.success(request, 'Cliente eliminado!')
+
+    return redirect('listar_personas')
 
 #FUNCION PARA GUARDAR LOS DATOS DE LOS MATERIALES
 @login_required
@@ -488,69 +367,6 @@ def materialesform(request):
 
 
 
-
-#FUNCION PARA MODIFICAR EL TECNICO
-@login_required
-def modifitecnico (request, id):
-    usuario = Tecnico.objects.get(id=id)
-    datos = {
-        'form' : TecnicoForm(instance=usuario)
-    }
-    if request.method == 'POST':
-        formulario = TecnicoForm(data=request.POST, files=request.FILES, instance=usuario)
-        if formulario.is_valid():
-            formulario.save()
-            messages.success(request, '¡Modificación de datos exitosa!')
-            datos['form'] = formulario
-
-    return render(request, 'app/modifitecnico.html', datos)
-
-
-
-
-#FORMULARIO PARA AGREGAR DATOS DEL CLIENTE,ESTE AGREGA AUTOMATICAMENTE EL ID SIN QUE EL USUARIO LO TENGA QUE ESCRIBIR
-@login_required
-def clienteform(request):
-    if request.method == 'POST':
-        form = ClienteForm(request.POST)
-        if form.is_valid():
-            # Crea una instancia del modelo Servicio sin especificar el campo "id"
-            #esto se hace para que el cliente no tenga que ingresar ese campo que no le corresponde
-            #digando agrega igual ese id . idealmente realizar trigger en base de datos para que 
-            #ese id sea autoincrementable
-            cliente = Cliente(
-                rut_cliente=form.cleaned_data['rut_cliente'],
-                nombre=form.cleaned_data['nombre'],
-                apellido=form.cleaned_data['apellido'],
-                correo=form.cleaned_data['correo'],
-                direccion=form.cleaned_data['direccion'],
-                telefono=form.cleaned_data['telefono'],
-                numero_tarjeta=form.cleaned_data['numero_tarjeta']
-            )
-            cliente.save()
-            messages.success(request,'Datos agregados correctamente!')
-    else:
-        form = ClienteForm()
-    return render(request, 'app/clienteform.html', {'form': form})
-
-
-
-
-#FORMULARIO PARA MODIFICAR DATOS CLIENTE
-@login_required
-def modificliente (request, id):
-    usuario = Cliente.objects.get(id=id)
-    datos = {
-        'form' : ClienteForm(instance=usuario)
-    }
-    if request.method == 'POST':
-        formulario = ClienteForm(data=request.POST, files=request.FILES, instance=usuario)
-        if formulario.is_valid():
-            formulario.save()
-            messages.success(request, '¡Modificación de datos exitosa!')
-            datos['form'] = formulario
-
-    return render(request, 'app/modificliente.html', datos)
 
 
 #FORMULARIO DE SOLICITAR SERVICIO,ESTE AGREGA AUTOMATICAMENTE EL ID SIN QUE EL USUARIO LO TENGA QUE ESCRIBIR

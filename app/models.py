@@ -147,7 +147,7 @@ class Libro(models.Model):
         db_table = 'libro'
 
 class Carrito(models.Model):
-   
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     libro = models.ForeignKey(Libro, models.CASCADE)
     cantidad = models.PositiveIntegerField()
     

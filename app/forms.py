@@ -26,53 +26,103 @@ class AgregarAlCarritoForm(forms.Form):
       
         fields = ['libro_id','cantidad']
 
-#formulario para que el cliente agrege sus datos , sin el id esta programado en  views para que no se coloque
-class ClienteForm(ModelForm):
-   
-    rut_cliente = forms.CharField(min_length=3 ,max_length=15)
-    nombre = forms.CharField(min_length=3 ,max_length=50)
-    apellido = forms.CharField(min_length=3 ,max_length=50)
-    correo = forms.CharField(min_length=3 ,max_length=80)
-    direccion = forms.CharField(min_length=3 ,max_length=80)
-    telefono = forms.CharField(min_length=3 ,max_length=20)
-    numero_tarjeta = forms.IntegerField()
+class Crearclienteform(ModelForm):
+    username = forms.CharField(min_length=3, max_length=15, label="Nombre de usuario")
+    password = forms.CharField(min_length=3, max_length=15, label="Contraseña")
+    rut = forms.CharField(min_length=3, max_length=15, label="RUT")
+    nombre = forms.CharField(min_length=3, max_length=50, label="Nombre")
+    apellido = forms.CharField(min_length=3, max_length=50, label="Apellido")
+    correo = forms.CharField(min_length=3, max_length=80, label="Correo electrónico")
+    direccion = forms.CharField(min_length=3, max_length=80, label="Dirección")
+    telefono = forms.CharField(min_length=3, max_length=20, label="Teléfono")
 
     class Meta:
         model = Cliente
-        fields = ['rut_cliente','nombre','apellido','correo','direccion','telefono', 'numero_tarjeta']
+        fields = ['username', 'password', 'rut', 'nombre', 'apellido', 'correo', 'direccion', 'telefono']
 
-class EmpleadoForm(ModelForm):
+    def save(self, commit=True):
+        user = User.objects.create_user(
+            username=self.cleaned_data['username'],
+            password=self.cleaned_data['password']
+        )
+        cliente = super().save(commit=False)
+        cliente.user = user
+        if commit:
+            cliente.save()
+        return cliente
+
+class ModificarClienteForm(forms.ModelForm):
+    rut = forms.CharField(min_length=3, max_length=15, label="RUT")
+    nombre = forms.CharField(min_length=3, max_length=50, label="Nombre")
+    apellido = forms.CharField(min_length=3, max_length=50, label="Apellido")
+    correo = forms.CharField(min_length=3, max_length=80, label="Correo electrónico")
+    direccion = forms.CharField(min_length=3, max_length=80, label="Dirección")
+    telefono = forms.CharField(min_length=3, max_length=20, label="Teléfono")
+
+    def save(self, commit=True):
+        cliente = super().save(commit=False)
+        cliente.user.first_name = self.cleaned_data['nombre']
+        cliente.user.last_name = self.cleaned_data['apellido']
+        cliente.user.email = self.cleaned_data['correo']
+        if commit:
+            cliente.save()
+            cliente.user.save()
+        return cliente
+
+    class Meta:
+        model = Cliente
+        fields = ['rut', 'nombre', 'apellido', 'correo', 'direccion', 'telefono']
+
+class Crearempleadoform(ModelForm):
+    username = forms.CharField(min_length=3, max_length=15, label="Nombre de usuario")
+    password = forms.CharField(min_length=3, max_length=15, label="Contraseña")
+    rut = forms.CharField(min_length=3, max_length=15, label="RUT")
+    nombre = forms.CharField(min_length=3, max_length=50, label="Nombre")
+    apellido = forms.CharField(min_length=3, max_length=50, label="Apellido")
+    correo = forms.CharField(min_length=3, max_length=80, label="Correo electrónico")
+    direccion = forms.CharField(min_length=3, max_length=80, label="Dirección")
+    telefono = forms.CharField(min_length=3, max_length=20, label="Teléfono")
+    cargo = forms.CharField(min_length=3, max_length=20, label="cargo")
+    departamento = forms.CharField(min_length=3, max_length=20, label="departamento")
    
-    rut_empleado = forms.CharField(min_length=3 ,max_length=15)
-    nombre = forms.CharField(min_length=3 ,max_length=50)
-    apellido = forms.CharField(min_length=3 ,max_length=50)
-    correo = forms.CharField(min_length=3 ,max_length=80)
-    direccion = forms.CharField(min_length=3 ,max_length=80)
-    telefono = forms.CharField(min_length=3 ,max_length=20)
-    cargo = forms.CharField(min_length=3 ,max_length=20)
-    departamento = forms.CharField(min_length=3 ,max_length=20)
-    
-
     class Meta:
         model = Empleado
-        fields = ['rut_empleado','nombre','apellido','correo','direccion','telefono', 'cargo','departamento']
+        fields = ['username', 'password', 'rut', 'nombre', 'apellido', 'correo', 'direccion', 'telefono','cargo','departamento']
 
+    def save(self, commit=True):
+        user = User.objects.create_user(
+            username=self.cleaned_data['username'],
+            password=self.cleaned_data['password']
+        )
+        empleado = super().save(commit=False)
+        empleado.user = user
+        if commit:
+            empleado.save()
+        return empleado
 
-
-
-class TecnicoForm(ModelForm):
-   
-    rut_tecnico = forms.CharField(min_length=3 ,max_length=15)
-    nombre = forms.CharField(min_length=3 ,max_length=50)
-    apellido = forms.CharField(min_length=3 ,max_length=50)
-    correo = forms.CharField(min_length=3 ,max_length=80)
-    direccion = forms.CharField(min_length=3 ,max_length=80,required=False)
-    telefono = forms.CharField(min_length=3 ,max_length=20,required=False)
-    
-
+class ModificarEmpleadoForm(forms.ModelForm):
+    rut = forms.CharField(min_length=3, max_length=15, label="RUT")
+    nombre = forms.CharField(min_length=3, max_length=50, label="Nombre")
+    apellido = forms.CharField(min_length=3, max_length=50, label="Apellido")
+    correo = forms.CharField(min_length=3, max_length=80, label="Correo electrónico")
+    direccion = forms.CharField(min_length=3, max_length=80, label="Dirección")
+    telefono = forms.CharField(min_length=3, max_length=20, label="Teléfono")
+    def save(self, commit=True):
+        empleado = super().save(commit=False)
+        empleado.user.first_name = self.cleaned_data['nombre']
+        empleado.user.last_name = self.cleaned_data['apellido']
+        empleado.user.email = self.cleaned_data['correo']
+        if commit:
+            empleado.save()
+            empleado.user.save()
+        return empleado 
     class Meta:
-        model = Tecnico
-        fields = ['rut_tecnico','nombre','apellido','correo','direccion','telefono']
+        model = Empleado
+        fields = ['rut', 'nombre', 'apellido', 'correo', 'direccion', 'telefono']
+
+
+
+
 
 
 class MaterialesForm(ModelForm):
