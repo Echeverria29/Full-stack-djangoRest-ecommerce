@@ -18,6 +18,8 @@
                 <th>Apellido</th>
                 <th>Dirección</th>
                 <th>Celular</th>
+                <th>Cargo</th>
+                <th>Departamento</th>
                 <th>E-mail</th>
               </tr>
             </thead>
@@ -38,6 +40,8 @@
                 <td> {{ user.empleado.apellido }}</td>
                 <td> {{ user.empleado.direccion }}</td>
                 <td> {{ user.empleado.telefono }}</td>
+                <td> {{ user.empleado.cargo }}</td>
+                <td> {{ user.empleado.departamento }}</td>
                 <td>
                   {{user.empleado.correo}}
                   <div class="d-flex" id="modifi">

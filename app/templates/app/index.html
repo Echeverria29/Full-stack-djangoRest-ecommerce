@@ -1,155 +1,166 @@
 {% extends 'app/base.html' %} {% block contenido %}
 
-<!--DENTRO DE HEADER VA EL NAVBAR QUE ES LA BARRA DE NAVEGACION SUPERIOR-->
-<header class="header" id="header">
-  <nav class="navbar navbar-expand-sm bg-info navbar-light">
-    <div class="container-fluid">
-      <img src="../static/app/img/libro.png " alt="" style="width: 50px; border-radius: 50%" />
-      <!--border-raduis le da forma circular al icono -->
-
-      <!--AQUI SE ENCUENTRA EL BOTON QUE SE DESPLIEGA HACIA ABAJO EN EL NAVBAR CON SU RESPECTVIOS LINKS-->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="../index">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../index">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tooltip" title="¡AQUÍ PUEDES REGISTRARTE!"
-              href="../crearclienteform">Registrarse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tooltip" title="¡AQUÍ PUEDES INICIAR SESIÓN!"
-              href="{% url 'login' %}">Iniciar sesión</a>
-          </li>
-        </ul>
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+    <a href="index.html" class="navbar-brand ml-lg-3">
+      <h1 class="m-0 text-dark"><span class="text-dark">Lib</span> Imagina</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+      <div class="navbar-nav m-auto py-0">
+        <a href="index.html" class="nav-item nav-link  ">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="service.html" class="nav-item nav-link">Services</a>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
       </div>
+      <a href="" class="btn btn-dark d-none d-lg-block">Book Now</a>
     </div>
   </nav>
-</header>
-<!--DENTRO DE HEADER VA EL NAVBAR QUE ES LA BARRA DE NAVEGACION SUPERIOR-->
+</div>
+<!-- Navbar End -->
 
-<div class="main" id="main">
-  <!--CONTENEDOR CON LA FOTO DE FONDO CON WHIDTH 100% PARA QUE SE ADAPTE SI ES DISPOSITIVO MOVIL Y NO SEA VEA SOLO UNA PARTE DE LA IMAGEN-->
-  <section class="py-2 text-center container-fluid">
-    <!--py-2 para que no quede pegado ni muy separado del navbar-->
 
-    <img src="../static/app/img/probando5.jpeg " alt="" width="100%" />
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <!--DENTRO DEL CLASS ES EL TIPO DE LETRA-->
-        <h1 class="fw-dark display-1">Librería "imagina"</h1>
-        <p class="lead text-muted display-6">
-          En este sitio web podrás encontrar los mejores libros de todo tipo, de
-          cualquier editorial y siempre siendo fieles a nuestros mejores
-          precios.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!--CONTENEDOR CON LA FOTO DE FONDO CON WHIDTH 100% PARA QUE SE ACHIQUE SI ES MODO MOVIL Y NO SEA VEA SOLO UNA PARTE DE LA IMAGEN-->
-
-  <!--BARRA PLOMA QUE ENCIERRA LOS CONTAINER-->
-  <section class="thumbnail 1" id="thumbnail 1">
-    <div class="Thumbnail py-5 bg-light">
-      <!--CONTENEDOR PLOMO QUE ENCIERRA LOS CONTAINER-->
-
-      <div class="container-fluid">
-        <!-- CONTENEDOR-fluid para que el contenedor ocupe los 12 espacios que nos ofrece boostrap  -->
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
-          <!--comando aling aliniea los 3 itemps-->
-          <!--IMAGEN DE LA IZQUIERDA-->
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="../static/app/img/lib1.jpeg " alt="" height="324" width="100%" />
-              <div class="card-body">
-                <div class="d-flex justify-content-center">
-                  <h3>El Señor de los Anillos Trilogía</h3>
-                </div>
-                <div>
-                  Un anillo para gobernarlos a todos, un anillo para
-                  encontrarlos, un anillo para atraerlos a todos y atarlos en
-                  las Tinieblas. La vida de los hombres y de toda la vida de la
-                  Tierra Media depende de un joven hobbit.
-                </div>
-
-                <div class="d-flex justify-content-center">
-                  <h4>¡Si quieres comprar regístrate!</h4>
-                </div>
-
-                <div class="d-flex justify-content-center">
-                  <a href="../crearclienteform" class="btn btn-success my-2" data-bs-toggle="tooltip"
-                    title="¡AQUÍ PUEDES REGISTRARTE!">Registrarse gratis</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--IMAGEN DE LA IZQUIERDA-->
-
-          <!--IMAGEN DEL CENTRO-->
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="../static/app/img/harrycolecionista.png " alt="" height="324" width="100%" />
-              <div class="card-body">
-                <div class="d-flex justify-content-center">
-                  <h3>Harry Potter Trilogía</h3>
-                </div>
-                <div>
-                  Hazte de la colección completa de los libros de Harry Potter,
-                  la saga más mágica de todos los tiempos. En una edición
-                  renovada con las siete novelas. Contando con el rediseño de
-                  cubierta a cargo del galardonado ilustrador Jonny Duddle.
-                </div>
-                <div class="d-flex justify-content-center">
-                  <h4>¡Si quieres comprar registrate!</h4>
-                </div>
-
-                <div class="d-flex justify-content-center">
-                  <a href="../crearclienteform" class="btn btn-success my-2" data-bs-toggle="tooltip"
-                    title="¡AQUÍ PUEDES REGISTRARTE!">Registrarse gratis</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--IMAGEN DEL CENTRO-->
-
-          <!--IMAGEN DE LA DERECHA-->
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="../static/app/img/alines.jpg " alt="" height="324 " width="100%" />
-              <div class="card-body">
-                <div class="d-flex justify-content-center">
-                  <h3>Aliens</h3>
-                </div>
-                <div>
-                  La trilogía de libros de la película "Aliens" es una serie de
-                  novelas de ciencia ficción escritas por el autor
-                  estadounidense Alan Dean Foster. La serie se basa en la
-                  exitosa franquicia de películas de "Aliens", creada por él
-                  director James Cameron.
-                </div>
-                <div class="d-flex justify-content-center">
-                  <h4>¡Si quieres comprar registrate!</h4>
-                </div>
-                <div class="d-flex justify-content-center">
-                  <a href="../crearclienteform" class="btn btn-success my-2" data-bs-toggle="tooltip"
-                    title="¡AQUÍ PUEDES REGISTRARTE!">Registrarse gratis</a>
-                </div>
-              </div>
-            </div>
+<!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5 pb-5">
+  <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#header-carousel" data-slide-to="1"></li>
+      <li data-target="#header-carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item position-relative active" style="min-height: 100vh;">
+        <img class="position-absolute w-100 h-100" src="../static/app/img/carousel-1.jpg" style="object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown"
+              style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+            <h3 class="display-3 text-capitalize text-white mb-3">Massage Treatment</h3>
+            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet
+              amet amet ndiam elitr ipsum labore diamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make
+              Appointment</a>
           </div>
         </div>
-        <!--IMAGEN DE LA DERECHA-->
-        <!--IMAGEN DE LA DERECHA-->
+      </div>
+      <div class="carousel-item position-relative" style="min-height: 100vh;">
+        <img class="position-absolute w-100 h-100" src="../static/app/img/carousel-2.jpg" style="object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown"
+              style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+            <h3 class="display-3 text-capitalize text-white mb-3">Facial Treatment</h3>
+            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet
+              amet amet ndiam elitr ipsum labore diam</p>
+            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make
+              Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item position-relative" style="min-height: 100vh;">
+        <img class="position-absolute w-100 h-100" src="../static/app/img/carousel-3.jpg" style="object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown"
+              style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+            <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
+            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet
+              amet amet ndiam elitr ipsum labore diam</p>
+            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make
+              Appointment</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
+<!-- Carousel End -->
 
-{% endblock %}
+
+<!-- Service Start -->
+<div class="container-fluid px-0 py-5 my-5">
+  <div class="row mx-0 justify-content-center text-center">
+    <div class="col-lg-6">
+      <h6 class="d-inline-block bg-ligth text-dark-uppercase py-1 px-2">Our Service</h6>
+      <h1>Spa & Beauty Services</h1>
+    </div>
+  </div>
+  <div class="owl-carousel service-carousel">
+    <div class="service-item position-relative">
+      <img class="img-fluid" src="../static/app/img/service-1.jpg" alt="">
+      <div class="service-text text-center">
+        <h4 class="text-white font-weight-medium px-3">Body Massage</h4>
+        <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum
+        </p>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="">Make Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-item position-relative">
+      <img class="img-fluid" src="../static/app/img/service-2.jpg" alt="">
+      <div class="service-text text-center">
+        <h4 class="text-white font-weight-medium px-3">Stone Therapy</h4>
+        <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum
+        </p>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="">Make Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-item position-relative">
+      <img class="img-fluid" src="../static/app/img/service-3.jpg" alt="">
+      <div class="service-text text-center">
+        <h4 class="text-white font-weight-medium px-3">Facial Therapy</h4>
+        <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum
+        </p>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="">Make Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-item position-relative">
+      <img class="img-fluid" src="../static/app/img/service-4.jpg" alt="">
+      <div class="service-text text-center">
+        <h4 class="text-white font-weight-medium px-3">Skin Care</h4>
+        <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum
+        </p>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="">Make Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-item position-relative">
+      <img class="img-fluid" src="../static/app/img/service-5.jpg" alt="">
+      <div class="service-text text-center">
+        <h4 class="text-white font-weight-medium px-3">Stream Bath</h4>
+        <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum
+        </p>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="">Make Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-item position-relative">
+      <img class="img-fluid" src="../static/app/img/service-6.jpg" alt="">
+      <div class="service-text text-center">
+        <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
+        <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum
+        </p>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="">Make Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Service End -->
+
+
+
+
+
+
+  {% endblock %}

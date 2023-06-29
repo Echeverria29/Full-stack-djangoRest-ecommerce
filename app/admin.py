@@ -12,6 +12,11 @@ class EmpleadoAdmin(admin.ModelAdmin):
     search_fields = ['id']
     list_per_page = 5
 
+class tecnicoAdmin(admin.ModelAdmin):
+    list_display = ['user','rut','nombre','apellido','correo', 'direccion','telefono']
+    search_fields = ['id']
+    list_per_page = 10
+
 class LibroAdmin(admin.ModelAdmin):
     list_display = ['id','nombre','autor','editorial', 'precio','stock','proveedor']
     search_fields = ['id']
@@ -32,10 +37,6 @@ class tipoAdmin(admin.ModelAdmin):
     search_fields = ['id']
     list_per_page = 9
 
-class tecnicoAdmin(admin.ModelAdmin):
-    list_display = ['user','rut','nombre','apellido','correo', 'direccion','telefono']
-    search_fields = ['id']
-    list_per_page = 10
 
 class servicioAdmin(admin.ModelAdmin):
     list_display = ['id','fecha_servicio','direccion_servicio','detalle_servicio','tecnico','cliente']

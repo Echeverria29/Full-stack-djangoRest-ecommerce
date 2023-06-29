@@ -61,22 +61,14 @@
           </table>
         </div>
 
-        <div class="col-sm-8 d-flex justify-content-center">
-          <table class="table">
-            <tbody>
-              <tr>
 
-                <td>
-                  <a href="{% url 'logout' %}" class="btn btn-danger bg-danger" data-bs-toggle="tooltip"
-                    title="¡AQUÍ PUEDES CERRAR SESIÓN!">Cerrar sesión</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
     </div>
   </div>
 </section>
-
+<ul class="nav d-flex justify-content-center">
+  <li class="nav-item d-flex justify-content-center">
+    <a class="nav-link" href="../home">Volver al perfil</a>
+  </li>
+</ul>
 {% endblock %}

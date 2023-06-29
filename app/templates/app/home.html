@@ -12,7 +12,12 @@
 {% block navbar3 %}
 {% include 'app/basetecnico.html' %}
 {% endblock %}
+{% elif user.is_superuser %}
+{% block navbar4 %}
+{% include 'app/baseadmin.html' %}
+{% endblock %}
 {% endif %}
+
 
 <body>
   {% if user.cliente %}
@@ -30,6 +35,12 @@
   {% include 'app/basetablatec.html' %}
   {% endblock %}
   {% endif %}
+  {% if user.is_superuser %}
+  {% block tablaadmin %}
+  {% include 'app/basetablaadmin.html' %}
+  {% endblock %}
+  {% endif %}
+
 
 </body>
 

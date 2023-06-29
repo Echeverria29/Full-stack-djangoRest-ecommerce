@@ -1,0 +1,194 @@
+{% extends 'app/base.html' %} {% block contenido %}
+{% block navbar %}
+{% include 'app/baseadmin.html' %}
+{% endblock %}
+<section class="thumbnail 1" id="thumbnail 1">
+  <div class="Thumbnail py-2 bg-light">
+    <!--CONTENEDOR PLOMO QUE ENCIERRA LOS CONTAINER-->
+
+    <div class="container-fluid">
+      <!-- CONTENEDOR-fluid para que el contenedor ocupe los 12 espacios que nos ofrece boostrap  -->
+
+      <div class="row">
+        <!--comando aling aliniea los 3 itemps-->
+        <!--IMAGEN DE LA IZQUIERDA-->
+        <div class="col-sm-5">
+          <table class="table table-condensed table-striped">
+            <thead>
+              <tr class="table-success">
+                <th>Foto</th>
+                <th>Rut</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Celular</th>
+                <th>E-mail</th>
+                <th>Modificar usuario</th>
+                <th>Eliminar usuario</th>
+
+
+              </tr>
+            </thead>
+            <tbody>
+              {% for aux in listaClientes %}
+
+              <tr>
+                <td>
+                  {% if aux.imagen %}
+                  <img src=" aux.imagen.url " />
+                  {% else %}
+                  <img src="../static/app/img/equipo.png" style="width: 80%; max-width: 80%;" />
+                  {% endif %}
+                </td>
+
+                <td>{{aux.rut}}</td>
+                <td>{{aux.nombre}}</td>
+                <td>{{aux.apellido}}</td>
+                <td>{{aux.direccion}}</td>
+                <td>{{aux.telefono}}</td>
+                <td>{{aux.correo}}</td>
+                <td>
+                  <div class="d-flex" id="elimi">
+                    <a href="{% url 'modificlienteadmin' aux.id %}" class="btn btn-success btn-sm"
+                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
+
+                  </div>
+                </td>
+                <td>
+
+
+                  <div class="d-flex" id="elimi">
+                    <a href="{% url 'eliminarclienteadmin' aux.id %}" class="btn btn-danger btn-sm"
+                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES ELIMINAR LOS DATOS!">Eliminar datos</a>
+
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="table table-condensed table-striped">
+            <thead>
+              <tr class="table-success">
+                <th>Foto</th>
+                <th>Rut</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Celular</th>
+                <th>Cargo</th>
+                <th>Departamento</th>
+                <th>E-mail</th>
+                <th>Modificar usuario</th>
+                <th>Eliminar usuario</th>
+
+
+              </tr>
+            </thead>
+            <tbody>
+              {% for aux in listaEmpleados %}
+
+              <tr>
+                <td>
+                  {% if aux.imagen %}
+                  <img src=" aux.imagen.url " />
+                  {% else %}
+                  <img src="../static/app/img/equipo.png" style="width: 80%; max-width: 80%;" />
+                  {% endif %}
+                </td>
+
+                <td>{{aux.rut}}</td>
+                <td>{{aux.nombre}}</td>
+                <td>{{aux.apellido}}</td>
+                <td>{{aux.direccion}}</td>
+                <td>{{aux.telefono}}</td>
+                <td>{{aux.cargo}}</td>
+                <td>{{aux.departamento}}</td>
+                <td>{{aux.correo}}</td>
+                <td>
+                  <div class="d-flex" id="elimi">
+                    <a href="{% url 'modifiempleadoadmin' aux.id %}" class="btn btn-success btn-sm"
+                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
+
+                  </div>
+                </td>
+                <td>
+
+
+                  <div class="d-flex" id="elimi">
+                    <a href="{% url 'eliminarempleadoadmin' aux.id %}" class="btn btn-danger btn-sm"
+                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES ELIMINAR LOS DATOS!">Eliminar datos</a>
+
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="table table-condensed table-striped">
+            <thead>
+              <tr class="table-success">
+                <th>Foto</th>
+                <th>Rut</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Celular</th>
+                <th>E-mail</th>
+                <th>Modificar usuario</th>
+                <th>Eliminar usuario</th>
+
+
+              </tr>
+            </thead>
+            <tbody>
+              {% for aux in listaTecnicos %}
+
+              <tr>
+                <td>
+                  {% if aux.imagen %}
+                  <img src=" aux.imagen.url " />
+                  {% else %}
+                  <img src="../static/app/img/equipo.png" style="width: 80%; max-width: 80%;" />
+                  {% endif %}
+                </td>
+
+                <td>{{aux.rut}}</td>
+                <td>{{aux.nombre}}</td>
+                <td>{{aux.apellido}}</td>
+                <td>{{aux.direccion}}</td>
+                <td>{{aux.telefono}}</td>
+                <td>{{aux.correo}}</td>
+                <td>
+                  <div class="d-flex" id="elimi">
+                    <a href="{% url 'modifitecnicoadmin' aux.id %}" class="btn btn-success btn-sm"
+                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
+
+                  </div>
+                </td>
+                <td>
+
+
+                  <div class="d-flex" id="elimi">
+                    <a href="{% url 'eliminartecnicoadmin' aux.id %}" class="btn btn-danger btn-sm"
+                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES ELIMINAR LOS DATOS!">Eliminar datos</a>
+
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<ul class="nav d-flex justify-content-center">
+  <li class="nav-item d-flex justify-content-center">
+    <a class="nav-link" href="../home">Volver al perfil</a>
+  </li>
+</ul>
+{% endblock %}

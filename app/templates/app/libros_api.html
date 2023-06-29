@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %} {% block contenido %}
 {% block navbar %}
-  {% include 'app/basempleado.html' %}
+{% include 'app/basempleado.html' %}
 {% endblock %}
 
 <div class="main container-fluid">
@@ -12,11 +12,7 @@
           {% if x.imagen %}
           <img src="{{ libro.imagen.url }}" class="card-img-top" />
           {% else %}
-          <img
-            src="../static/app/img/imagenlibros.jpg"
-            class="card-img-top"
-            style="width: 100%; max-width: 100%"
-          />
+          <img src="../static/app/img/imagenlibros.jpg" class="card-img-top" style="width: 100%; max-width: 100%" />
           {% endif %}
           <div class="card-body">
             <div class="d-flex justify-content-center m-1">
@@ -36,8 +32,8 @@
               <p class="card-text">
                 <strong>Precio: ${{ x.precio }}</strong>
               </p>
-           </div>
-            
+            </div>
+
           </div>
         </div>
       </div>
@@ -49,13 +45,8 @@
 
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a
-      class="nav-link"
-      href="../listar_empleado"
-      data-bs-toggle="tooltip"
-      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!"
-      >Volver al perfil</a
-    >
+    <a class="nav-link" href="../home" data-bs-toggle="tooltip" title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al
+      perfil</a>
   </li>
 </ul>
 {% endblock %}

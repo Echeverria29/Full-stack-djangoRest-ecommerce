@@ -12,20 +12,24 @@ from datetime import date
 from django.db import transaction
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
-
+#AL COMPRAR TE MUESTRA ESTA PAGINA PARA IR A TU SEGUIMIENTO
 def comprafinalizada(request):
     return render(request,'app/comprafinalizada.html')
 
+#PAGINA PARA MOSTRAR TUS DATOS DE USUARIO
+@login_required
 def home(request):
   return render(request,'app/home.html')
 
 def index(request):
   return render(request,'app/index.html')
 
+#PAGINA PARA REALIZAR EL PAGO SIMULADO CON EL SCRIPT
+@login_required
 def indexpypal(request):
   return render(request,'app/indexpypal.html')
 
- 
+#FUNCION PARA MANDAR LOS DATOS A STARKEN Y POBLAR LAS TABLAS VENTA Y PAGO AL MISMO TIEMPO
 @login_required
 def realizar_comprastarken(request):
     carrito = Carrito.objects.all()  # Obtener el  objetos del modelo Carrito del usuario actual
@@ -99,6 +103,7 @@ def realizar_comprastarken(request):
     
     return redirect('indexpypal')  # Redirigir al usuario a la lista de libros después de realizar las compras
 
+#INICIO SE SESION
 def iniciar_sesion(request):
     if request.method == 'POST':
         form = LoginForm(request, data=request.POST)
@@ -114,10 +119,13 @@ def iniciar_sesion(request):
 
     return render(request, 'login.html', {'form': form})
 
+#CERRAR SESION
+@login_required
 def cerrar_sesion(request):
     logout(request)
     return redirect('index')
 
+#FORMULARIO PARA CREAR AL CLIENTE
 def crearclienteform(request):
     if request.method == 'POST':
         form = Crearclienteform(request.POST)
@@ -128,7 +136,8 @@ def crearclienteform(request):
         form = Crearclienteform()
     return render(request, 'app/crearclienteform.html', {'form': form})
 
-  
+#FORMULARIO PARA CREAR AL EMPLEADO
+@login_required
 def crearempleadoform(request):
     if request.method == 'POST':
         form = Crearempleadoform(request.POST)
@@ -139,7 +148,18 @@ def crearempleadoform(request):
         form = Crearempleadoform()
     return render(request, 'app/crearempleadoform.html', {'form': form})
 
-  
+#FORMULARIO PARA CREAR AL TECNICO
+@login_required
+def creartecnicoform(request):
+    if request.method == 'POST':
+        form = Creartecnicoform(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Tecnico registrado correctamente')
+    else:
+        form = Creartecnicoform()
+    return render(request, 'app/creartecnicoform.html', {'form': form})
+
 #FORMULARIO PARA MODIFICAR DATOS CLIENTE
 @login_required
 def modificliente (request, id):
@@ -171,6 +191,20 @@ def modifiempleado (request, id):
 
     return render(request, 'app/modifiempleado.html', datos)
 
+@login_required
+def modifitecnico (request, id):
+    tecnico = Tecnico.objects.get(user_id=id)
+    datos = {
+        'form' : ModificarTecnicoForm(instance=tecnico)
+    }
+    if request.method == 'POST':
+        formulario = ModificarTecnicoForm(data=request.POST, files=request.FILES, instance=tecnico)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modifitecnico.html', datos)
 
 
 
@@ -241,7 +275,6 @@ def agregar_al_carrito(request):
 
 
 #funcion para ver los libros agregados al carrito
-
 @login_required
 def ver_carrito(request):
     carrito = Carrito.objects.filter(usuario=request.user)
@@ -253,14 +286,13 @@ def ver_carrito(request):
     return render(request, 'app/ver_carrito.html', context)
 
 
-
 #funcion para eliminar el lo que esta en el carrito
 @login_required
 def eliminar_del_carrito(request, id):
     carrito = get_object_or_404(Carrito, id=id,usuario=request.user)
     if request.method == 'POST':
         carrito.delete()
-        messages.error(request, f'Se ha eliminado "{carrito.libro.nombre}" del carrito.')
+       
     return redirect('ver_carrito')
 
 #FUNCION PARA LISTAR LOS DATOS DEL CLIENTE LA PAGINA PRINCIPAL
@@ -330,16 +362,16 @@ def listar_cotizaciones(request):
 
 
 #FUNCION PARA ELIMINAR LOS CLIENTES DEL EMPLEADO
-
+@login_required
 def eliminarpersona(request, id):
-    cliente = Cliente.objects.get(user_id=id)
+    cliente = Cliente.objects.get(id=id)
     user = cliente.user
 
     # Eliminar el cliente y el usuario
     cliente.delete()
     user.delete()
 
-    messages.success(request, 'Cliente eliminado!')
+    
 
     return redirect('listar_personas')
 
@@ -427,3 +459,107 @@ def cotizacionesform(request):
         form = CotizacionesForm()
     return render(request, 'app/cotizacionesform.html', {'form': form})
 
+###############################################################################
+############################################################################
+#################SECCION DE CRUD DEL ADMIN####################################
+@login_required
+def modificlienteadmin (request, id):
+    cliente = Cliente.objects.get(id=id)
+    datos = {
+        'form' : ModificarClienteadminForm(instance=cliente)
+    }
+    if request.method == 'POST':
+        formulario = ModificarClienteadminForm(data=request.POST, files=request.FILES, instance=cliente)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modificlienteadmin.html', datos)
+
+@login_required
+def modifiempleadoadmin (request, id):
+    empleado = Empleado.objects.get(id=id)
+    datos = {
+        'form' : ModificarEmpleadoadminForm(instance=empleado)
+    }
+    if request.method == 'POST':
+        formulario = ModificarEmpleadoadminForm(data=request.POST, files=request.FILES, instance=empleado)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modifiempleadoadmin.html', datos)
+
+@login_required
+def modifitecnicoadmin (request, id):
+    tecnico = Tecnico.objects.get(id=id)
+    datos = {
+        'form' : ModificarTecnicoadminForm(instance=tecnico)
+    }
+    if request.method == 'POST':
+        formulario = ModificarTecnicoadminForm(data=request.POST, files=request.FILES, instance=tecnico)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, '¡Modificación de datos exitosa!')
+            datos['form'] = formulario
+
+    return render(request, 'app/modifitecnicoadmin.html', datos)
+
+
+@login_required
+def listar_personasadmin(request):
+    cliente = Cliente.objects.all()
+    empleado = Empleado.objects.all()
+    tecnico = Tecnico.objects.all()
+     
+    datos = {
+        #como dato estas listas van en las paginas listar_...
+        
+        'listaClientes': cliente,
+        'listaEmpleados': empleado,
+        'listaTecnicos': tecnico,
+        
+        
+    }
+    return render(request, 'app/listar_personasadmin.html', datos)
+
+@login_required
+def eliminarclienteadmin(request, id):
+    cliente = Cliente.objects.get(id=id)
+    user = cliente.user
+
+    # Eliminar el cliente y el usuario
+    cliente.delete()
+    user.delete()
+
+   
+
+    return redirect('listar_personasadmin')
+
+@login_required
+def eliminarempleadoadmin(request, id):
+    empleado = Empleado.objects.get(id=id)
+    user = empleado.user
+
+    # Eliminar el empleado y el usuario
+    empleado.delete()
+    user.delete()
+
+    
+
+    return redirect('listar_personasadmin')
+
+@login_required
+def eliminartecnicoadmin(request, id):
+    tecnico = Tecnico.objects.get(id=id)
+    user = tecnico.user
+
+    # Eliminar el tecnico y el usuario
+    tecnico.delete()
+    user.delete()
+
+  
+
+    return redirect('listar_personasadmin')

@@ -11,7 +11,6 @@ urlpatterns = [
   path('logout/', LogoutView.as_view(), name='logout'),
   path('cerrar_sesion/', cerrar_sesion, name='cerrar_sesion'),
   path('crearclienteform/', crearclienteform, name='crearclienteform'),
-  path('crearempleadoform/', crearempleadoform, name='crearempleadoform'),
   path('home/', home, name='home'),
   path('index/', index, name='index'),
   path('indexpypal/', indexpypal, name='indexpypal'),
@@ -27,16 +26,26 @@ urlpatterns = [
   path('listar_serviciotec', listar_serviciotec, name='listar_serviciotec'),
   path('modificliente/<int:id>', modificliente, name='modificliente'),
   path('modifiempleado/<int:id>', modifiempleado, name='modifiempleado'),
+  path('modifitecnico/<int:id>', modifitecnico, name='modifitecnico'),
   path('servicioform', servicioform, name='servicioform'),
   path('cotizacionesform', cotizacionesform, name='cotizacionesform'),
   path('listar_servicio', listar_servicio, name='listar_servicio'),
   path('listar_cotizaciones', listar_cotizaciones, name='listar_cotizaciones'),
   path('libros_api', libros_api, name='libros_api'),
   path('starken_api', starken_api, name='starken_api'),
-  path('realizar_comprastarken/', realizar_comprastarken, name='realizar_comprastarken'),
- 
- 
-
+  path('realizar_comprastarken/', realizar_comprastarken, name='realizar_comprastarken'), 
+  #########################################################################################
+  ####################ADMIN##################################
+  path('crearempleadoform/', crearempleadoform, name='crearempleadoform'),
+  path('creartecnicoform/', creartecnicoform, name='creartecnicoform'),
+  path('modificlienteadmin/<int:id>', modificlienteadmin, name='modificlienteadmin'),
+  path('modifiempleadoadmin/<int:id>', modifiempleadoadmin, name='modifiempleadoadmin'),
+  path('modifitecnicoadmin/<int:id>', modifitecnicoadmin, name='modifitecnicoadmin'),
+  path('listar_personasadmin', listar_personasadmin, name='listar_personasadmin'),
+  path('eliminarclienteadmin/<int:id>', eliminarclienteadmin, name='eliminarclienteadmin'),
+  path('eliminarempleadoadmin/<int:id>', eliminarempleadoadmin, name='eliminarempleadoadmin'),
+  path('eliminartecnicoadmin/<int:id>', eliminartecnicoadmin, name='eliminartecnicoadmin'),
+  
 
 ]   
 
