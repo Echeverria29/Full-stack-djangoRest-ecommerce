@@ -152,13 +152,13 @@ sup {
 }
 
 a {
-  color: #0a0a0a;
+  color: #f2f2f2;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #030303;
+  color: #f9f4f4;
   text-decoration: underline;
 }
 
@@ -9535,7 +9535,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #F9A392;
+  color: #000;
 }
 
 @media (max-width: 991.98px) {
