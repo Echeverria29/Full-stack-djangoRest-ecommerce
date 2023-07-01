@@ -1,10 +1,25 @@
-#main7 {
-  background-image: url("../img/probando2login.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+#toperegistro2 {
+  background: url("../img/inicioses.jpg") center center / contain no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-#toperegistro2 {
-  margin-top: 140px;
+.formulario {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  #toperegistro2 {
+    background-position: top center;
+    height: auto;
+  }
+
+  .formulario {
+    margin-top: 20px;
+  }
 }
