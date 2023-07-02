@@ -1,4 +1,4 @@
-{% extends 'app/base.html' %}
+{% extends 'app/base2.html' %}
 {% block contenido %}
 {% block navbar %}
 {% include 'app/basecliente.html' %}
@@ -56,7 +56,7 @@
   <form method="POST" action="{% url 'realizar_comprastarken' %}">
     {% csrf_token %}
 
-    <button type="submit" class="btn btn-primary">Realizar compra</button>
+    <button type="submit" class="btn btn-dark">Realizar compra</button>
 
   </form>
 
@@ -64,7 +64,8 @@
 
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a class="nav-link" href="../home" data-bs-toggle="tooltip" title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al
+    <a class="nav-link text-dark" href="../home" data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al
       perfil</a>
   </li>
 </ul>

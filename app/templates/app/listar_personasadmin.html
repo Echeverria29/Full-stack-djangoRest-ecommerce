@@ -1,4 +1,4 @@
-{% extends 'app/base.html' %} {% block contenido %}
+{% extends 'app/base2.html' %} {% block contenido %}
 {% block navbar %}
 {% include 'app/baseadmin.html' %}
 {% endblock %}
@@ -49,8 +49,8 @@
                 <td>{{aux.correo}}</td>
                 <td>
                   <div class="d-flex" id="elimi">
-                    <a href="{% url 'modificlienteadmin' aux.id %}" class="btn btn-success btn-sm"
-                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
+                    <a href="{% url 'modificlienteadmin' aux.id %}" class="btn btn-dark btn-sm" data-bs-toggle="tooltip"
+                      title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
 
                   </div>
                 </td>
@@ -107,7 +107,7 @@
                 <td>{{aux.correo}}</td>
                 <td>
                   <div class="d-flex" id="elimi">
-                    <a href="{% url 'modifiempleadoadmin' aux.id %}" class="btn btn-success btn-sm"
+                    <a href="{% url 'modifiempleadoadmin' aux.id %}" class="btn btn-dark btn-sm"
                       data-bs-toggle="tooltip" title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
 
                   </div>
@@ -161,8 +161,8 @@
                 <td>{{aux.correo}}</td>
                 <td>
                   <div class="d-flex" id="elimi">
-                    <a href="{% url 'modifitecnicoadmin' aux.id %}" class="btn btn-success btn-sm"
-                      data-bs-toggle="tooltip" title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
+                    <a href="{% url 'modifitecnicoadmin' aux.id %}" class="btn btn-dark btn-sm" data-bs-toggle="tooltip"
+                      title="¡AQUÍ PUEDES MODIFICAR LOS DATOS!">Modificar datos</a>
 
                   </div>
                 </td>
@@ -188,7 +188,7 @@
 </section>
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a class="nav-link" href="../home">Volver al perfil</a>
+    <a class="nav-link text-dark" href="../home">Volver al perfil</a>
   </li>
 </ul>
 {% endblock %}

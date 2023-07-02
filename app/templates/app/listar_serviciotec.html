@@ -1,4 +1,4 @@
-{% extends 'app/base.html' %} {% block contenido %}
+{% extends 'app/base2.html' %} {% block contenido %}
 {% block navbar %}
 {% include 'app/basetecnico.html' %}
 {% endblock %}
@@ -52,8 +52,9 @@
 </section>
 <ul class="nav d-flex justify-content-center">
   <li class="nav-item d-flex justify-content-center">
-    <a class="nav-link" href="../listar_tecnico" data-bs-toggle="tooltip"
-      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al perfil</a>
+    <a class="nav-link text-dark" href="../home" data-bs-toggle="tooltip"
+      title="¡AQUÍ PUEDES VOLVER A TU PERFIL!">Volver al
+      perfil</a>
   </li>
 </ul>
 {% endblock %}
