@@ -27,14 +27,29 @@
       onApprove: function (data, actions) {
         return actions.order.capture().then(function (details) {
           alert('Transaction completed by ' + details.payer.name.given_name + '!');
-
-          // Redireccionar al índice de tu página
           window.location.href = 'http://localhost:8000/comprafinalizada/';
+          // Realizar solicitud al servidor para ejecutar la función
+          fetch('/realizar_comprastarken/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': '{{ csrf_token }}'  // Obtener el valor del token CSRF en Django
+            },
+            body: JSON.stringify(details)  // Puedes enviar los detalles de PayPal si son necesarios
+          })
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              // Aquí puedes manejar la respuesta del servidor
+              console.log(data.message);
+            });
+
         });
+
       }
     }).render('#paypal-button-container');
   </script>
-
 
 </div>
 <ul class="nav d-flex justify-content-center">
