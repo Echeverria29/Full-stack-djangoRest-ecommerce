@@ -1,5 +1,5 @@
 # Libreria front-back django
-_Acá va un párrafo que describa lo que es el proyecto_
+Este es un proyecto de una librería desarrollada utilizando Django como framework web y MySQL como base de datos. Esta aplicación es una aplicación full-stack de una libreria web, integrando Api Rest para el seguimiento(simulando starken) y proveedor más paypal como metodo de pago 
 
 ## Comenzando 🚀
 
