@@ -1,3 +1,0 @@
-alter SESSION set "_oracle_script" = true;
-CREATE USER probando IDENTIFIED by probando;
-grant all PRIVILEGES to probando;

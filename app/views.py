@@ -272,6 +272,9 @@ def agregar_al_carrito(request):
         else:
             carrito = Carrito.objects.create(usuario=request.user, libro=libro, cantidad=cantidad)
             messages.success(request, f'Se ha agregado "{libro.nombre}" al carrito.')
+
+        carrito.imagen = libro.imagen
+        carrito.save()
     return redirect('../lista_libros')
 
 

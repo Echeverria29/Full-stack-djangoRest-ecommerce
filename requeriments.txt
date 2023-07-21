@@ -1,4 +1,4 @@
-cx_Oracle
+
 django
 pillow
 django-admin-interface

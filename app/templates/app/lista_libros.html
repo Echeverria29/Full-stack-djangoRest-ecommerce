@@ -11,9 +11,11 @@
       <div class="col-sm-4">
         <div class="m-3 card" style="width: 400px">
           {% if libro.imagen %}
-          <img src="{{ libro.imagen.url }}" class="card-img-top" />
+          <img src="{{ libro.imagen.url }}" class="card-img-top"
+            style="width: 100%; max-width: 100%; height: 500px; object-fit: cover;" />
           {% else %}
-          <img src="../static/app/img/imagenlibros.jpg" class="card-img-top" style="width: 100%; max-width: 100%;" />
+          <img src="../static/app/img/imagenlibros.jpg" class="card-img-top"
+            style="width: 100%; max-width: 100%; height: 500px; object-fit: cover;" />
           {% endif %}
           <div class="card-body">
             <div class="d-flex justify-content-center m-1">

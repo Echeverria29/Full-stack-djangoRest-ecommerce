@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+    'colorfield',
     'crispy_forms',
     'rest_framework',
     'crispy_bootstrap5',
@@ -84,16 +85,16 @@ WSGI_APPLICATION = 'libreweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/orcl',
-        'USER': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_libros',
+        'HOST': 'Localhost',
+        'PORT': '3306',
+        'USER': 'root',
         'PASSWORD': '',
-        'TEST': {
-            'USER': 'default_test',
-            'TBLSPACE': 'default_test_tbls',
-            'TBLSPACE_TMP': 'default_test_tbls_tmp',
-        },
-    },
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
 }
 
 

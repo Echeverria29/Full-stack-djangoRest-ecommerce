@@ -26,6 +26,24 @@ class AgregarAlCarritoForm(forms.Form):
       
         fields = ['libro_id','cantidad']
 
+class LibroForm(ModelForm):
+
+    codigo = forms.IntegerField(min_value=1)
+    nombre = forms.CharField(min_length=3 ,max_length=20)
+    descripcion = forms.CharField(min_length=3 ,max_length=300)
+
+
+
+
+    class Meta:
+        
+        model = Libro
+      
+        fields = ['nombre', 'autor','editorial', 'precio', 'stock', 'proveedor', 'imagen']
+
+
+
+
 class Crearclienteform(ModelForm):
     username = forms.CharField(min_length=3, max_length=15, label="Nombre de usuario")
     password = forms.CharField(min_length=3, max_length=15, label="Contraseña")

@@ -21,9 +21,9 @@
     <tr>
       <td>
         {% if item.imagen %}
-        <img src="{{ item.imagen.url }}" />
+        <img src="{{ item.imagen.url }}" class="img-thumbnail" style="width: 10%; max-width: 10%;" />
         {% else %}
-        <img src="../static/app/img/imagenlibros.jpg" class="img-thumbnail" style="width: 10%; max-width: 50%;" />
+        <img src=" ../static/app/img/imagenlibros.jpg" class="img-thumbnail" style="width: 10%; max-width: 50%;" />
         {% endif %}
         {{ item.libro.nombre }}
       </td>

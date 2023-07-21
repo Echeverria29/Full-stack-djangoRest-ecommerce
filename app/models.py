@@ -1,6 +1,7 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+from unittest.util import _MAX_LENGTH
 
 class Perfil(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -10,7 +11,9 @@ class Perfil(models.Model):
     correo = models.CharField(max_length=50)
     direccion = models.CharField(max_length=50)
     telefono = models.CharField(max_length=50)
-    
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
+
     class Meta:
         abstract = True
 
@@ -57,6 +60,8 @@ class Cotizaciones(models.Model):
     correo = models.CharField(max_length=80)
     detalle = models.CharField(max_length=200)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     def __str__(self):
       return self.cliente
@@ -73,6 +78,8 @@ class Materiales(models.Model):
     nombre = models.CharField( max_length=30)
     stock = models.IntegerField()
     tecnico = models.ForeignKey(Tecnico, models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     class Meta:
         
@@ -82,6 +89,8 @@ class Materiales(models.Model):
 class Tipo(models.Model):
 
     tipo = models.CharField(max_length=40)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.tipo
@@ -97,7 +106,9 @@ class Servicio(models.Model):
     tipo = models.ForeignKey(Tipo,on_delete=models.CASCADE)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     tecnico = models.ForeignKey(Tecnico, on_delete=models.CASCADE)
-    
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
+
     
     
     class Meta:
@@ -110,6 +121,8 @@ class Venta(models.Model):
     total = models.IntegerField()
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     class Meta:
         
@@ -119,6 +132,9 @@ class Pago(models.Model):
    
     total = models.IntegerField()
     venta = models.ForeignKey(Venta, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
+
     def __str__(self):
         return self.total
     class Meta:
@@ -134,6 +150,9 @@ class Libro(models.Model):
     precio = models.IntegerField()
     stock = models.IntegerField()
     proveedor = models.CharField(max_length=50)
+    imagen = models.ImageField(upload_to="Libro", null=True)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     def stockfinal(self):
       return self.stock - self.carrito.cantidad
@@ -150,7 +169,10 @@ class Carrito(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     libro = models.ForeignKey(Libro, models.CASCADE)
     cantidad = models.PositiveIntegerField()
-    
+    imagen = models.ImageField(upload_to="Carrito", null=True)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
+
     def subtotal(self):
         return self.libro.precio * self.cantidad
 
@@ -165,6 +187,8 @@ class DetalleVenta(models.Model):
     
     venta = models.ForeignKey(Venta, on_delete=models.CASCADE)  
     libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     class Meta:
         
