@@ -3,7 +3,7 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
