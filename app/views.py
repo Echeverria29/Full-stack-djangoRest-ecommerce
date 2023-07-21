@@ -1,6 +1,5 @@
 
 from django.shortcuts import render,redirect,get_object_or_404
-
 import requests
 from .models import *
 from .forms import *
@@ -13,7 +12,7 @@ from django.db import transaction
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 #AL COMPRAR TE MUESTRA ESTA PAGINA PARA IR A TU SEGUIMIENTO
-@login_required
+
 def comprafinalizada(request):
     return render(request,'app/comprafinalizada.html')
 

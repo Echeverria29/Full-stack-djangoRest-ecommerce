@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'libreweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_libros',
+        'NAME': '',
         'HOST': 'Localhost',
         'PORT': '3306',
         'USER': 'root',

@@ -11,4 +11,5 @@ django-filter
 requests
 mysqlclient
 pymysql
+mysql-connector-python
 
