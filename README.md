@@ -35,8 +35,7 @@ https://www.anaconda.com/
 3.MySQL: Asegúrate de tener una instancia de MySQL instalada y configurada. Puedes descargar MySQL desde su sitio web oficial:
 https://www.mysql.com/downloads/
 
-4.XAMPP: En caso de que no puedas instalar My SQL por espacio, prueba esta alternativa.
-Puedes descargar XAMPP desde su sitio web oficial:
+4.XAMPP: En caso de que no puedas instalar My SQL por espacio, prueba esta alternativa.Puedes descargar XAMPP desde su sitio web oficial:
 https://www.apachefriends.org/es/download.html
 tutorial: https://www.youtube.com/watch?v=MtllDrDm4cM
 
