@@ -26,6 +26,7 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 
 ### Pre-requisitos 📋
 Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
+
 1.Python: Para instalar Django, necesitarás tener Python instalado en tu sistema. Puedes descargar la última versión de Python desde su sitio web oficial: https://www.python.org/downloads/
 
 2.Anaconda: Puedes descargar la última versión de Python desde su sitio web oficial: 
