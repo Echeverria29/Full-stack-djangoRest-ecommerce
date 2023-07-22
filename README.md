@@ -68,12 +68,12 @@ python manage.py runserver
 ```
 
 5.Configura la base de datos para las APIS:
-Crea una base de datos MySQL o XAMPP para las APIS que estan en el rar integradas.
-(el pago no funciona y en empleado proveedor)
+Crea una base de datos MySQL o XAMPP para las APIS que estan en el rar integradas
+(Tienen que estar funcionando las apis en simultaneo para el funcionamiento completo del proyecto).
 turial XAMPP: https://www.youtube.com/watch?v=BKyqmDwz1pM
 Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL(El mismo procedimiento que la apliación principal).
 
-6.Bases de datos con entorno virtual(opcional si no pudiste como arriba):
+6.Bases de datos con entorno virtual(opcional, esto es si no pudiste con la forma de arriba):
 
 ```
 python -m venv myenv
