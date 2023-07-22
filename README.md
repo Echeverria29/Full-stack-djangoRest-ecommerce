@@ -18,7 +18,7 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 [![6carrito.png](https://i.postimg.cc/TPVhrzpG/6carrito.png)](https://postimg.cc/DWz2hYrY)
 
 # Pago con PayPal
-[![7pagopaypal.png](https://i.postimg.cc/0NRbKk5c/7pagopaypal.png)](https://postimg.cc/PCytBkww)
+[![7pagopaypal.png](https://i.postimg.cc/sX0BXpMZ/7pagopaypal.png)](https://postimg.cc/vgf82xLQ)
 
 ## Comenzando 🚀
 
