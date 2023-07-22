@@ -75,6 +75,7 @@ Actualiza la configuración de la base de datos en el archivo settings.py en la 
 
 6.Bases de datos con entorno virtual(opcional, esto es si no pudiste con la forma de arriba):
 
+Tutorial: https://www.youtube.com/watch?v=SXVdnEGetPI
 ```
 python -m venv myenv
 ```
