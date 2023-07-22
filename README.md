@@ -43,17 +43,26 @@ tutorial: https://www.youtube.com/watch?v=MtllDrDm4cM
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
+1.Instala las dependencias necesarias:
 
 ```
-Da un ejemplo
+pip install -r requirements.txt
 ```
 
-_Y repite_
+2.Configura la base de datos:
+Crea una base de datos MySQL o XAMPP para el proyecto.
+turial XAMPP: https://www.youtube.com/watch?v=BKyqmDwz1pM
+Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL.
 
-```
-hasta finalizar
-```
+3.Configura la base de datos:
+Crea una base de datos MySQL o XAMPP para las APIS que estan en el rar integradas.
+(el pago no funciona sin esa api)
+turial XAMPP: https://www.youtube.com/watch?v=BKyqmDwz1pM
+Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL.
+
+4.Accede a la aplicación principal en tu navegador visitando http://localhost:8000/.
+  Accede a la aplicación starken APi en tu navegador visitando http://localhost:8080/.
+  Accede a la aplicación alphilia en tu navegador visitando http://localhost:8001/.
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
