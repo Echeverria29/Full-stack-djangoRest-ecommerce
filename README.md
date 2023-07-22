@@ -1,5 +1,19 @@
 # Libreria front-back django
 Este es un proyecto de una librería desarrollada utilizando Django como framework web y MySQL como base de datos. Esta aplicación es una aplicación full-stack de una libreria web, integrando Api Rest para el seguimiento(simulando starken) y proveedor más paypal como metodo de pago 
+[url=https://postimg.cc/QVCWm0vm][img]https://i.postimg.cc/QVCWm0vm/1index.png[/img][/url]
+
+[url=https://postimg.cc/LJtq57Z9][img]https://i.postimg.cc/LJtq57Z9/2index.png[/img][/url]
+
+[url=https://postimg.cc/zbB3dG2v][img]https://i.postimg.cc/zbB3dG2v/3regis.png[/img][/url]
+
+[url=https://postimg.cc/yJnkXZP2][img]https://i.postimg.cc/yJnkXZP2/4inicioses.png[/img][/url]
+
+[url=https://postimg.cc/K1SkZFjp][img]https://i.postimg.cc/K1SkZFjp/5tienda.png[/img][/url]
+
+[url=https://postimg.cc/mtF1fhLF][img]https://i.postimg.cc/mtF1fhLF/6carrito.png[/img][/url]
+
+[url=https://postimg.cc/kDHRpWmm][img]https://i.postimg.cc/kDHRpWmm/7pagopaypal.png[/img][/url]
+
 
 ## Comenzando 🚀
 
