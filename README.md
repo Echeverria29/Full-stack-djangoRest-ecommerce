@@ -2,6 +2,7 @@
 Este es un proyecto de una librería desarrollada utilizando Django como framework web y MySQL como base de datos. Esta aplicación es una aplicación full-stack de una libreria web, integrando Api Rest para el seguimiento(simulando starken) y proveedor más paypal como metodo de pago 
 [![1index.png](https://i.postimg.cc/T3WKPLxK/1index.png)](https://postimg.cc/0zPkWNbv)
 
+[![2index.png](https://i.postimg.cc/Hnxx1j3s/2index.png)](https://postimg.cc/JDfmbr99)
 ## Comenzando 🚀
 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
