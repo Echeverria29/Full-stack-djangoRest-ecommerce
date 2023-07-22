@@ -32,10 +32,12 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 2.Anaconda: Puedes descargar la última versión de Python desde su sitio web oficial: 
 https://www.anaconda.com/
 
-3.MySQL: Asegúrate de tener una instancia de MySQL instalada y configurada. Puedes descargar MySQL desde su sitio web oficial:
+3.MySQL: Asegúrate de tener una instancia de MySQL instalada y configurada.
+Puedes descargar MySQL desde su sitio web oficial:
 https://www.mysql.com/downloads/
 
-4.XAMPP: En caso de que no puedas instalar My SQL por espacio, prueba esta alternativa.Puedes descargar XAMPP desde su sitio web oficial:
+4.XAMPP: En caso de que no puedas instalar My SQL por espacio, prueba esta alternativa.
+Puedes descargar XAMPP desde su sitio web oficial:
 https://www.apachefriends.org/es/download.html
 tutorial: https://www.youtube.com/watch?v=MtllDrDm4cM
 
@@ -49,16 +51,59 @@ _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener 
 pip install -r requirements.txt
 ```
 
-2.Configura la base de datos:
+2.Configura la base de datos principal:
 Crea una base de datos MySQL o XAMPP para el proyecto.
 turial XAMPP: https://www.youtube.com/watch?v=BKyqmDwz1pM
 Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL.
 
-3.Configura la base de datos:
+3.Realiza las migraciones:
+
+```
+python manage.py migrate
+```
+4.Ejecuta el servidor de desarrollo:
+
+```
+python manage.py runserver
+```
+
+4.Configura la base de datos para las APIS:
 Crea una base de datos MySQL o XAMPP para las APIS que estan en el rar integradas.
-(el pago no funciona sin esa api)
+(el pago no funciona y en empleado proveedor)
 turial XAMPP: https://www.youtube.com/watch?v=BKyqmDwz1pM
-Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL.
+Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL(El mismo procedimiento que la apliación principal).
+
+5.Crea un entorno virtual (opcional, pero se recomienda):
+
+```
+python -m venv myenv
+```
+
+Activar el entorno virtual:
+
+En Windows:
+
+```
+myenv\Scripts\activate
+```
+
+En macOS y Linux:
+
+```
+source myenv/bin/activate
+```
+
+Realiza las migraciones:
+
+```
+python manage.py migrate
+```
+
+Ejecuta el servidor de desarrollo:
+
+```
+python manage.py runserver
+```
 
 4.Accede a la aplicación principal en tu navegador visitando http://localhost:8000/.
 
