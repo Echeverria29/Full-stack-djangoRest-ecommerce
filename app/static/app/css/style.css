@@ -36,11 +36,6 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
-.card-img-book {
-  width: 100%;
-  height: 200px; /* Establece aquí la altura deseada para las imágenes */
-  object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor sin deformarse */
-}
 
 *,
 *::before,
