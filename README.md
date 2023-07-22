@@ -24,16 +24,20 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
-
 ### Pre-requisitos 📋
+Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
+1.Python: Para instalar Django, necesitarás tener Python instalado en tu sistema. Puedes descargar la última versión de Python desde su sitio web oficial: https://www.python.org/downloads/
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+2.Anaconda: Puedes descargar la última versión de Python desde su sitio web oficial: 
+https://www.anaconda.com/
 
-```
-Da un ejemplo
-```
+3.MySQL: Asegúrate de tener una instancia de MySQL instalada y configurada. Puedes descargar MySQL desde su sitio web oficial:
+https://www.mysql.com/downloads/
+
+4.XAMPP: En caso de que no puedas instalar My SQL por espacio, prueba esta alternativa.
+Puedes descargar XAMPP desde su sitio web oficial:
+https://www.apachefriends.org/es/download.html
+tutorial: https://www.youtube.com/watch?v=MtllDrDm4cM
 
 ### Instalación 🔧
 
