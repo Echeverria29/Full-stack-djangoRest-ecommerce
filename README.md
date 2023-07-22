@@ -67,13 +67,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-4.Configura la base de datos para las APIS:
+5.Configura la base de datos para las APIS:
 Crea una base de datos MySQL o XAMPP para las APIS que estan en el rar integradas.
 (el pago no funciona y en empleado proveedor)
 turial XAMPP: https://www.youtube.com/watch?v=BKyqmDwz1pM
 Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL(El mismo procedimiento que la apliación principal).
 
-5.Crea un entorno virtual (opcional, pero se recomienda):
+6.Bases de datos con entorno virtual(opcional si no pudiste como arriba):
 
 ```
 python -m venv myenv
@@ -111,75 +111,46 @@ python manage.py runserver
   
   Accede a la aplicación alphilia en tu navegador visitando http://localhost:8001/.
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+Para ejecutar las pruebas automatizadas para este sistema, utiliza el siguiente comando:
+
+```
+python manage.py test
+```
 
 ### Analice las pruebas end-to-end 🔩
 
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
+Las pruebas end-to-end verifican que todas las partes de la aplicación, tanto el front-end como el back-end, funcionen correctamente en conjunto. Estas pruebas prueban los flujos de trabajo completos del sistema para garantizar su correcto funcionamiento.
 
 ### Y las pruebas de estilo de codificación ⌨️
 
-_Explica que verifican estas pruebas y por qué_
+Las pruebas de estilo de codificación aseguran que el código escrito siga las pautas y convenciones establecidas por el proyecto. Esto ayuda a mantener un código limpio y fácilmente comprensible para todos los colaboradores.
 
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+Las herramientas utilizadas para crear este proyecto son:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+Django - El framework web utilizado.
+MySQL - Base de datos utilizada.
+Boostrap - Diseño web.
+SASS - Diseño web.
+Otros paquetes y dependencias de Python especificados en requirements.txt.
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+* **Orlando Echeverría Hernandez** - *Trabajo Inicial* - [Echeverría](https://github.com/Echeverria29)
 
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 * Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
-
-
+* Dona con cripto a esta dirección: 0xf253fc233333078436d111175e5a76a649890000 (broma, ¡no es una dirección real! 😄)
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [Echeverría](https://github.com/Echeverria29) 😊
+¡Gracias por interesarte en este proyecto! Si tienes alguna pregunta o necesitas ayuda, no dudes en comunicarte con nosotros. ¡Disfruta trabajando con Django y MySQL!
