@@ -61,10 +61,13 @@ turial XAMPP: https://www.youtube.com/watch?v=BKyqmDwz1pM
 Actualiza la configuración de la base de datos en el archivo settings.py en la sección DATABASES con tus credenciales de MySQL.
 
 4.Accede a la aplicación principal en tu navegador visitando http://localhost:8000/.
+
   Accede a la aplicación starken APi en tu navegador visitando http://localhost:8080/.
+  
   Accede a la aplicación alphilia en tu navegador visitando http://localhost:8001/.
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+
 
 ## Ejecutando las pruebas ⚙️
 
