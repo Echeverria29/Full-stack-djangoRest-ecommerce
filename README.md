@@ -8,6 +8,8 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 ### Vista lógica
 [![Logical.png](https://i.postimg.cc/mkw9FfwH/Logical.png)](https://postimg.cc/FkYz26wr)
 
+### 
+[![Relational-1.png](https://i.postimg.cc/mDCc9z4q/Relational-1.png)](https://postimg.cc/r0yFXpKC)
 ### Diagramas de secuencia
 
 ### Pago Paypal
@@ -17,7 +19,7 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 [![Diagrama-secuencia-seguimiento.png](https://i.postimg.cc/tJCTw13s/Diagrama-secuencia-seguimiento.png)](https://postimg.cc/WFCTJ1fV)
 
 ### Diagrama de despliegue
-[![modelado.png](https://i.postimg.cc/5NDDcB2f/modelado.png)](https://postimg.cc/qzX1yCKF)
+
 
 ### Index
 [![1index.png](https://i.postimg.cc/T3WKPLxK/1index.png)](https://postimg.cc/0zPkWNbv)
