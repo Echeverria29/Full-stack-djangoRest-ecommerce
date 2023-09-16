@@ -10,10 +10,10 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 
 ### Diagramas de secuencia
 
-### Diagramas de pago Paypal
+### Pago Paypal
 [![Diagrama-secuencia-pago.png](https://i.postimg.cc/WzW3v28X/Diagrama-secuencia-pago.png)](https://postimg.cc/N2XY8vWH)
 
-### Diagramas de seguimiento starken
+### seguimiento starken
 [![Diagrama-secuencia-seguimiento.png](https://i.postimg.cc/tJCTw13s/Diagrama-secuencia-seguimiento.png)](https://postimg.cc/WFCTJ1fV)
 
 ### Diagrama de despliegue
