@@ -1,6 +1,21 @@
 # Libreria front-back django
 Este es un proyecto de una librería desarrollada utilizando Django como framework web y MySQL como base de datos. Esta aplicación es una aplicación full-stack de una libreria web, integrando Api Rest para el seguimiento(simulando starken) y proveedor(alphilia) más paypal como metodo de pago.
-### Modelado de base de datos
+### Caso de uso
+[![Caso-de-uso-drawio.png](https://i.postimg.cc/fbjxm95F/Caso-de-uso-drawio.png)](https://postimg.cc/sBxQR1k9)
+
+### Solo se solicitaron algunos de los diagramas 4+1 tales como:
+
+### Vista lógica
+[![Logical.png](https://i.postimg.cc/mkw9FfwH/Logical.png)](https://postimg.cc/FkYz26wr)
+[![modelado.png](https://i.postimg.cc/5NDDcB2f/modelado.png)](https://postimg.cc/qzX1yCKF)
+
+### Diagramas de secuencia
+[![Diagrama-de-secuencia-stock.png](https://i.postimg.cc/LXShkQhB/Diagrama-de-secuencia-stock.png)](https://postimg.cc/R3PM4R7N)
+[![Diagrama-secuencia-pago.png](https://i.postimg.cc/WzW3v28X/Diagrama-secuencia-pago.png)](https://postimg.cc/N2XY8vWH)
+[![Diagrama-secuencia-seguimiento.png](https://i.postimg.cc/tJCTw13s/Diagrama-secuencia-seguimiento.png)](https://postimg.cc/WFCTJ1fV)
+[![Diagrama-secuencia-stock-alphilia.png](https://i.postimg.cc/Twc1tjD8/Diagrama-secuencia-stock-alphilia.png)](https://postimg.cc/CBzw1q7J)
+
+### Diagrama de despliegue
 [![modelado.png](https://i.postimg.cc/5NDDcB2f/modelado.png)](https://postimg.cc/qzX1yCKF)
 
 ### Index
