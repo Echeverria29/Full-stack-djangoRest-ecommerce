@@ -19,7 +19,7 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 [![Diagrama-secuencia-seguimiento.png](https://i.postimg.cc/tJCTw13s/Diagrama-secuencia-seguimiento.png)](https://postimg.cc/WFCTJ1fV)
 
 ### Diagrama de despliegue
-
+[![Diagrama-de-despliegue.png](https://i.postimg.cc/MHr8K548/Diagrama-de-despliegue.png)](https://postimg.cc/K3LW0Px9)
 
 ### Index
 [![1index.png](https://i.postimg.cc/T3WKPLxK/1index.png)](https://postimg.cc/0zPkWNbv)
