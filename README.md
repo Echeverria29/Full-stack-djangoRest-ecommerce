@@ -8,13 +8,12 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 ### Vista lógica
 [![Logical.png](https://i.postimg.cc/mkw9FfwH/Logical.png)](https://postimg.cc/FkYz26wr)
 
-[![modelado.png](https://i.postimg.cc/5NDDcB2f/modelado.png)](https://postimg.cc/qzX1yCKF)
-
 ### Diagramas de secuencia
-[![Diagrama-de-secuencia-stock.png](https://i.postimg.cc/LXShkQhB/Diagrama-de-secuencia-stock.png)](https://postimg.cc/R3PM4R7N)
 
+### Diagramas de pago Paypal
 [![Diagrama-secuencia-pago.png](https://i.postimg.cc/WzW3v28X/Diagrama-secuencia-pago.png)](https://postimg.cc/N2XY8vWH)
 
+### Diagramas de seguimiento starken
 [![Diagrama-secuencia-seguimiento.png](https://i.postimg.cc/tJCTw13s/Diagrama-secuencia-seguimiento.png)](https://postimg.cc/WFCTJ1fV)
 
 ### Diagrama de despliegue
