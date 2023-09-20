@@ -163,9 +163,9 @@ Otros paquetes y dependencias de Python especificados en requirements.txt.
 
 ## Autores ✒️
 
-* **Orlando Echeverría Hernande** *    
-* **Juan pablo sepulveda** *
-* **Martín rubio** *
+* **Orlando Echeverría Hernande**   
+* **Juan pablo sepulveda** 
+* **Martín rubio** 
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
