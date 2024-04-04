@@ -1,15 +1,15 @@
 # Libreria front-back django
 Este es un proyecto de una librería desarrollada utilizando Django como framework web y MySQL como base de datos. Esta aplicación es una aplicación full-stack de una libreria web, integrando Api Rest para el seguimiento(simulando starken) y proveedor(alphilia) más paypal como metodo de pago.
 ### Caso de uso
-[![caso-de-uso-final.png](https://i.postimg.cc/cJVscSG2/caso-de-uso-final.png)](https://postimg.cc/TyJMRBwJ)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/CASOUSO.png)
 
 ### Solo se solicitaron algunos de los diagramas 4+1 tales como:
 
 ### Vista lógica
-[![Logical.png](https://i.postimg.cc/mkw9FfwH/Logical.png)](https://postimg.cc/FkYz26wr)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/Logical.png)
 
-### 
-[![Relational-1.png](https://i.postimg.cc/mDCc9z4q/Relational-1.png)](https://postimg.cc/r0yFXpKC)
+### Vista Relacional
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/Relational_1.png)
 ### Diagramas de secuencia
 
 ### Pago Paypal
