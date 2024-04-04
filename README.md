@@ -13,13 +13,13 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 ### Diagramas de secuencia
 
 ### Pago Paypal
-[![Diagrama-secuencia-pago.png](https://i.postimg.cc/WzW3v28X/Diagrama-secuencia-pago.png)](https://postimg.cc/N2XY8vWH)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/Diagrama-secuencia-pago.png)
 
 ### seguimiento starken
-[![Diagrama-secuencia-seguimiento.png](https://i.postimg.cc/tJCTw13s/Diagrama-secuencia-seguimiento.png)](https://postimg.cc/WFCTJ1fV)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/SEGUIMIENTO.png)
 
 ### Diagrama de despliegue
-[![Diagrama-de-despliegue.png](https://i.postimg.cc/MHr8K548/Diagrama-de-despliegue.png)](https://postimg.cc/K3LW0Px9)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/DESPLIEGUE.png)
 
 ### Index
 [![1index.png](https://i.postimg.cc/T3WKPLxK/1index.png)](https://postimg.cc/0zPkWNbv)
