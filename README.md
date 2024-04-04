@@ -38,7 +38,7 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 ![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/6carrito.png)
 
 ### Pago con PayPal
-[![7pagopaypal.png](https://i.postimg.cc/sX0BXpMZ/7pagopaypal.png)](https://postimg.cc/vgf82xLQ)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/7pagopaypal.png)
 
 ### Comenzando 🚀
 
