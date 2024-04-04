@@ -22,21 +22,20 @@ Este es un proyecto de una librería desarrollada utilizando Django como framewo
 ![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/DESPLIEGUE.png)
 
 ### Index
-[![1index.png](https://i.postimg.cc/T3WKPLxK/1index.png)](https://postimg.cc/0zPkWNbv)
-
-[![2index.png](https://i.postimg.cc/Hnxx1j3s/2index.png)](https://postimg.cc/JDfmbr99)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/1index.png)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/2index.png)
 
 ### Registrarse
-[![3regis.png](https://i.postimg.cc/Hk5Lgq05/3regis.png)](https://postimg.cc/SnS4LtvN)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/3regis.png)
 
 ### Inicio de sesión
-[![4inicioses.png](https://i.postimg.cc/8P75yJjZ/4inicioses.png)](https://postimg.cc/qzd4q7cK)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/4inicioses.png)
 
 ### Tienda
-[![5tienda.png](https://i.postimg.cc/Pf3JzzrL/5tienda.png)](https://postimg.cc/mh9TT99R)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/5tienda.png)
 
 ### Carrito
-[![6carrito.png](https://i.postimg.cc/TPVhrzpG/6carrito.png)](https://postimg.cc/DWz2hYrY)
+![](https://github.com/Echeverria29/Full-stack-djangoRest-ecommerce/blob/main/imagesrepoStack/6carrito.png)
 
 ### Pago con PayPal
 [![7pagopaypal.png](https://i.postimg.cc/sX0BXpMZ/7pagopaypal.png)](https://postimg.cc/vgf82xLQ)
